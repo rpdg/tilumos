@@ -120,7 +120,7 @@ let spacing = (cw + (opt.range.x * 2)) / (opt.count - 1);
 while (i--) {
     points.push(new Point({
         x: (spacing * (i - 1)) - opt.range.x,
-        y: ch - (ch * opt.level)
+        y: ch - (ch * opt.level),
     }));
 }
 loop();

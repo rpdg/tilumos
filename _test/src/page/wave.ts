@@ -9,7 +9,8 @@ let ctx: CanvasRenderingContext2D = c.getContext('2d'),
 		return Math.floor((Math.random() * (max - min + 1) ) + min);
 	},
 	ease = function (t, b, c, d) {
-		if ((t /= d / 2) < 1) return c / 2 * t * t + b;
+		if ((t /= d / 2) < 1)
+			return c / 2 * t * t + b;
 		return -c / 2 * ((--t) * (t - 2) - 1) + b;
 	};
 
@@ -151,11 +152,11 @@ function loop() {
 
 
 let i = opt.count + 2;
-let spacing = (cw + (opt.range.x * 2)) / (opt.count-1);
-while(i--){
+let spacing = (cw + (opt.range.x * 2)) / (opt.count - 1);
+while (i--) {
 	points.push(new Point({
 		x: (spacing * (i - 1)) - opt.range.x,
-		y: ch - (ch * opt.level)
+		y: ch - (ch * opt.level),
 	}));
 }
 
