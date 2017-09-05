@@ -47,4 +47,6 @@ http://lab.hakim.se/magnetic/02/
 
 https://evanw.github.io/glfx.js/demo/  图像扭曲
 https://github.com/simeydotme/jQuery-canvas-sparkles  jquery加闪光
+http://css3transition.com/demo/Sparkle-Effect-Using-jQuery-And-Canvas/index.html
 http://www.relfind.com/game/magician.html h5游戏，有闪光图资源
+https://www.pond5.com/sound-effect/47602257/magic-wand-sparkle.html#2  音效
