@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "file": "wave.css",
+    "sources": [
+        "/page/wave.scss"
+    ],
+    "sourcesContent": [
+        "$w: 300px;\r\n$h: 300px;\r\n$bg: #000;\r\n\r\n#g{\r\n\twidth: $w;\r\n\theight: $h;\r\n\tbackground-color: $bg;\r\n}"
+    ],
+    "names": [],
+    "mappings": "AAIA,AAAA,EAAE,CAAA,EACD,KAAK,EALF,KAAK,EAMR,MAAM,EALH,KAAK,EAMR,gBAAgB,EALZ,IAAI,GAMR"
+}

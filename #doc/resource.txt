@@ -28,7 +28,7 @@ http://www.cocoachina.com/webapp/20150126/11020.html
 
 
 
-
+key words：html5 cool canvas magic sparkle
 ==========================================================================
 
 http://www.qdfuns.com/notes/29385/62fd5cd751660c9203bc0386ff0ae87a.html
@@ -40,3 +40,11 @@ http://www.sucaihuo.com/js/1708.html
 http://www.jb51.net/jiaoben/543855.html
 
 http://www.qdfuns.com/notes/28490/e309e26d2d66b972a40ff0db461466c9.html
+
+https://code.tutsplus.com/articles/21-ridiculously-impressive-html5-canvas-experiments--net-14210
+
+http://lab.hakim.se/magnetic/02/
+
+https://evanw.github.io/glfx.js/demo/  图像扭曲
+https://github.com/simeydotme/jQuery-canvas-sparkles  jquery加闪光
+http://www.relfind.com/game/magician.html h5游戏，有闪光图资源
