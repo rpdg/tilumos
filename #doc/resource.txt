@@ -1,4 +1,5 @@
-粒子 魔法棒 magic-wand
+粒子 魔法棒 magic-wand  mouse  sparkle effect
+http://www.freeactionscript.com/tag/sparkle-effect/    as3
 http://www.snazzyspace.com/tumblr/mouse-sparkles.php/
 http://www.sucaijiayuan.com/Js/html5-css3/968.html
 https://www.sourcecodester.com/node/10067
