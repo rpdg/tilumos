@@ -1,6 +1,7 @@
 粒子 魔法棒 magic-wand
+http://www.snazzyspace.com/tumblr/mouse-sparkles.php/
 http://www.sucaijiayuan.com/Js/html5-css3/968.html
-
+https://www.sourcecodester.com/node/10067
 
 
 圆点扩散
@@ -26,6 +27,11 @@ http://isux.tencent.com/great-mobile-h5-pages.html
 http://www.cocoachina.com/webapp/20150126/11020.html
 
 
+swipe
+https://segmentfault.com/a/1190000003817077
+http://kele527.github.io/iSlider/  腾讯的滑动翻页  
+http://lightningtgc.github.io/material-refresh/   下拉刷新
+
 
 
 key words：html5 cool canvas magic sparkle
@@ -50,3 +56,29 @@ https://github.com/simeydotme/jQuery-canvas-sparkles  jquery加闪光
 http://css3transition.com/demo/Sparkle-Effect-Using-jQuery-And-Canvas/index.html
 http://www.relfind.com/game/magician.html h5游戏，有闪光图资源
 https://www.pond5.com/sound-effect/47602257/magic-wand-sparkle.html#2  音效
+
+
+http://thinkpixellab.com/pxloader/    loading
+http://www.cnblogs.com/lvdabao/p/resource-preload-plugin.html
+
+
+
+
+========================================================
+H5 游戏
+https://www.codeproject.com/articles/756189/master-chief-createjs-typescript
+
+
+typescript install typeings
+npm install --save-dev @types/createjs
+https://www.davevoyles.com/2016/02/16/how-to-add-type-definitions-to-a-typescript-project/
+http://www.kopf.com.br/kaplof/how-to-use-createjs-on-typescript/
+https://stackoverflow.com/questions/33793654/typescript-class-createjs-eventdispatcher 
+
+
+
+=======================================
+as3  sparkle effect
+
+http://www.freeactionscript.com/2008/12/sparkle-effect/
+http://stock-footages.com/sparkles+fairy+dust

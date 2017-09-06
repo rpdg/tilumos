@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "file": "t1.js",
+    "sourceRoot": "",
+    "sources": [
+        "/page/t1.ts"
+    ],
+    "names": [],
+    "mappings": "AAAA;IAOC,YAAY,MAAyB;QACpC,IAAI,CAAC,MAAM,GAAG,MAAM,CAAC;QACrB,IAAI,CAAC,KAAK,GAAG,IAAI,QAAQ,CAAC,KAAK,CAAC,MAAM,CAAC,CAAC;QAExC,IAAI,CAAC,OAAO,GAAG,IAAI,QAAQ,CAAC,IAAI,CAAC,SAAS,EAAE,oBAAoB,EAAE,SAAS,CAAC,CAAC;QAC7E,IAAI,CAAC,OAAO,CAAC,SAAS,GAAG,QAAQ,CAAC;QAClC,IAAI,CAAC,OAAO,CAAC,CAAC,GAAG,MAAM,CAAC,KAAK,GAAG,CAAC,CAAC;QAClC,IAAI,CAAC,OAAO,CAAC,CAAC,GAAG,MAAM,CAAC,MAAM,GAAG,CAAC,CAAC;QACnC,IAAI,CAAC,KAAK,CAAC,QAAQ,CAAC,IAAI,CAAC,OAAO,CAAC,CAAC;QAGlC,IAAI,KAAK,GAAG,IAAI,QAAQ,CAAC,KAAK,EAAE,CAAC;QAEjC,IAAI,CAAC,GAAG,KAAK,CAAC,QAAQ,CAAC;QACvB,CAAC,CAAC,SAAS,CAAC,SAAS,CAAC,CAAC;QACvB,CAAC,CAAC,UAAU,CAAC,GAAG,EAAE,GAAG,EAAE,EAAE,CAAC,CAAC;QAC3B,CAAC,CAAC,OAAO,EAAE,CAAC;QAEZ,KAAK,CAAC,CAAC,GAAG,EAAE,CAAC;QACb,KAAK,CAAC,CAAC,GAAG,EAAE,CAAC;QACb,KAAK,CAAC,WAAW,GAAG,IAAI,CAAC;QACzB,IAAI,CAAC,KAAK,CAAC,QAAQ,CAAC,KAAK,CAAC,CAAC;QAE3B,QAAQ,CAAC,MAAM,CAAC,gBAAgB,CAAC,MAAM,EAAE,CAAC,CAAuB,KAAK,IAAI,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC,CAAC;IAGrF,CAAC;IAED,IAAI,CAAC,CAAuB;QAC3B,IAAI,CAAC,KAAK,CAAC,MAAM,CAAC,CAAC,CAAC,CAAC;IACtB,CAAC;CACD;AAED,MAAM,CAAC,gBAAgB,CAAC,MAAM,EAAE;IAC/B,IAAI,MAAM,GAAuB,QAAQ,CAAC,cAAc,CAAC,YAAY,CAAC,CAAC;IACvE,MAAM,CAAC,KAAK,CAAC,UAAU,GAAG,MAAM,CAAC;IACjC,IAAI,IAAI,CAAC,MAAM,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC",
+    "sourcesContent": [
+        "class Main {\r\n\tprivate canvas: HTMLCanvasElement;\r\n\tprivate stage: createjs.Stage;\r\n\tprivate manifest: any[];\r\n\tprivate queue: createjs.LoadQueue;\r\n\tprivate message: createjs.Text;\r\n\r\n\tconstructor(canvas: HTMLCanvasElement) {\r\n\t\tthis.canvas = canvas;\r\n\t\tthis.stage = new createjs.Stage(canvas);\r\n\r\n\t\tthis.message = new createjs.Text('message', 'bold 30px Segoe UI', '#e66000');\r\n\t\tthis.message.textAlign = 'center';\r\n\t\tthis.message.x = canvas.width / 2;\r\n\t\tthis.message.y = canvas.height / 2;\r\n\t\tthis.stage.addChild(this.message);\r\n\r\n\r\n\t\tlet shape = new createjs.Shape();\r\n\r\n\t\tlet g = shape.graphics;\r\n\t\tg.beginFill('#d0b000');\r\n\t\tg.drawCircle(100, 100, 30);\r\n\t\tg.endFill();\r\n\r\n\t\tshape.x = 50;\r\n\t\tshape.y = 50;\r\n\t\tshape.snapToPixel = true;\r\n\t\tthis.stage.addChild(shape);\r\n\r\n\t\tcreatejs.Ticker.addEventListener('tick', (e: createjs.TickerEvent) => this.tick(e));\r\n\r\n\r\n\t}\r\n\r\n\ttick(e: createjs.TickerEvent) {\r\n\t\tthis.stage.update(e);\r\n\t}\r\n}\r\n\r\nwindow.addEventListener('load', () => {\r\n\tlet canvas = <HTMLCanvasElement> document.getElementById('gameCanvas');\r\n\tcanvas.style.background = '#000';\r\n\tnew Main(canvas);\r\n});"
+    ]
+}
