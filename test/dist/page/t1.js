@@ -11,7 +11,7 @@ class Main {
         this.stage.scaleX = stageScale;
         this.stage.scaleY = stageScale;
         this.container = new createjs.Container();
-        this.message = new createjs.Text(document.documentElement.clientWidth, 'bold 30px Segoe UI', '#e66000');
+        this.message = new createjs.Text(!!navigator.vibrate, 'bold 30px Segoe UI', '#e66000');
         this.message.textAlign = 'left';
         this.message.x = 100;
         this.message.y = 200;
@@ -43,15 +43,23 @@ class Main {
     testShake() {
         //create a new instance of shake.js.
         let myShakeEvent = new Shake({
-            threshold: 15
+            threshold: 15,
         });
         // start listening to device motion
         myShakeEvent.start();
-        this.message.text = 'wait Shake!';
+        //this.message.text = 'wait Shake!';
         // register a shake event
         window.addEventListener('shake', () => {
-            this.message.text = 'Shake!';
+            this.message.text = 'Shake ed !';
+            this.vibrate();
         }, false);
+    }
+    vibrate() {
+        // 振动1秒
+        navigator.vibrate(1000);
+        // 振动多次
+        // 参数分别是震动3秒，等待2秒，然后振动1秒
+        // navigator.vibrate([3000, 2000, 1000]);
     }
 }
 window.addEventListener('load', () => {
