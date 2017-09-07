@@ -1,14 +1,15 @@
-$w: 700px;
-$h: 500px;
+$w: 100%;
+$h: 100%;
 $bg: #000;
-
-#g{
-	width: $w;
-	height: $h;
-	background-color: $bg;
-}
 
 html,body{
 	padding: 0;
 	margin: 0;
+	width: $w;
+	height: $h;
+}
+
+
+#gameCanvas{
+	background-color: $bg;
 }
