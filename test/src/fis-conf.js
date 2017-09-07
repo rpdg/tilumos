@@ -1,5 +1,13 @@
 fis.set('project.fileType.text', 'ts');
 
+// 启用插件
+fis.hook('relative');
+
+// 让所有文件，都使用相对路径。
+fis.match('**', {
+	relative: true
+});
+
 //Ts
 fis.match('{**/*.ts,**.html:ts}', {
 	parser: fis.plugin('typescript', {
