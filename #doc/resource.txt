@@ -78,6 +78,12 @@ https://stackoverflow.com/questions/33793654/typescript-class-createjs-eventdisp
 
 
 
+
+========================================================
+createjs ½Ì³Ì
+http://www.ajexoop.com/wordpress/2016/03/%E6%96%B0%E6%89%8B%E5%86%99createjs%E6%97%B6%E5%AE%B9%E6%98%93%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89.html
+
+
 =======================================
 as3  sparkle effect
 

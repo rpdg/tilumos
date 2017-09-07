@@ -2,6 +2,7 @@ class Main {
     constructor(canvas) {
         this.canvas = canvas;
         this.stage = new createjs.Stage(canvas);
+        createjs.Touch.enable(this.stage);
         this.message = new createjs.Text('message', 'bold 30px Segoe UI', '#e66000');
         this.message.textAlign = 'center';
         this.message.x = canvas.width / 2;

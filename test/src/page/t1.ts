@@ -8,6 +8,7 @@ class Main {
 	constructor(canvas: HTMLCanvasElement) {
 		this.canvas = canvas;
 		this.stage = new createjs.Stage(canvas);
+		createjs.Touch.enable(this.stage);
 
 		this.message = new createjs.Text('message', 'bold 30px Segoe UI', '#e66000');
 		this.message.textAlign = 'center';
