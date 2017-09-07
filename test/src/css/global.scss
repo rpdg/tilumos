@@ -3,10 +3,13 @@ $h: 100%;
 $bg: #000;
 
 html,body{
-	padding: 0;
-	margin: 0;
 	width: $w;
 	height: $h;
+}
+
+html, body, div, span, canvas {
+	margin:0;
+	padding:0;
 	box-sizing: border-box;
 }
 
