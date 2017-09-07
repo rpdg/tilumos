@@ -1,8 +1,8 @@
 class Main {
     constructor(canvas) {
         this.canvas = canvas;
-        this.canvas.width = document.documentElement.clientWidth;
-        this.canvas.height = document.documentElement.clientHeight;
+        this.canvas.width = document.body.clientWidth;
+        this.canvas.height = document.body.clientHeight;
         //let scale = 1 / window.devicePixelRatio;
         let stageScale = document.documentElement.clientWidth / 750; //宽度自适应；
         //let stageScale = document.documentElement.clientHeight/1206; //高度自适应两者选一
@@ -31,13 +31,13 @@ class Main {
         createjs.Ticker.addEventListener('tick', (e) => this.tick(e));
     }
     tick(e) {
-        /*if(this.shape.y < 10){
+        if (this.shape.y < 10) {
             this.shape.y += 2;
         }
-        else if(this.shape.y > 0){
+        else if (this.shape.y > 0) {
             console.log(this.shape.y);
             this.shape.y += -2;
-        }*/
+        }
         this.stage.update(e);
     }
     testShake() {

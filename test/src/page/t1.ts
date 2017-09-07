@@ -9,8 +9,8 @@ class Main {
 
 	constructor(canvas: HTMLCanvasElement) {
 		this.canvas = canvas;
-		this.canvas.width = document.documentElement.clientWidth;
-		this.canvas.height = document.documentElement.clientHeight;
+		this.canvas.width = document.body.clientWidth;
+		this.canvas.height = document.body.clientHeight;
 
 		//let scale = 1 / window.devicePixelRatio;
 		let stageScale = document.documentElement.clientWidth / 750; //宽度自适应；
@@ -66,9 +66,7 @@ class Main {
 
 	testShake() {
 		//create a new instance of shake.js.
-		let myShakeEvent = new Shake({
-			threshold: 15,
-		});
+		let myShakeEvent = new Shake();
 		// start listening to device motion
 		myShakeEvent.start();
 		//this.message.text = 'wait Shake!';
