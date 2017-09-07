@@ -1,15 +1,21 @@
 class Main {
     constructor(canvas) {
         this.canvas = canvas;
+        this.canvas.width = document.documentElement.clientWidth;
+        this.canvas.height = document.documentElement.clientHeight;
         let scale = 1 / window.devicePixelRatio;
-        document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width,initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+        let stageScale = document.documentElement.clientWidth / 750; //宽度自适应；
+        //document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width,initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
         this.stage = new createjs.Stage(canvas);
         createjs.Touch.enable(this.stage);
+        this.container = new createjs.Container();
+        // this.container.scaleX = stageScale;
+        // this.container.scaleY = stageScale;
         this.message = new createjs.Text(document.documentElement.clientWidth, 'bold 30px Segoe UI', '#e66000');
         this.message.textAlign = 'center';
         this.message.x = canvas.width / 2;
         this.message.y = canvas.height / 2;
-        this.stage.addChild(this.message);
+        this.container.addChild(this.message);
         let shape = new createjs.Shape();
         let g = shape.graphics;
         g.beginFill('#d0b000');
@@ -19,6 +25,7 @@ class Main {
         shape.y = 50;
         shape.snapToPixel = true;
         //this.stage.addChild(shape);
+        this.stage.addChild(this.container);
         createjs.Ticker.addEventListener('tick', (e) => this.tick(e));
     }
     tick(e) {
