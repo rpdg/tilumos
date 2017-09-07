@@ -1,4 +1,6 @@
 Á£×Ó Ä§·¨°ô magic-wand  mouse  sparkle effect
+
+http://timothypoon.com/blog/2011/01/19/html5-canvas-particle-animation/     html5 magic  sparkles
 http://www.freeactionscript.com/tag/sparkle-effect/    as3
 http://www.jqueryscript.net/demo/jQuery-Plugin-For-Magic-Cursor-Animations-jStars/
 http://www.snazzyspace.com/tumblr/mouse-sparkles.php/
@@ -96,3 +98,23 @@ as3  sparkle effect
 
 http://www.freeactionscript.com/2008/12/sparkle-effect/
 http://stock-footages.com/sparkles+fairy+dust
+
+
+http://creativecan.com/2012/03/html5-and-javascript-experiment/
+
+https://davidwalsh.name/canvas-demos
+
+==========================================
+html5 canvas wave distort image
+
+https://stackoverflow.com/questions/4362248/how-to-distort-an-image-to-create-flag-waving-in-the-wind-effect-using-html5-can
+http://phrogz.net/tmp/gkheadwave.html
+https://ariya.io/2012/03/underwater-effect-with-html5-canvas
+https://ariya.github.io/canvas/underwater/
+
+
+http://agilerepose.weebly.com/water-ripple.html  Ë®²¨ÎÆ
+https://stackoverflow.com/questions/17667487/water-ripple-effect-on-background-of-website
+
+
+http://blog.teamtreehouse.com/create-vector-masks-using-the-html5-canvas      vector mask

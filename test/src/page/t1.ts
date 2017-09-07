@@ -53,13 +53,13 @@ class Main {
 	}
 
 	tick(e: createjs.TickerEvent) {
-		/*if(this.shape.y < 10){
+		if(this.shape.y < 10){
 			this.shape.y += 2;
 		}
 		else if(this.shape.y > 0){
 			console.log(this.shape.y);
 			this.shape.y += -2;
-		}*/
+		}
 		this.stage.update(e);
 	}
 
