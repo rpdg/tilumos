@@ -35,7 +35,7 @@ class Main {
 
 		this.shape = new createjs.Shape();
 		let g = this.shape.graphics;
-		g.beginFill('#d030f0');
+		g.beginFill('#309070');
 		g.drawRect(0, 0, 375 , 100);
 		g.endFill();
 		this.shape.x = 0;
