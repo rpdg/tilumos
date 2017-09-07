@@ -46,22 +46,22 @@ class Main {
 
 		this.stage.addChild(this.container);
 
+		this.testShake();
 
 		createjs.Touch.enable(this.stage);
 		createjs.Ticker.addEventListener('tick', (e: createjs.TickerEvent) => this.tick(e));
 
-		this.testShake();
 
 	}
 
 	tick(e: createjs.TickerEvent) {
-		if(this.shape.y < 10){
+		/*if(this.shape.y < 10){
 			this.shape.y += 2;
 		}
 		else if(this.shape.y > 0){
 			console.log(this.shape.y);
 			this.shape.y += -2;
-		}
+		}*/
 		this.stage.update(e);
 	}
 
@@ -73,13 +73,12 @@ class Main {
 		});
 		// start listening to device motion
 		myShakeEvent.start();
+		this.message.text = 'wait Shake!';
 		// register a shake event
-		window.addEventListener('shake', shakeEventDidOccur, false);
-		//shake event callback
-		function shakeEventDidOccur () {
-			//put your own code here etc.
-			alert('Shake!');
-		}
+		window.addEventListener('shake', ()=>{
+			this.message.text = 'Shake!';
+		}, false);
+
 	}
 }
 
