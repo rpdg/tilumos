@@ -23,7 +23,7 @@ class Main {
 		this.container = new createjs.Container();
 
 
-		let img = new createjs.Bitmap('../img/man.jpg');
+		let img = new createjs.Bitmap('../../img/man.jpg');
 		this.container.addChild(img);
 		//this.stage.setChildIndex( img, this.stage.numChildren-1);
 
