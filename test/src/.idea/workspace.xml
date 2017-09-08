@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8e78d1a-5254-4995-aa5d-512796bd2bbc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/star/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/star/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/star/star.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/page/t1.html" afterPath="$PROJECT_DIR$/page/misc/t1.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/page/t1.ts" afterPath="$PROJECT_DIR$/page/misc/t1.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../#doc/resource.txt" afterPath="$PROJECT_DIR$/../../#doc/resource.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -63,11 +58,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/star/index.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="114">
               <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clickTip.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/page/star/clickTip.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -116,6 +121,7 @@
         <option value="$PROJECT_DIR$/page/star/index.html" />
         <option value="$PROJECT_DIR$/page/star/index.ts" />
         <option value="$PROJECT_DIR$/page/star/star.ts" />
+        <option value="$PROJECT_DIR$/page/star/clickTip.ts" />
       </list>
     </option>
   </component>
@@ -187,12 +193,6 @@
               <item name="src" type="b2602c69:ProjectViewProjectNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="page" type="462c0819:PsiDirectoryNode" />
-              <item name="misc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="src" type="b2602c69:ProjectViewProjectNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
               <item name="star" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -253,12 +253,12 @@
       <workItem from="1504749525578" duration="5734000" />
       <workItem from="1504764271030" duration="9653000" />
       <workItem from="1504838458668" duration="1556000" />
-      <workItem from="1504850308686" duration="5887000" />
+      <workItem from="1504850308686" duration="7148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33396000" />
+    <option name="totallyTimeSpent" value="34657000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="740" extended-state="6" />
@@ -611,6 +611,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/star/clickTip.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
           <folding />
         </state>
       </provider>
