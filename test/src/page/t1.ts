@@ -6,6 +6,7 @@ class Main {
 	private queue: createjs.LoadQueue;
 	private message: createjs.Text;
 	private shape: createjs.Shape;
+	private circle: Circle;
 
 	constructor(canvas: HTMLCanvasElement) {
 		//this.canvas = canvas;
@@ -47,7 +48,14 @@ class Main {
 		//this.stage.addChild(this.container);
 
 
-		this.stage.addChild(new Circle());
+		this.circle = new Circle();
+		this.stage.addChild(this.circle);
+
+		createjs.MotionGuidePlugin.install();
+		createjs.Tween.get(this.circle, {loop: true }).to({guide:{ path:[0,0, 0,200,200,200, 200,0,0,0] }},7000);
+
+
+
 
 		this.testShake();
 

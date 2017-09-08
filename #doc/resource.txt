@@ -13,6 +13,14 @@ http://blog.csdn.net/cxl444905143/article/details/42299971
 http://www.bkjia.com/HTML_CSS/1179363.html
 
 
+
+上下浮动
+http://www.bkjia.com/webzh/756470.html
+http://down.admin5.com/texiao/127478.html
+http://www.html5tricks.com/demo/css3-sword/index.html
+
+
+
 水波纹 Water Ripple Effect 
 https://www.timewasters-place.com/water-ripple-effect-done-in-html-5/
 http://media.chikuyonok.ru/ripple/
@@ -71,6 +79,13 @@ http://www.cnblogs.com/lvdabao/p/resource-preload-plugin.html
 
 
 
+https://jsfiddle.net/lannymcnie/qEYD4/1/    Following a custom path in TweenJs
+http://www.html5gamedevs.com/topic/5960-using-tweens-to-create-a-movement-along-a-circular-path/
+
+
+
+
+
 ========================================================
 H5 游戏
 https://www.codeproject.com/articles/756189/master-chief-createjs-typescript
@@ -83,6 +98,9 @@ http://www.kopf.com.br/kaplof/how-to-use-createjs-on-typescript/
 https://stackoverflow.com/questions/33793654/typescript-class-createjs-eventdispatcher 
 
 
+
+html5 canvas 双缓冲
+https://stackoverflow.com/questions/2795269/does-html5-canvas-support-double-buffering
 
 
 ========================================================
