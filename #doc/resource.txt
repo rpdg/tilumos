@@ -38,6 +38,7 @@ createjs
 http://www.cnblogs.com/kenkofox/p/4153853.html
 http://createjs.cc/
 http://www.ajexoop.com/wordpress/2016/03/%e6%96%b0%e6%89%8b%e5%86%99createjs%e6%97%b6%e5%ae%b9%e6%98%93%e9%81%87%e5%88%b0%e7%9a%84%e5%9d%91%ef%bc%88%e6%8c%81%e7%bb%ad%e6%9b%b4%e6%96%b0%ef%bc%89.html
+http://www.ajexoop.com/wordpress/2017/04/%e7%ae%97%e6%b3%95%e7%9a%84%e8%89%ba%e6%9c%af%ef%bc%88%e9%99%84%e7%ae%97%e6%b3%95%e7%89%b9%e6%95%88demo%ef%bc%89.html
 
 
 http://www.ih5.cn/not-logged-in/template
@@ -115,7 +116,8 @@ createjs ½Ì³Ì
 http://www.ajexoop.com/wordpress/2016/03/%E6%96%B0%E6%89%8B%E5%86%99createjs%E6%97%B6%E5%AE%B9%E6%98%93%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89.html
 
 https://blog.toggl.com/better-multitouch-support-for-canvas-with-hammerjs/
-
+https://blog.toggl.com/6-performance-tips-for-html-canvas-and-createjs/
+https://stackoverflow.com/questions/27661920/is-pinch-zoom-supported-in-createjs
 
 
 =======================================
