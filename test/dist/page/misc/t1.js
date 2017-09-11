@@ -33,7 +33,9 @@ class Main {
         createjs.Tween.get(this.circle, { loop: true }).to({ guide: { path: [0, 0, 0, 200, 200, 200, 200, 0, 0, 0] } }, 7000);
         this.testShake();
         createjs.Touch.enable(this.stage);
-        createjs.Ticker.addEventListener('tick', (e) => this.tick(e));
+        this.stage.update();
+        //
+        //createjs.Ticker.addEventListener('tick', (e: createjs.TickerEvent) => this.tick(e));
     }
     tick(e) {
         if (this.shape.y < 10) {

@@ -1,7 +1,7 @@
 class Main {
     constructor(canvas) {
         this.initStage(canvas);
-        for (let i = 0, l = 80; i < l; i++) {
+        for (let i = 0, l = 50; i < l; i++) {
             let star = new Star();
             star.x = 200 * Math.random() + 100;
             star.y = 500 * Math.random() + 100;

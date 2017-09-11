@@ -2,7 +2,7 @@ class Star extends createjs.Shape {
     constructor() {
         super();
         this.size = Math.random() * Math.random() * Math.random() * 20 + 10;
-        let color = createjs.Graphics.getRGB(~~(Math.random() * 50) + 50, ~~(Math.random() * 50) + 200, 255, 0.7 + Math.random() * 0.3);
+        let color = createjs.Graphics.getRGB(~~(Math.random() * 50) + 50, ~~(Math.random() * 50) + 200, 255, 0.6 + Math.random() * 0.4);
         //console.log(colorHsl);
         let g = this.graphics;
         g.clear();
@@ -13,6 +13,11 @@ class Star extends createjs.Shape {
         this.mouseEnabled = false;
         let padding = 2;
         this.cache(-this.size - padding, -this.size - padding, this.size * 2 + padding * 2, this.size * 2 + padding * 2);
+        createjs.Ticker.addEventListener('tick', (e) => this.tick(e));
+    }
+    tick(e) {
+        this.x += (Math.random() - 0.5) * Math.random() * 10;
+        this.y += (Math.random() - 0.5) * Math.random() * 10;
     }
 }
 //# sourceMappingURL=/page/star/star.js.map

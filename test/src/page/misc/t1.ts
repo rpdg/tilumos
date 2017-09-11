@@ -60,7 +60,11 @@ class Main {
 		this.testShake();
 
 		createjs.Touch.enable(this.stage);
-		createjs.Ticker.addEventListener('tick', (e: createjs.TickerEvent) => this.tick(e));
+
+		this.stage.update();
+
+		//
+		//createjs.Ticker.addEventListener('tick', (e: createjs.TickerEvent) => this.tick(e));
 
 
 	}

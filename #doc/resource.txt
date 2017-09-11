@@ -28,7 +28,7 @@ http://www.html5tricks.com/demo/css3-sword/index.html
 
 
 
-Ë®²¨ÎÆ Water Ripple Effect 
+Ë®²¨ÎÆ Water Ripple Effect   createjs ripple pulse effect
 https://www.timewasters-place.com/water-ripple-effect-done-in-html-5/
 http://media.chikuyonok.ru/ripple/
 http://fff.cmiscm.com/#!/section/ripples
@@ -124,6 +124,7 @@ https://stackoverflow.com/questions/27661920/is-pinch-zoom-supported-in-createjs
 as3  sparkle effect
 
 http://www.freeactionscript.com/2008/12/sparkle-effect/
+http://www.freeactionscript.com/tag/sparkle-effect/
 http://stock-footages.com/sparkles+fairy+dust
 
 

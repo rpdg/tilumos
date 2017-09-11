@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "file": "clickTip.js",
+    "sourceRoot": "",
+    "sources": [
+        "/page/star/clickTip.ts"
+    ],
+    "names": [],
+    "mappings": "AAAA,cAAe,SAAQ,QAAQ,CAAC,KAAK;IACpC;QACC,KAAK,EAAE,CAAC;IACT,CAAC;CACD",
+    "sourcesContent": [
+        "class ClickTip extends createjs.Shape{\r\n\tconstructor(){\r\n\t\tsuper();\r\n\t}\r\n}"
+    ]
+}
