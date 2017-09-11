@@ -1,6 +1,6 @@
 Á£×Ó Ä§·¨°ô magic-wand  mouse  sparkle effect
 
-https://codepen.io/clockmaker/pen/aOqVBa  
+https://codepen.io/clockmaker/pen/aOqVBa      Particle Canvas using CreateJS
 http://timothypoon.com/blog/2011/01/19/html5-canvas-particle-animation/     html5 magic  sparkles
 http://www.freeactionscript.com/tag/sparkle-effect/    as3
 http://www.jqueryscript.net/demo/jQuery-Plugin-For-Magic-Cursor-Animations-jStars/
@@ -134,6 +134,8 @@ https://davidwalsh.name/canvas-demos
 
 http://spielzeugz.de/html5/liquid-particles/
 http://lab.hakim.se/magnetic/02/
+
+http://webjx.com/flash/example-16461.html  Êó±ê¸úËæ
 
 
 ==========================================

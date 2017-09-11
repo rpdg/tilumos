@@ -6,13 +6,13 @@ class Main {
 
 		for (let i = 0, l = 50; i < l; i++) {
 			let star = new Star();
-			star.x = 200 * Math.random() + 100;
-			star.y = 500 * Math.random() + 100;
 
 			this.stage.addChild(star);
 		}
 
 
+		createjs.Ticker.framerate = 30;
+		createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
 		createjs.Touch.enable(this.stage);
 		createjs.Ticker.addEventListener('tick', (e: createjs.TickerEvent) => this.tick(e));
 
@@ -43,6 +43,9 @@ class Main {
 
 
 //
-window.addEventListener('load', () => {
+function run(){
+	window.removeEventListener('load' , run);
 	new Main(<HTMLCanvasElement> document.getElementById('gameCanvas'));
-});
+}
+
+window.addEventListener('load', run);

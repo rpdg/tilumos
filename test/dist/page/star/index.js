@@ -3,10 +3,10 @@ class Main {
         this.initStage(canvas);
         for (let i = 0, l = 50; i < l; i++) {
             let star = new Star();
-            star.x = 200 * Math.random() + 100;
-            star.y = 500 * Math.random() + 100;
             this.stage.addChild(star);
         }
+        createjs.Ticker.framerate = 30;
+        createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
         createjs.Touch.enable(this.stage);
         createjs.Ticker.addEventListener('tick', (e) => this.tick(e));
     }
@@ -29,7 +29,9 @@ class Main {
     }
 }
 //
-window.addEventListener('load', () => {
+function run() {
+    window.removeEventListener('load', run);
     new Main(document.getElementById('gameCanvas'));
-});
+}
+window.addEventListener('load', run);
 //# sourceMappingURL=/page/star/index.js.map

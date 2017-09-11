@@ -18,11 +18,22 @@ class Star extends createjs.Shape {
 		let padding = 2;
 		this.cache(-this.size - padding, -this.size - padding, this.size * 2 + padding * 2, this.size * 2 + padding * 2);
 
-		createjs.Ticker.addEventListener('tick', (e: createjs.TickerEvent) => this.tick(e));
+
+		this.x = 200 * Math.random() + 100;
+		this.y = 500 * Math.random() + 100;
+
+		createjs.Ticker.addEventListener('tick', (e: createjs.TickerEvent)=>this.tick(e));
 	}
 
 	tick(e: createjs.TickerEvent) {
 		this.x += (Math.random() - 0.5) * Math.random() *10;
 		this.y += (Math.random() - 0.5) * Math.random() *10;
+		this.alpha = Math.random() * 0.6 + 0.4;
+		this.scaleX = this.scaleY = Math.random()*0.5 + 0.5;
+	}
+
+	dispose(){
+		createjs.Ticker.removeAllEventListeners('tick');
+		this.parent.removeChild(this);
 	}
 }
