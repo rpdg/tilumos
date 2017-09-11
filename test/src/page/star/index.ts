@@ -4,11 +4,19 @@ class Main {
 	constructor(canvas: HTMLCanvasElement) {
 		this.initStage(canvas);
 
-		for (let i = 0, l = 50; i < l; i++) {
+		for (let i = 0, l = 40; i < l; i++) {
 			let star = new Star();
 
 			this.stage.addChild(star);
 		}
+
+
+		let wand = new Wand(200, 200);
+		wand.rotation = -35;
+		this.stage.addChild(wand);
+
+
+		createjs.Tween.get(wand).wait(1000).to({x:500 , y : 500}, 1000).call(wand.breath);
 
 
 		createjs.Ticker.framerate = 30;

@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8e78d1a-5254-4995-aa5d-512796bd2bbc" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/star/wand.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dist/page/star/index.js" afterPath="$PROJECT_DIR$/../dist/page/star/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dist/page/star/index.js.map" afterPath="$PROJECT_DIR$/../dist/page/star/index.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dist/page/star/star.js" afterPath="$PROJECT_DIR$/../dist/page/star/star.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dist/page/star/star.js.map" afterPath="$PROJECT_DIR$/../dist/page/star/star.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/star/index.html" afterPath="$PROJECT_DIR$/page/star/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/star/index.ts" afterPath="$PROJECT_DIR$/page/star/index.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/star/star.ts" afterPath="$PROJECT_DIR$/page/star/star.ts" />
     </list>
@@ -20,18 +27,30 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/star/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+            <state relative-caret-position="198">
+              <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="t1.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/misc/t1.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="54" column="23" lean-forward="false" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="23" />
+              <folding>
+                <element signature="e#2854#3009#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/star/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+            <state relative-caret-position="114">
+              <caret line="18" column="88" lean-forward="false" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -40,8 +59,18 @@
       <file leaf-file-name="star.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/star/star.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="31" column="53" lean-forward="false" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+            <state relative-caret-position="132">
+              <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wand.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/page/star/wand.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -110,11 +139,12 @@
         <option value="$PROJECT_DIR$/page/t1.html" />
         <option value="$PROJECT_DIR$/css/global.scss" />
         <option value="$PROJECT_DIR$/page/t1.ts" />
-        <option value="$PROJECT_DIR$/page/star/index.html" />
         <option value="$PROJECT_DIR$/page/star/clickTip.ts" />
         <option value="$PROJECT_DIR$/page/misc/t1.ts" />
-        <option value="$PROJECT_DIR$/page/star/index.ts" />
+        <option value="$PROJECT_DIR$/page/star/index.html" />
         <option value="$PROJECT_DIR$/page/star/star.ts" />
+        <option value="$PROJECT_DIR$/page/star/index.ts" />
+        <option value="$PROJECT_DIR$/page/star/wand.ts" />
       </list>
     </option>
   </component>
@@ -271,12 +301,12 @@
       <workItem from="1504838458668" duration="1556000" />
       <workItem from="1504850308686" duration="7148000" />
       <workItem from="1505095362116" duration="1484000" />
-      <workItem from="1505113350445" duration="4698000" />
+      <workItem from="1505113350445" duration="7582000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40839000" />
+    <option name="totallyTimeSpent" value="43723000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="740" extended-state="6" />
@@ -287,7 +317,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3196046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24217463" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -312,22 +342,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/page/star/clickTip.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/star/star.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="134" lean-forward="false" selection-start-line="7" selection-start-column="134" selection-end-line="7" selection-end-column="134" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page/star/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -651,24 +665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/misc/t1.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="61" column="23" lean-forward="false" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="23" />
-          <folding>
-            <element signature="e#2854#3009#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/star/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@types/easeljs/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -677,18 +673,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/page/star/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/page/star/star.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="31" column="53" lean-forward="false" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+        <state relative-caret-position="132">
+          <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/misc/t1.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="54" column="23" lean-forward="false" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="23" />
+          <folding>
+            <element signature="e#2854#3009#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/tweenjs/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="155" column="8" lean-forward="false" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page/star/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+        <state relative-caret-position="114">
+          <caret line="18" column="88" lean-forward="false" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/star/wand.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
           <folding />
         </state>
       </provider>
