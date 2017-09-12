@@ -7,7 +7,8 @@ http://www.jqueryscript.net/demo/jQuery-Plugin-For-Magic-Cursor-Animations-jStar
 http://www.snazzyspace.com/tumblr/mouse-sparkles.php/
 http://www.sucaijiayuan.com/Js/html5-css3/968.html
 https://www.sourcecodester.com/node/10067
-https://github.com/andyr0id/createjs_particles
+https://github.com/andyr0id/createjs_particles    particle
+http://ics-web.jp/projects/particle-develop/     particle
 
 
 
