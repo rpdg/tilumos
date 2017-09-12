@@ -2,9 +2,10 @@ $w: 100%;
 $h: 100%;
 $bg: #000;
 
-html,body{
+html,body ,#gameCanvas{
 	width: $w;
 	height: $h;
+	background-color: $bg;
 }
 
 html, body, div, span, canvas {
@@ -14,6 +15,3 @@ html, body, div, span, canvas {
 }
 
 
-#gameCanvas{
-	background-color: $bg;
-}
