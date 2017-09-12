@@ -59,7 +59,7 @@ class Main {
         this.stage.scaleX = stageScale;
         this.stage.scaleY = stageScale;
         this.stage.setBounds(0, 0, 750, 1206);
-        this.drawGrid();
+        //this.drawGrid();
         if (createjs.Touch.isSupported()) {
             createjs.Touch.enable(this.stage);
         }
