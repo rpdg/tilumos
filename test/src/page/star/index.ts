@@ -8,8 +8,8 @@ class Main {
 
 
 		let clickTip = new ClickTip();
-		clickTip.x = 100;
-		clickTip.y = 100;
+		clickTip.x = 200;
+		clickTip.y = 200;
 		this.stage.addChild(clickTip);
 		clickTip.pulsate();
 
@@ -87,7 +87,7 @@ class Main {
 		this.stage.scaleY = stageScale;
 
 		this.stage.setBounds(0, 0, 750, 1206);
-		//this.drawGrid();
+		this.drawGrid();
 
 		if (createjs.Touch.isSupported()) {
 			createjs.Touch.enable(this.stage);
