@@ -68,7 +68,7 @@ class Main {
 
 			if (that.stars) {
 				for (let i = that.stars.length - 1; i > -1; --i) {
-					console.log(i);
+					//console.log(i);
 					let star = <Star> that.stars.splice(i, 1)[0];
 					star.dispose();
 					star = null;
