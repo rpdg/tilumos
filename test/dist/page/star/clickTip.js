@@ -1,5 +1,6 @@
-var Tween = createjs.Tween;
 var Shape = createjs.Shape;
+var Tween = createjs.Tween;
+var Timeline = createjs.Timeline;
 class ClickTip extends createjs.Container {
     constructor() {
         super();
@@ -15,7 +16,14 @@ class ClickTip extends createjs.Container {
         let t2 = Tween.get(this.c2).wait(150).to({ alpha: 0.7, scaleX: 1, scaleY: 1 }, 500, createjs.Ease.sineIn).to({ alpha: 0, scaleX: 1.2, scaleY: 1.2, visible: false }, 1200, createjs.Ease.sineOut);
         let t3 = Tween.get(this.c3).wait(300).to({ alpha: 0.4, scaleX: 1, scaleY: 1 }, 500, createjs.Ease.sineIn).to({ alpha: 0, scaleX: 1.2, scaleY: 1.2, visible: false }, 1200, createjs.Ease.sineOut);
         //create the Timeline
-        let timeline = new createjs.Timeline([t1, t2, t3], {}, { loop: true });
+        this.tl = new createjs.Timeline([t1, t2, t3], {}, { loop: true });
+    }
+    dispose() {
+        Tween.removeTweens(this.c1);
+        Tween.removeTweens(this.c2);
+        Tween.removeTweens(this.c3);
+        this.removeAllChildren();
+        this.parent.removeChild(this);
     }
 }
 class Circle extends Shape {

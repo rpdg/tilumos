@@ -1,4 +1,4 @@
-class Star extends createjs.Shape {
+class Star extends createjs.Shape implements IDispose{
 	size: number;
 
 	constructor() {

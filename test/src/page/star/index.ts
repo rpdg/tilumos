@@ -31,16 +31,30 @@ class Main {
 		createjs.Ticker.framerate = 30;
 		createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
 		createjs.Touch.enable(this.stage);
+
 		createjs.Ticker.addEventListener('tick', (e: createjs.TickerEvent) => this.tick(e));
+
+
+		clickTip.on('pressmove', function (evt: createjs.MouseEvent) {
+			clickTip.x = evt.stageX;
+			clickTip.y = evt.stageY;
+
+
+			//clickTip.dispose()
+		});
+
+		clickTip.on('pressup', function (evt: createjs.MouseEvent) {
+			clickTip.dispose()
+		});
 
 	}
 
 	private drawGrid() {
 		let rect = this.stage.getBounds();
 		let to = {
-				x: rect.width,
-				y: rect.height,
-			};
+			x: rect.width,
+			y: rect.height,
+		};
 
 		let gap = 50;
 		let cur, i, freq;

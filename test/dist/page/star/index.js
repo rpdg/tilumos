@@ -19,6 +19,14 @@ class Main {
         createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
         createjs.Touch.enable(this.stage);
         createjs.Ticker.addEventListener('tick', (e) => this.tick(e));
+        clickTip.on('pressmove', function (evt) {
+            clickTip.x = evt.stageX;
+            clickTip.y = evt.stageY;
+            //clickTip.dispose()
+        });
+        clickTip.on('pressup', function (evt) {
+            clickTip.dispose();
+        });
     }
     drawGrid() {
         let rect = this.stage.getBounds();

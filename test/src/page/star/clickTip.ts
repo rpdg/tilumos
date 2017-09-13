@@ -1,11 +1,15 @@
-import Tween = createjs.Tween;
 import Shape = createjs.Shape;
+import Tween = createjs.Tween;
+import Timeline = createjs.Timeline;
 
-class ClickTip extends createjs.Container {
+class ClickTip extends createjs.Container implements IDispose{
 
 	c1 : Circle;
 	c2 : Circle;
 	c3 : Circle;
+
+
+	tl : Timeline ;
 
 	constructor() {
 		super();
@@ -28,8 +32,20 @@ class ClickTip extends createjs.Container {
 		let t3 = Tween.get(this.c3).wait(300).to({ alpha: 0.4, scaleX: 1, scaleY: 1 }, 500 , createjs.Ease.sineIn).to({ alpha: 0, scaleX: 1.2, scaleY: 1.2, visible:false}, 1200 , createjs.Ease.sineOut);
 
 		//create the Timeline
-		let timeline = new createjs.Timeline([t1 , t2, t3] , {} , {loop:true});
+		this.tl = new createjs.Timeline([t1 , t2, t3] , {} , {loop:true});
 	}
+
+
+	dispose(){
+		Tween.removeTweens(this.c1);
+		Tween.removeTweens(this.c2);
+		Tween.removeTweens(this.c3);
+
+		this.removeAllChildren();
+
+		this.parent.removeChild(this);
+	}
+
 }
 
 class Circle extends Shape{
