@@ -15,7 +15,7 @@ class Star extends createjs.Shape {
         this.cache(-this.size - padding, -this.size - padding, this.size * 2 + padding * 2, this.size * 2 + padding * 2);
         this.x = 150 * Math.random() + 100;
         this.y = 150 * Math.random() + 100;
-        createjs.Ticker.addEventListener('tick', (e) => this.tick(e));
+        createjs.Ticker.addEventListener('tick.star', (e) => this.tick(e));
     }
     tick(e) {
         this.x += (Math.random() - 0.5) * Math.random() * 4;
@@ -24,7 +24,7 @@ class Star extends createjs.Shape {
         this.scaleX = this.scaleY = Math.random() * 0.5 + 0.5;
     }
     dispose() {
-        createjs.Ticker.removeAllEventListeners('tick');
+        createjs.Ticker.removeAllEventListeners('tick.star');
         this.parent.removeChild(this);
     }
 }

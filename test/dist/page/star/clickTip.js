@@ -12,9 +12,32 @@ class ClickTip extends createjs.Container {
         this.addChild(this.c3);
     }
     pulsate() {
-        let t1 = Tween.get(this.c1).to({ alpha: 1, scaleX: 1, scaleY: 1 }, 500, createjs.Ease.sineIn).to({ alpha: 0, scaleX: 1.2, scaleY: 1.2, visible: false }, 1200, createjs.Ease.sineOut);
-        let t2 = Tween.get(this.c2).wait(150).to({ alpha: 0.7, scaleX: 1, scaleY: 1 }, 500, createjs.Ease.sineIn).to({ alpha: 0, scaleX: 1.2, scaleY: 1.2, visible: false }, 1200, createjs.Ease.sineOut);
-        let t3 = Tween.get(this.c3).wait(300).to({ alpha: 0.4, scaleX: 1, scaleY: 1 }, 500, createjs.Ease.sineIn).to({ alpha: 0, scaleX: 1.2, scaleY: 1.2, visible: false }, 1200, createjs.Ease.sineOut);
+        let t1 = Tween.get(this.c1).to({ alpha: 1, scaleX: 1, scaleY: 1 }, 500, createjs.Ease.sineIn).to({
+            alpha: 0,
+            scaleX: 1.2,
+            scaleY: 1.2,
+            visible: false,
+        }, 1200, createjs.Ease.sineOut);
+        let t2 = Tween.get(this.c2).wait(150).to({
+            alpha: 0.7,
+            scaleX: 1,
+            scaleY: 1,
+        }, 500, createjs.Ease.sineIn).to({
+            alpha: 0,
+            scaleX: 1.2,
+            scaleY: 1.2,
+            visible: false,
+        }, 1200, createjs.Ease.sineOut);
+        let t3 = Tween.get(this.c3).wait(300).to({
+            alpha: 0.4,
+            scaleX: 1,
+            scaleY: 1,
+        }, 500, createjs.Ease.sineIn).to({
+            alpha: 0,
+            scaleX: 1.2,
+            scaleY: 1.2,
+            visible: false,
+        }, 1200, createjs.Ease.sineOut);
         //create the Timeline
         this.tl = new createjs.Timeline([t1, t2, t3], {}, { loop: true });
     }
@@ -34,6 +57,7 @@ class Circle extends Shape {
         g.endStroke();
         this.alpha = 0;
         this.scaleX = this.scaleY = 0.2;
+        this.cache(-r * 1.5, -r * 1.5, r * 2 * 1.5, r * 2 * 1.5);
     }
     dispose() {
         //console.log(this);

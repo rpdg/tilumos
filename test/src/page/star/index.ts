@@ -3,6 +3,7 @@ import Shape = createjs.Shape;
 class Main {
 	private stage: createjs.Stage;
 	private ratio: number;
+	private stars: Star[];
 
 	constructor(canvas: HTMLCanvasElement) {
 		this.initStage(canvas);
@@ -15,9 +16,11 @@ class Main {
 		clickTip.pulsate();
 
 
+		this.stars = [];
 		for (let i = 0, l = 40; i < l; i++) {
 			let star = new Star();
 			this.stage.addChild(star);
+			this.stars.push(star);
 		}
 
 
@@ -57,7 +60,22 @@ class Main {
 		});
 
 		wand.on('pressup', function (evt: createjs.MouseEvent) {
-			clickTip.dispose();
+			if (clickTip) {
+				clickTip.dispose();
+				clickTip = null;
+			}
+
+
+			if (that.stars) {
+				for (let i = that.stars.length - 1; i > -1; --i) {
+					console.log(i);
+					let star = <Star> that.stars.splice(i, 1)[0];
+					star.dispose();
+					star = null;
+				}
+				that.stars = null;
+			}
+
 		});
 
 	}

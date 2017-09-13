@@ -22,7 +22,7 @@ class Star extends createjs.Shape implements IDispose{
 		this.x = 150 * Math.random() + 100;
 		this.y = 150 * Math.random() + 100;
 
-		createjs.Ticker.addEventListener('tick', (e: createjs.TickerEvent)=>this.tick(e));
+		createjs.Ticker.addEventListener('tick.star', (e: createjs.TickerEvent)=>this.tick(e));
 	}
 
 	tick(e: createjs.TickerEvent) {
@@ -33,7 +33,7 @@ class Star extends createjs.Shape implements IDispose{
 	}
 
 	dispose(){
-		createjs.Ticker.removeAllEventListeners('tick');
+		createjs.Ticker.removeAllEventListeners('tick.star');
 		this.parent.removeChild(this);
 	}
 }

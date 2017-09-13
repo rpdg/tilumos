@@ -2,14 +2,14 @@ import Shape = createjs.Shape;
 import Tween = createjs.Tween;
 import Timeline = createjs.Timeline;
 
-class ClickTip extends createjs.Container implements IDispose{
+class ClickTip extends createjs.Container implements IDispose {
 
-	c1 : Circle;
-	c2 : Circle;
-	c3 : Circle;
+	c1: Circle;
+	c2: Circle;
+	c3: Circle;
 
 
-	tl : Timeline ;
+	tl: Timeline;
 
 	constructor() {
 		super();
@@ -27,16 +27,39 @@ class ClickTip extends createjs.Container implements IDispose{
 	}
 
 	pulsate() {
-		let t1 = Tween.get(this.c1).to({ alpha: 1, scaleX: 1, scaleY: 1 }, 500 , createjs.Ease.sineIn).to({ alpha: 0, scaleX: 1.2, scaleY: 1.2, visible:false}, 1200 , createjs.Ease.sineOut);
-		let t2 = Tween.get(this.c2).wait(150).to({ alpha: 0.7, scaleX: 1, scaleY: 1 }, 500 , createjs.Ease.sineIn).to({ alpha: 0, scaleX: 1.2, scaleY: 1.2, visible:false}, 1200 , createjs.Ease.sineOut);
-		let t3 = Tween.get(this.c3).wait(300).to({ alpha: 0.4, scaleX: 1, scaleY: 1 }, 500 , createjs.Ease.sineIn).to({ alpha: 0, scaleX: 1.2, scaleY: 1.2, visible:false}, 1200 , createjs.Ease.sineOut);
+		let t1 = Tween.get(this.c1).to({alpha: 1, scaleX: 1, scaleY: 1}, 500, createjs.Ease.sineIn).to({
+			alpha: 0,
+			scaleX: 1.2,
+			scaleY: 1.2,
+			visible: false,
+		}, 1200, createjs.Ease.sineOut);
+		let t2 = Tween.get(this.c2).wait(150).to({
+			alpha: 0.7,
+			scaleX: 1,
+			scaleY: 1,
+		}, 500, createjs.Ease.sineIn).to({
+			alpha: 0,
+			scaleX: 1.2,
+			scaleY: 1.2,
+			visible: false,
+		}, 1200, createjs.Ease.sineOut);
+		let t3 = Tween.get(this.c3).wait(300).to({
+			alpha: 0.4,
+			scaleX: 1,
+			scaleY: 1,
+		}, 500, createjs.Ease.sineIn).to({
+			alpha: 0,
+			scaleX: 1.2,
+			scaleY: 1.2,
+			visible: false,
+		}, 1200, createjs.Ease.sineOut);
 
 		//create the Timeline
-		this.tl = new createjs.Timeline([t1 , t2, t3] , {} , {loop:true});
+		this.tl = new createjs.Timeline([t1, t2, t3], {}, {loop: true});
 	}
 
 
-	dispose(){
+	dispose() {
 		this.c1.dispose();
 		this.c2.dispose();
 		this.c3.dispose();
@@ -46,8 +69,8 @@ class ClickTip extends createjs.Container implements IDispose{
 
 }
 
-class Circle extends Shape implements IDispose{
-	constructor(r :number){
+class Circle extends Shape implements IDispose {
+	constructor(r: number) {
 		super();
 
 		let g = this.graphics;
@@ -57,9 +80,11 @@ class Circle extends Shape implements IDispose{
 
 		this.alpha = 0;
 		this.scaleX = this.scaleY = 0.2;
+
+		this.cache(-r * 1.5, -r * 1.5, r * 2 * 1.5, r * 2 * 1.5);
 	}
 
-	dispose(){
+	dispose() {
 		//console.log(this);
 		Tween.removeTweens(this);
 		this.parent.removeChild(this);

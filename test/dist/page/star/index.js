@@ -7,9 +7,11 @@ class Main {
         clickTip.y = 200;
         this.stage.addChild(clickTip);
         clickTip.pulsate();
+        this.stars = [];
         for (let i = 0, l = 40; i < l; i++) {
             let star = new Star();
             this.stage.addChild(star);
+            this.stars.push(star);
         }
         let wand = new Wand(200, 200);
         wand.rotation = -35;
@@ -33,7 +35,19 @@ class Main {
             console.log(evt.stageX, evt.stageY);
         });
         wand.on('pressup', function (evt) {
-            clickTip.dispose();
+            if (clickTip) {
+                clickTip.dispose();
+                clickTip = null;
+            }
+            if (that.stars) {
+                for (let i = that.stars.length - 1; i > -1; --i) {
+                    console.log(i);
+                    let star = that.stars.splice(i, 1)[0];
+                    star.dispose();
+                    star = null;
+                }
+                that.stars = null;
+            }
         });
     }
     drawGrid() {

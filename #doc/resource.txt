@@ -124,7 +124,7 @@ https://stackoverflow.com/questions/27661920/is-pinch-zoom-supported-in-createjs
 https://stackoverflow.com/questions/20340796/how-to-clear-createjs-code-and-canvas-completely    °²È«ÒÆ³ýstage
 https://stackoverflow.com/questions/18357149/safely-disposing-of-a-stage-element-in-easeljs-createjs
 
-
+http://blog.csdn.net/lanix516/article/details/47326093
 
 
 =======================================
