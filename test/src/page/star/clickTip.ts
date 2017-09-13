@@ -37,18 +37,16 @@ class ClickTip extends createjs.Container implements IDispose{
 
 
 	dispose(){
-		Tween.removeTweens(this.c1);
-		Tween.removeTweens(this.c2);
-		Tween.removeTweens(this.c3);
-
-		this.removeAllChildren();
+		this.c1.dispose();
+		this.c2.dispose();
+		this.c3.dispose();
 
 		this.parent.removeChild(this);
 	}
 
 }
 
-class Circle extends Shape{
+class Circle extends Shape implements IDispose{
 	constructor(r :number){
 		super();
 
@@ -59,5 +57,11 @@ class Circle extends Shape{
 
 		this.alpha = 0;
 		this.scaleX = this.scaleY = 0.2;
+	}
+
+	dispose(){
+		//console.log(this);
+		Tween.removeTweens(this);
+		this.parent.removeChild(this);
 	}
 }

@@ -19,10 +19,9 @@ class ClickTip extends createjs.Container {
         this.tl = new createjs.Timeline([t1, t2, t3], {}, { loop: true });
     }
     dispose() {
-        Tween.removeTweens(this.c1);
-        Tween.removeTweens(this.c2);
-        Tween.removeTweens(this.c3);
-        this.removeAllChildren();
+        this.c1.dispose();
+        this.c2.dispose();
+        this.c3.dispose();
         this.parent.removeChild(this);
     }
 }
@@ -35,6 +34,11 @@ class Circle extends Shape {
         g.endStroke();
         this.alpha = 0;
         this.scaleX = this.scaleY = 0.2;
+    }
+    dispose() {
+        //console.log(this);
+        Tween.removeTweens(this);
+        this.parent.removeChild(this);
     }
 }
 //# sourceMappingURL=/page/star/clickTip.js.map

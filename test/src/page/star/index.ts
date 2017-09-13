@@ -2,6 +2,7 @@ import Shape = createjs.Shape;
 
 class Main {
 	private stage: createjs.Stage;
+	private ratio: number;
 
 	constructor(canvas: HTMLCanvasElement) {
 		this.initStage(canvas);
@@ -35,16 +36,28 @@ class Main {
 		createjs.Ticker.addEventListener('tick', (e: createjs.TickerEvent) => this.tick(e));
 
 
+		let that = this;
 		clickTip.on('pressmove', function (evt: createjs.MouseEvent) {
-			clickTip.x = evt.stageX;
-			clickTip.y = evt.stageY;
+			let s = <Shape> this;
+			let p: createjs.Point = s.localToGlobal(evt.rawX, evt.rawY);
+
+			console.log(evt, s, p);
+
+
+			clickTip.x = evt.rawX * that.ratio;
+			clickTip.y = evt.rawY * that.ratio;
 
 
 			//clickTip.dispose()
 		});
 
-		clickTip.on('pressup', function (evt: createjs.MouseEvent) {
-			clickTip.dispose()
+		this.stage.on('pressup', function (evt: createjs.MouseEvent) {
+			console.log(evt.stageX, evt.stageY);
+			console.log(evt.stageX, evt.stageY);
+		});
+
+		wand.on('pressup', function (evt: createjs.MouseEvent) {
+			clickTip.dispose();
 		});
 
 	}
@@ -95,6 +108,7 @@ class Main {
 		canvas.height = h;
 
 		let stageScale = w / 750; //宽度自适应；
+		this.ratio = 750 / w;
 		//let stageScale = h/1206; //高度自适应两者选一
 		this.stage = new createjs.Stage(canvas);
 		this.stage.scaleX = stageScale;

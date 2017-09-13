@@ -19,12 +19,20 @@ class Main {
         createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
         createjs.Touch.enable(this.stage);
         createjs.Ticker.addEventListener('tick', (e) => this.tick(e));
+        let that = this;
         clickTip.on('pressmove', function (evt) {
-            clickTip.x = evt.stageX;
-            clickTip.y = evt.stageY;
+            let s = this;
+            let p = s.localToGlobal(evt.rawX, evt.rawY);
+            console.log(evt, s, p);
+            clickTip.x = evt.rawX * that.ratio;
+            clickTip.y = evt.rawY * that.ratio;
             //clickTip.dispose()
         });
-        clickTip.on('pressup', function (evt) {
+        this.stage.on('pressup', function (evt) {
+            console.log(evt.stageX, evt.stageY);
+            console.log(evt.stageX, evt.stageY);
+        });
+        wand.on('pressup', function (evt) {
             clickTip.dispose();
         });
     }
@@ -62,6 +70,7 @@ class Main {
         canvas.width = w;
         canvas.height = h;
         let stageScale = w / 750; //宽度自适应；
+        this.ratio = 750 / w;
         //let stageScale = h/1206; //高度自适应两者选一
         this.stage = new createjs.Stage(canvas);
         this.stage.scaleX = stageScale;
