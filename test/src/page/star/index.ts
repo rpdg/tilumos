@@ -38,6 +38,8 @@ class Main {
 
 		createjs.Ticker.addEventListener('tick', (e: createjs.TickerEvent) => this.tick(e));
 
+		this.stage.update();
+
 
 		let that = this;
 		clickTip.on('pressmove', function (evt: createjs.MouseEvent) {

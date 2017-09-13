@@ -15,7 +15,7 @@ class Star extends createjs.Shape {
         this.cache(-this.size - padding, -this.size - padding, this.size * 2 + padding * 2, this.size * 2 + padding * 2);
         this.x = 150 * Math.random() + 100;
         this.y = 150 * Math.random() + 100;
-        createjs.Ticker.addEventListener('tick.star', (e) => this.tick(e));
+        //createjs.Ticker.addEventListener('tick.star', (e: createjs.TickerEvent)=>this.tick(e));
     }
     tick(e) {
         this.x += (Math.random() - 0.5) * Math.random() * 4;

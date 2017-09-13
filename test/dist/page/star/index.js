@@ -21,6 +21,7 @@ class Main {
         createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
         createjs.Touch.enable(this.stage);
         createjs.Ticker.addEventListener('tick', (e) => this.tick(e));
+        this.stage.update();
         let that = this;
         clickTip.on('pressmove', function (evt) {
             let s = this;
