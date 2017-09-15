@@ -74,7 +74,7 @@ class ClickTip extends createjs.Container implements IDispose {
 		this.c3.dispose();
 		this.c3 = null;
 
-		//this.parent.removeChild(this);
+		this.parent.removeChild(this);
 	}
 
 }

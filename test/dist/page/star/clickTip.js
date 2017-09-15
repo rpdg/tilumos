@@ -54,7 +54,7 @@ class ClickTip extends createjs.Container {
         this.c2 = null;
         this.c3.dispose();
         this.c3 = null;
-        //this.parent.removeChild(this);
+        this.parent.removeChild(this);
     }
 }
 class Circle extends Shape {
