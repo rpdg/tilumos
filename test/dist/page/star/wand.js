@@ -14,10 +14,10 @@ class Wand extends createjs.Shape {
     tick(e) {
         if (this.breathing) {
             if (this.forward) {
-                this.y += 0.5;
+                this.y += 0.3;
             }
             else {
-                this.y -= 0.5;
+                this.y -= 0.3;
             }
             if (this.y < this.min || this.y > this.max) {
                 this.forward = !this.forward;
@@ -26,8 +26,8 @@ class Wand extends createjs.Shape {
     }
     breath(b = true) {
         if (b) {
-            this.min = this.y - 5;
-            this.max = this.y + 5;
+            this.min = this.y - 7;
+            this.max = this.y + 7;
         }
         this.breathing = b;
     }

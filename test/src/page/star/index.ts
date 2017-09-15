@@ -1,12 +1,13 @@
 import Shape = createjs.Shape;
 
+
 class Main {
 	private stage: createjs.Stage;
 	private ratio: number;
 	private stars: Star[];
 
-	constructor(canvas: HTMLCanvasElement) {
-		this.initStage(canvas);
+	constructor(canvas: HTMLCanvasElement, draftWidth?: number = 750) {
+		this.initStage(canvas ,draftWidth);
 
 
 		let clickTip = new ClickTip();
@@ -82,7 +83,7 @@ class Main {
 
 	}
 
-	private drawGrid() {
+	/*private drawGrid() {
 		let rect = this.stage.getBounds();
 		let to = {
 			x: rect.width,
@@ -113,13 +114,13 @@ class Main {
 		g.endStroke();
 
 		this.stage.addChild(s);
-	}
+	}*/
 
 	private tick(e: createjs.TickerEvent) {
 		this.stage.update(e);
 	}
 
-	private initStage(canvas: HTMLCanvasElement) {
+	private initStage(canvas: HTMLCanvasElement, draftWidth: number) {
 		let w = document.body.clientWidth;
 		let h = document.body.clientHeight;
 
@@ -127,15 +128,15 @@ class Main {
 		canvas.width = w;
 		canvas.height = h;
 
-		let stageScale = w / 750; //宽度自适应；
-		this.ratio = 750 / w;
+		let stageScale = w / draftWidth; //宽度自适应；
+		this.ratio = draftWidth / w;
 		//let stageScale = h/1206; //高度自适应两者选一
 		this.stage = new createjs.Stage(canvas);
 		this.stage.scaleX = stageScale;
 		this.stage.scaleY = stageScale;
 
-		this.stage.setBounds(0, 0, 750, 1206);
-		this.drawGrid();
+		this.stage.setBounds(0, 0, w * this.ratio, h * this.ratio);
+		Util.drawGrid(this.stage, 100);
 
 		if (createjs.Touch.isSupported()) {
 			createjs.Touch.enable(this.stage);
