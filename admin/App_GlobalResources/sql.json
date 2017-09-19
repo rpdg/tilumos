@@ -1,0 +1,15 @@
+{
+	"Provider": "SQLite",
+	"Version": "3" ,
+	"Schema": "main",
+	"Tables": {
+		"t_clicks" : {
+			"Name" : "t_clicks" ,
+			"PrimaryKey": "id",
+			"Columns" : {
+				"id":{"Name":"id","AllowNull":true,"Type":"Int16","AutoGenerate":true},
+				"btnName":{"Name":"btnName","AllowNull":false,"Type":"String","AutoGenerate":false}
+			}
+		}
+	}
+}
