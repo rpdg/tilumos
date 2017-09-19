@@ -30,6 +30,8 @@ using Lyu.Data.Client;
 using Lyu.Json;
 using Lyu.Text;
 
+using admin.Bll;
+
 namespace admin
 {
 	/// <summary>
@@ -58,9 +60,11 @@ namespace admin
 			//Response.Write(Delete("sd"));
 			
 			
-			var p = GetPage(1);
+			var p = ClickNoteBll.GetPage(1);
 			
-			Util.WriteJson(Response, p );
+			Response.WriteJson(p);
+			
+			
 
 		}
 		#endregion
@@ -68,18 +72,17 @@ namespace admin
 		
 		
 		
-		DataPage GetPage( int pageIndex = 0 , int pageSize = 10)
+		DataPage GetPage(int pageIndex = 0, int pageSize = 10)
 		{
 			ClickNoteDal dal = new ClickNoteDal();
 			var wheres = new Dictionary<string, object>() {
 				
 			};
-			var which = new QueryObj
-            {
-                //Select = "exhibition_id,exhibition_name,type,time,address,limits,post_time,registration_count,attendance_count,bonus",
-                SortOn = "id",
-                SortType = "DESC"
-            };
+			var which = new QueryObj {
+				//Select = "exhibition_id,exhibition_name,type,time,address,limits,post_time,registration_count,attendance_count,bonus",
+				SortOn = "id",
+				SortType = "DESC"
+			};
 			return dal.Get(wheres, which, pageSize, pageIndex);
 		}
 		

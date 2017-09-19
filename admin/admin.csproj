@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Bll\ClickNote.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
@@ -74,6 +75,9 @@
     <None Include="Default.aspx" />
     <None Include="Global.asax" />
     <None Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
