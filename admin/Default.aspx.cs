@@ -60,7 +60,7 @@ namespace admin
 			//Response.Write(Delete("sd"));
 			
 			
-			var p = ClickNoteBll.GetPage(1);
+			var p = ClickNoteBll.GetPage(1 , 10);
 			
 			Response.WriteJson(p);
 			
