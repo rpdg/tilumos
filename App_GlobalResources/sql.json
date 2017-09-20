@@ -8,6 +8,17 @@
 			"PrimaryKey": "id",
 			"Columns" : {
 				"id":{"Name":"id","AllowNull":true,"Type":"Int16","AutoGenerate":true},
+				"btnName":{"Name":"btnName","AllowNull":false,"Type":"String","AutoGenerate":false},
+				"ip":{"Name":"ip","AllowNull":true,"Type":"String","AutoGenerate":false},
+				"time":{"Name":"time","AllowNull":true,"Type":"String","AutoGenerate":false},
+				"browser":{"Name":"browser","AllowNull":true,"Type":"String","AutoGenerate":false}
+			}
+		},
+		"v_clicksCount" : {
+			"Name" : "v_clicksCount" ,
+			"PrimaryKey": "btnName",
+			"Columns" : {
+				"clicks":{"Name":"clicks","AllowNull":false,"Type":"Int16","AutoGenerate":false},
 				"btnName":{"Name":"btnName","AllowNull":false,"Type":"String","AutoGenerate":false}
 			}
 		}

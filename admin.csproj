@@ -66,6 +66,7 @@
     </Compile>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Bll\ClickNote.cs" />
+    <Compile Include="Bll\Authen.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
