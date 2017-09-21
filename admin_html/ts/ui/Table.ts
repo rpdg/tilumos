@@ -192,7 +192,7 @@ class Table extends AjaxDisplayObject {
 				next_text: "下页",
 				load_first_page: false,
 				callback: (pageIndex, paginationContainer) => {
-					that._param.pageNo = pageIndex + 1;
+					that._param.pageIndex = pageIndex;
 					that.update(this._param);
 					//that.iptPageGo.val(that._param.pageNo);
 					return false;
@@ -212,7 +212,7 @@ class Table extends AjaxDisplayObject {
 			this.pagination = cfg.pagination;
 
 			this._param = $.extend({
-				pageNo: 1,
+				pageIndex: 0,
 				pageSize: cfg.pagination.pageSize
 			}, cfg._params);
 		}
@@ -238,8 +238,9 @@ class Table extends AjaxDisplayObject {
 	}
 
 	bindHandler(json) {
+		//console.log(json);
 		if (this.pagination) {
-			this.makePager(~~json.totalRecord);
+			this.makePager(~~json.page.rowCount);
 		}
 		if (typeof this.onBind === 'function') this.onBind(json);
 	}
@@ -266,16 +267,16 @@ class Table extends AjaxDisplayObject {
 		let pageCount = Math.ceil(rowCount / this._param.pageSize);
 		if (pageCount === 0) pageCount = 1;
 
-		if (this._param.pageNo > 1 && pageCount < this.pageCount) {
-			this._param.pageNo -= (this.pageCount - pageCount);
+		if (this._param.pageIndex > 0 && pageCount < this.pageCount) {
+			this._param.pageIndex -= (this.pageCount - pageCount);
 			return setTimeout(() => this.update(), 10);
 		}
 
 		this.pageCount = pageCount;
-		let pageNum = this._param.pageNo;
+		let pageIndex = this._param.pageIndex;
 
 		if (this.tPager) {
-			this.pagination.current_page = this._param.pageNo - 1;
+			this.pagination.current_page = this._param.pageIndex  ;
 			this.tPager.pagination(rowCount, this.pagination);
 
 			if (this.pagination.showCount) {
@@ -306,10 +307,10 @@ class Table extends AjaxDisplayObject {
 				else
 					this.pageTemplate = '共<span class="bt">${rowCount}</span>条记录 , 第<span class="bf">${pageNum}</span> / <span class="bc">${pageCount}</span>页';
 
-				this.pageCounter.html(format.json(this.pageTemplate, {rowCount, pageNum, pageCount}));
+				this.pageCounter.html(format.json(this.pageTemplate, {rowCount, pageIndex, pageCount}));
 
 				let bf = this.pageCounter.find('.bf');
-				this.iptPageGo.val(pageNum);//.data('total' , pageCount);
+				this.iptPageGo.val(pageIndex);//.data('total' , pageCount);
 				bf.replaceWith(this.iptPageGo);
 			}
 
@@ -330,7 +331,7 @@ class Table extends AjaxDisplayObject {
 				pageSelector.on('change.opg', function () {
 
 					that.pagination.items_per_page = that._param.pageSize = ~~(this.options[this.selectedIndex] as HTMLOptionElement).value;
-					that._param.pageNo = 1;
+					that._param.pageIndex = 0;
 					that.update(that._param);
 
 					return false;

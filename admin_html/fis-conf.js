@@ -9,19 +9,29 @@ fis.match('**', {
 });
 
 
-var currentMedia = fis.project.currentMedia();
+//var currentMedia = fis.project.currentMedia();
 
 
 
 fis.match('**/*.html', {
 	parser: fis.plugin('art-template', {
 		define: {
-			__layout: '/comm/main.html',
+			__layout: '/comm/layout.html',
 			bodyType: '',
+			// 需要：完整协议+ url +‘/’ 结尾
+			// 如： http://54.223.126.249:8080/api/
+			apiServer: '/api/admin/',
+			'page/': {
+				'clickDetail.html': {
+					bodyType: 'pop'
+				}
+			}
 		}
 	}),
 	rExt: '.aspx'
 });
+
+
 
 fis.match('**/*.ts', {
 	parser: fis.plugin('typescript', {
@@ -103,4 +113,4 @@ fis.media('prd')
 
 
 // fis3 server start --root ../dist
-// fis3 release prd -d ../admin
+// fis3 release prd -d ../web_root/admin

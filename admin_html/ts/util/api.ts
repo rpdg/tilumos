@@ -170,7 +170,7 @@ class ServerFn {
 					}
 					else {
 						if (callback && typeof callback === 'function')
-							callback(json.data === undefined ? {} : json.data, textStatus, jqXHR);
+							callback(json, textStatus, jqXHR);
 					}
 				}
 			});

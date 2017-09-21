@@ -118,7 +118,7 @@ export abstract class AjaxDisplayObject extends DisplayObject implements IListBa
 		this._selectedIndex = -1;
 		this._initSelectedIndex = -1;
 
-		this.arrSrc = cfg.arrSrc || 'results';
+		this.arrSrc = cfg.arrSrc || 'data';
 		this.container = this.jq;
 
 		this.onUpdate = cfg.onUpdate;
