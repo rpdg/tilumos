@@ -40,3 +40,8 @@ fis.match('**.html', {
 		}
 	})
 });
+
+
+
+
+//fis3.cmd release dev -d ../../web_root/H5/test

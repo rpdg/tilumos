@@ -1,16 +1,16 @@
-class Wand extends createjs.Shape {
+class Wand extends createjs.Shape implements IBreathable{
 
-	private forward: boolean;
+	/*private forward: boolean;
 
 	private breathing: boolean;
 	private min: number;
-	private max: number;
+	private max: number;*/
 
 	constructor(x: number, y: number) {
 		super();
 
-		this.breathing = false;
-		this.forward = true;
+		/*this.breathing = false;
+		this.forward = true;*/
 
 		let g = this.graphics;
 		g.beginFill('#d00070');
@@ -20,10 +20,10 @@ class Wand extends createjs.Shape {
 		this.x = x;
 		this.y = y;
 
-		createjs.Ticker.addEventListener('tick', (e: createjs.TickerEvent) => this.tick(e));
+		//createjs.Ticker.addEventListener('tick', (e: createjs.TickerEvent) => this.tick(e));
 	}
 
-	tick(e: createjs.TickerEvent) {
+	/*tick(e: createjs.TickerEvent) {
 		if (this.breathing) {
 			if (this.forward) {
 				this.y += 0.3;
@@ -42,7 +42,7 @@ class Wand extends createjs.Shape {
 			this.max = this.y + 7;
 		}
 		this.breathing = b;
-	}
+	}*/
 
 	dispose() {
 		createjs.Ticker.removeAllEventListeners('tick');

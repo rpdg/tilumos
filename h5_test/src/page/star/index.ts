@@ -30,7 +30,9 @@ class Main {
 		this.stage.addChild(wand);
 
 
-		createjs.Tween.get(wand).wait(1000).to({x: 500, y: 500}, 1000).call(wand.breath);
+		createjs.Tween.get(wand).wait(1000).to({x: 500, y: 500}, 1000).call(function () {
+			Util.breath(wand  , 20);
+		});
 
 
 		createjs.Ticker.framerate = 30;
@@ -62,6 +64,7 @@ class Main {
 			console.log(evt.stageX, evt.stageY);
 		});
 
+
 		wand.on('pressup', function (evt: createjs.MouseEvent) {
 			if (clickTip) {
 				clickTip.dispose();
@@ -78,6 +81,8 @@ class Main {
 				}
 				that.stars = null;
 			}
+
+			Util.unBreath(wand);
 
 		});
 
