@@ -1,0 +1,272 @@
+{
+    "res": {
+        "css/ams.scss": {
+            "uri": "/css/ams.css",
+            "type": "css",
+            "extras": {}
+        },
+        "css/jquery.datetimepicker.css": {
+            "uri": "/css/jquery.datetimepicker.css",
+            "type": "css"
+        },
+        "css/module/_border.scss": {
+            "uri": "/css/module/_border.css",
+            "type": "css"
+        },
+        "css/module/_color.scss": {
+            "uri": "/css/module/_color.css",
+            "type": "css"
+        },
+        "css/module/_combo.scss": {
+            "uri": "/css/module/_combo.css",
+            "type": "css"
+        },
+        "css/module/_form.scss": {
+            "uri": "/css/module/_form.css",
+            "type": "css"
+        },
+        "css/module/_loading.scss": {
+            "uri": "/css/module/_loading.css",
+            "type": "css"
+        },
+        "css/module/_pager.scss": {
+            "uri": "/css/module/_pager.css",
+            "type": "css"
+        },
+        "css/module/_panel.scss": {
+            "uri": "/css/module/_panel.css",
+            "type": "css"
+        },
+        "css/module/_popup.scss": {
+            "uri": "/css/module/_popup.css",
+            "type": "css"
+        },
+        "css/module/_reset.scss": {
+            "uri": "/css/module/_reset.css",
+            "type": "css"
+        },
+        "css/module/_tab.scss": {
+            "uri": "/css/module/_tab.css",
+            "type": "css"
+        },
+        "css/module/_table.scss": {
+            "uri": "/css/module/_table.css",
+            "type": "css"
+        },
+        "css/module/_text.scss": {
+            "uri": "/css/module/_text.css",
+            "type": "css"
+        },
+        "css/module/_tree.scss": {
+            "uri": "/css/module/_tree.css",
+            "type": "css"
+        },
+        "css/treePageLayout.scss": {
+            "uri": "/css/treePageLayout.css",
+            "type": "css",
+            "extras": {}
+        },
+        "index.ts": {
+            "uri": "/index.js",
+            "type": "js",
+            "extras": {},
+            "deps": [
+                "ts/util/store.ts",
+                "ts/opg.ts"
+            ]
+        },
+        "js/config.js": {
+            "uri": "/js/config.js",
+            "type": "js"
+        },
+        "js/jquery.plugins.js": {
+            "uri": "/js/jquery.plugins.js",
+            "type": "js"
+        },
+        "js/mockData.js": {
+            "uri": "/js/mockData.js",
+            "type": "js"
+        },
+        "lib/jquery-3.2.1.js": {
+            "uri": "/lib/jquery-3.2.1.js",
+            "type": "js"
+        },
+        "lib/jquery.datetimepicker.js": {
+            "uri": "/lib/jquery.datetimepicker.js",
+            "type": "js"
+        },
+        "lib/jquery.hover3d.js": {
+            "uri": "/lib/jquery.hover3d.js",
+            "type": "js"
+        },
+        "lib/jquery.mockjax.js": {
+            "uri": "/lib/jquery.mockjax.js",
+            "type": "js"
+        },
+        "lib/jquery.pagination.js": {
+            "uri": "/lib/jquery.pagination.js",
+            "type": "js"
+        },
+        "lib/jquery.resizableColumns.js": {
+            "uri": "/lib/jquery.resizableColumns.js",
+            "type": "js",
+            "deps": [
+                "./class",
+                "./constants",
+                "./adapter"
+            ]
+        },
+        "lib/mock.js": {
+            "uri": "/lib/mock.js",
+            "type": "js",
+            "deps": [
+                "canvas"
+            ]
+        },
+        "lib/mod.js": {
+            "uri": "/lib/mod.js",
+            "type": "js"
+        },
+        "lib/store.js": {
+            "uri": "/lib/store.js",
+            "type": "js"
+        },
+        "page/main.scss": {
+            "uri": "/page/main.css",
+            "type": "css",
+            "extras": {}
+        },
+        "page/main.ts": {
+            "uri": "/page/main.js",
+            "type": "js",
+            "extras": {},
+            "deps": [
+                "ts/opg.ts",
+                "ts/util/store.ts",
+                "ts/app.cfg.ts",
+                "ts/ui/Popup.ts"
+            ]
+        },
+        "ts/app.cfg.ts": {
+            "uri": "/ts/app.cfg.js",
+            "type": "js",
+            "extras": {},
+            "deps": [
+                "ts/util/store.ts"
+            ]
+        },
+        "ts/opg.ts": {
+            "uri": "/ts/opg.js",
+            "type": "js",
+            "extras": {},
+            "deps": [
+                "ts/ui/FormControls.ts",
+                "ts/util/api.ts",
+                "ts/ui/Table.ts",
+                "ts/ui/Popup.ts",
+                "ts/ui/Panel.ts",
+                "ts/ui/Tree.ts",
+                "ts/ui/TabView.ts",
+                "ts/util/utils.ts"
+            ]
+        },
+        "ts/ui/Combo.ts": {
+            "uri": "/ts/ui/Combo.js",
+            "type": "js",
+            "extras": {},
+            "deps": [
+                "ts/ui/DisplayOject.ts"
+            ]
+        },
+        "ts/ui/DisplayOject.ts": {
+            "uri": "/ts/ui/DisplayOject.js",
+            "type": "js",
+            "extras": {}
+        },
+        "ts/ui/FormControls.ts": {
+            "uri": "/ts/ui/FormControls.js",
+            "type": "js",
+            "extras": {},
+            "deps": [
+                "ts/ui/DisplayOject.ts"
+            ]
+        },
+        "ts/ui/Panel.ts": {
+            "uri": "/ts/ui/Panel.js",
+            "type": "js",
+            "extras": {},
+            "deps": [
+                "ts/ui/DisplayOject.ts"
+            ]
+        },
+        "ts/ui/Popup.ts": {
+            "uri": "/ts/ui/Popup.js",
+            "type": "js",
+            "extras": {},
+            "deps": [
+                "ts/ui/DisplayOject.ts",
+                "ts/util/utils.ts"
+            ]
+        },
+        "ts/ui/Sp.ts": {
+            "uri": "/ts/ui/Sp.js",
+            "type": "js",
+            "extras": {},
+            "deps": [
+                "ts/ui/DisplayOject.ts"
+            ]
+        },
+        "ts/ui/Table.ts": {
+            "uri": "/ts/ui/Table.js",
+            "type": "js",
+            "extras": {},
+            "deps": [
+                "ts/ui/DisplayOject.ts",
+                "ts/util/utils.ts"
+            ]
+        },
+        "ts/ui/TabView.ts": {
+            "uri": "/ts/ui/TabView.js",
+            "type": "js",
+            "extras": {},
+            "deps": [
+                "ts/ui/DisplayOject.ts"
+            ]
+        },
+        "ts/ui/Tree.ts": {
+            "uri": "/ts/ui/Tree.js",
+            "type": "js",
+            "extras": {},
+            "deps": [
+                "ts/ui/DisplayOject.ts",
+                "ts/ui/Combo.ts",
+                "ts/util/store.ts"
+            ]
+        },
+        "ts/util/api.ts": {
+            "uri": "/ts/util/api.js",
+            "type": "js",
+            "extras": {},
+            "deps": [
+                "ts/app.cfg.ts",
+                "ts/util/utils.ts"
+            ]
+        },
+        "ts/util/Dictionary.ts": {
+            "uri": "/ts/util/Dictionary.js",
+            "type": "js",
+            "extras": {}
+        },
+        "ts/util/store.ts": {
+            "uri": "/ts/util/store.js",
+            "type": "js",
+            "extras": {}
+        },
+        "ts/util/utils.ts": {
+            "uri": "/ts/util/utils.js",
+            "type": "js",
+            "extras": {}
+        }
+    },
+    "pkg": {}
+}

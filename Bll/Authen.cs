@@ -19,9 +19,9 @@ namespace admin.Bll
 	{
 		public static int SignIn(string name, string password)
 		{
-			if(FormsAuthentication.Authenticate(name, password)) {
-			//if (Membership.ValidateUser(name, password)) {
-				var ticket = new FormsAuthenticationTicket("ticket", true, 24 * 3600 * 1000);
+			if (FormsAuthentication.Authenticate(name, password)) {
+				//if (Membership.ValidateUser(name, password)) {
+				var ticket = new FormsAuthenticationTicket(name, true, 24 * 3600 * 1000);
 				string encTicket = FormsAuthentication.Encrypt(ticket);
 				var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, encTicket);
 				cookie.Path = FormsAuthentication.FormsCookiePath;
@@ -32,7 +32,7 @@ namespace admin.Bll
 			}
 			
 			//throw new UnauthorizedAccessException("用户名或密码不正确");
-			return 0 ;
+			return 0;
 			
 		}
 	}

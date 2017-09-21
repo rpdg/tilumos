@@ -41,7 +41,7 @@ namespace admin.Bll
 			
 			
 			var which = new QueryObj {
-				//Select = "exhibition_id,exhibition_name,type,time,address,limits,post_time,registration_count,attendance_count,bonus",
+				//Select = "id,btnName,id,time,browser",
 				SortOn = "id",
 				SortType = "DESC"
 			};
@@ -50,7 +50,9 @@ namespace admin.Bll
 			return dal.Get(wheres, which, pageSize, pageIndex);
 		}
 		
-		
+		/*
+		 	http://127.0.0.1:8011/api/admin/Bll.ClickNoteBll/Notice?btnName=xxxxx
+		 */
 		public static long Notice(string btnName)
 		{
 						
@@ -66,6 +68,9 @@ namespace admin.Bll
 			
 			return id;
 		}
+		
+		
+		
 		
 		private static string GetUserIP()
 		{

@@ -1,0 +1,34 @@
+
+
+<div id="opgAjaxLoading">
+	<div id="opgAjaxLoadingText">
+		<div id="square-spin"></div>
+		请稍候 ...
+	</div>
+</div>
+
+
+<script src="/lib/mod.js"></script><!--ignore-->
+<script src="/lib/jquery-3.2.1.js"></script><!--ignore-->
+<script src="/lib/jquery.resizableColumns.js"></script><!--ignore-->
+<script src="/lib/jquery.pagination.js"></script><!--ignore-->
+<script src="/js/jquery.plugins.js"></script><!--ignore-->
+
+
+{{if scripts}}
+{{each scripts}}
+<script src="{{$value}}"></script>
+{{/each}}
+{{/if}}
+
+
+<!--SCRIPT_PLACEHOLDER-->
+
+
+<script>
+	require('{{__fis_file.filename}}');
+</script>
+
+
+</body>
+</html>

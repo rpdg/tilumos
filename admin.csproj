@@ -61,9 +61,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="admin\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Bll\ClickNote.cs" />
     <Compile Include="Bll\Authen.cs" />
@@ -73,13 +70,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="admin.css" />
-    <None Include="admin\admin.css" />
-    <None Include="admin\Default.aspx" />
     <None Include="Global.asax" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="admin" />
     <Folder Include="Bll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

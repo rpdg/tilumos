@@ -15,6 +15,6 @@ D:\develop\Mr.Wang\H5-tilumos\bin\Newtonsoft.Json.dll
 D:\develop\Mr.Wang\H5-tilumos\bin\System.Data.SQLite.dll
 D:\develop\Mr.Wang\H5-tilumos\bin\Newtonsoft.Json.xml
 D:\develop\Mr.Wang\H5-tilumos\bin\System.Data.SQLite.xml
-D:\develop\Mr.Wang\H5-tilumos\obj\Debug\admin.csprojResolveAssemblyReference.cache
 D:\develop\Mr.Wang\H5-tilumos\obj\Debug\admin.dll
 D:\develop\Mr.Wang\H5-tilumos\obj\Debug\admin.pdb
+D:\develop\Mr.Wang\H5-tilumos\obj\Debug\admin.csprojResolveAssemblyReference.cache
