@@ -29,7 +29,11 @@ class Main {
         });
         let a = this.preLoader.getResult('myImage1');
         let b = new createjs.Bitmap(a);
-        console.log('img:', a);
+        b.scaleY = b.scaleX = 750 / a.width;
+        console.log('img:', a, b.getBounds().width);
+        /*let s = new createjs.Shape();
+        let g = s.graphics;
+        g.beginBitmapFill(b);*/
         this.stage.addChild(b);
     }
     initStage(canvas, draftWidth) {

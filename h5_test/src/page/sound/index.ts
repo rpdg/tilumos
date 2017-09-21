@@ -20,7 +20,7 @@ class Main {
 		this.preLoader.addEventListener('progress', function (e: createjs.ProgressEvent) {
 			console.log('loading:', e);
 		});
-		this.preLoader.addEventListener('complete', (e: createjs.ProgressEvent) => this.playSound(e) );
+		this.preLoader.addEventListener('complete', (e: createjs.ProgressEvent) => this.playSound(e));
 
 
 		this.preLoader.loadFile({id: 'mySound', src: 'assets/sound/magic-wand-sparkle.mp3'});
@@ -42,7 +42,12 @@ class Main {
 
 		let a = <HTMLImageElement> this.preLoader.getResult('myImage1');
 		let b: createjs.Bitmap = new createjs.Bitmap(a);
-		console.log('img:', a);
+		b.scaleY = b.scaleX = 750 / a.width;
+		console.log('img:', a, b.getBounds().width);
+		/*let s = new createjs.Shape();
+		let g = s.graphics;
+		g.beginBitmapFill(b);*/
+
 		this.stage.addChild(b);
 	}
 
@@ -74,7 +79,7 @@ class Main {
 		}
 	}
 
-	private tick(e: createjs.TickerEvent){
+	private tick(e: createjs.TickerEvent) {
 		this.stage.update();
 	}
 }
