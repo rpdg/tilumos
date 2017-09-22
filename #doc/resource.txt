@@ -5,8 +5,9 @@ http://timothypoon.com/blog/2011/01/19/html5-canvas-particle-animation/     html
 http://www.freeactionscript.com/tag/sparkle-effect/    as3
 http://www.jqueryscript.net/demo/jQuery-Plugin-For-Magic-Cursor-Animations-jStars/
 http://www.snazzyspace.com/tumblr/mouse-sparkles.php/
-http://www.sucaijiayuan.com/Js/html5-css3/968.html
-https://www.sourcecodester.com/node/10067
+http://www.qdfuns.com/notes/29385/62fd5cd751660c9203bc0386ff0ae87a.html     js+html5实现跟随鼠标移动而散开的粒子
+http://www.sucaijiayuan.com/Js/html5-css3/968.html     js+html5实现跟随鼠标移动而散开的粒子
+https://www.sourcecodester.com/node/10067    Cursor Sparkle Effect using Javascript
 https://github.com/andyr0id/createjs_particles    particle
 http://ics-web.jp/projects/particle-develop/     particle
 
@@ -25,7 +26,8 @@ https://www.kirupa.com/html5/creating_simple_html5_canvas_animation.htm
 上下浮动
 http://www.bkjia.com/webzh/756470.html
 http://down.admin5.com/texiao/127478.html
-http://www.html5tricks.com/demo/css3-sword/index.html
+
+http://www.html5tricks.com/demo/css3-sword/index.html  双图层缓冲
 
 
 
@@ -61,26 +63,24 @@ https://forums.adobe.com/thread/2181822 createjs+hammer
 key words：html5 cool canvas magic sparkle
 ==========================================================================
 
-http://www.qdfuns.com/notes/29385/62fd5cd751660c9203bc0386ff0ae87a.html
 
 https://segmentfault.com/a/1190000000733242
 
-http://www.sucaihuo.com/js/1708.html
+http://www.sucaihuo.com/js/1708.html  canvas闪烁的星光粒子动画特效
 
 http://www.jb51.net/jiaoben/543855.html
 
-http://www.qdfuns.com/notes/28490/e309e26d2d66b972a40ff0db461466c9.html
+http://www.qdfuns.com/notes/28490/e309e26d2d66b972a40ff0db461466c9.html   canvas跟随鼠标的丝带
 
-https://code.tutsplus.com/articles/21-ridiculously-impressive-html5-canvas-experiments--net-14210
+https://code.tutsplus.com/articles/21-ridiculously-impressive-html5-canvas-experiments--net-14210     21 Ridiculously Impressive HTML5 Canvas Experiments
 
-http://lab.hakim.se/magnetic/02/
+http://lab.hakim.se/magnetic/02/    Magnetic
 
 https://evanw.github.io/glfx.js/demo/  图像扭曲
 https://github.com/simeydotme/jQuery-canvas-sparkles  jquery加闪光
 http://css3transition.com/demo/Sparkle-Effect-Using-jQuery-And-Canvas/index.html
 http://www.relfind.com/game/magician.html h5游戏，有闪光图资源
-https://www.pond5.com/sound-effect/47602257/magic-wand-sparkle.html#2  音效
-https://www.pond5.com/sound-effect/36542029/magic-wand.html
+
 
 
 http://thinkpixellab.com/pxloader/    loading
@@ -137,7 +137,8 @@ as3  sparkle effect
 
 http://www.freeactionscript.com/2008/12/sparkle-effect/
 http://www.freeactionscript.com/tag/sparkle-effect/
-http://stock-footages.com/sparkles+fairy+dust
+
+http://stock-footages.com/sparkles+fairy+dust   mp4 星光效果
 
 
 http://creativecan.com/2012/03/html5-and-javascript-experiment/
@@ -153,7 +154,9 @@ http://webjx.com/flash/example-16461.html  鼠标跟随
 ==========================================
 html5 canvas wave distort image
 
+https://jsfiddle.net/f06vvpr6/
 https://stackoverflow.com/questions/4362248/how-to-distort-an-image-to-create-flag-waving-in-the-wind-effect-using-html5-can
+https://stackoverflow.com/questions/25668914/add-flaglike-waving-to-2d-context?noredirect=1&lq=1  *
 http://phrogz.net/tmp/gkheadwave.html
 https://ariya.io/2012/03/underwater-effect-with-html5-canvas
 https://ariya.github.io/canvas/underwater/
