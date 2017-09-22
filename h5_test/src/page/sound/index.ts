@@ -1,10 +1,10 @@
 import Shape = createjs.Shape;
 
-
 class Main {
 	private stage: createjs.Stage;
 	private ratio: number;
 	private preLoader: createjs.LoadQueue;
+	private progressBar :ProgressBar;
 
 
 	constructor(canvas: HTMLCanvasElement, draftWidth?: number = 750) {
@@ -15,23 +15,32 @@ class Main {
 	private loadSound() {
 		this.preLoader = new createjs.LoadQueue();
 		this.preLoader.installPlugin(createjs.Sound);
-		createjs.Sound.alternateExtensions = ['mp3'];
+		//createjs.Sound.alternateExtensions = ['mp3'];
 
-		this.preLoader.addEventListener('progress', function (e: createjs.ProgressEvent) {
-			console.log('loading:', e);
+
+		///
+		this.progressBar = new ProgressBar();
+		this.stage.addChild(this.progressBar);
+		this.preLoader.addEventListener('progress',  (event: createjs.ProgressEvent) => {
+			this.progressBar.progress = event.progress ;
 		});
 		this.preLoader.addEventListener('complete', (e: createjs.ProgressEvent) => this.playSound(e));
 
 
-		this.preLoader.loadFile({id: 'mySound', src: 'assets/sound/magic-wand-sparkle.mp3'});
 		// OR
 		this.preLoader.loadManifest([
 			{id: 'myImage1', src: 'assets/image/1.jpg'},
 			{id: 'myImage2', src: 'assets/image/2.png'},
+			{id: 'mySound', src: 'assets/sound/魔法2.mp3'},
+			{id: 'mySound', src: 'assets/sound/魔法5.mp3'},
 		]);
+
+
 	}
 
 	private playSound(event: createjs.ProgressEvent) {
+		this.progressBar.progress = 1 ;
+
 		let btn = document.getElementById('btnPlay');
 		console.log(btn);
 		console.log('loaded:', event);
@@ -48,7 +57,7 @@ class Main {
 		let g = s.graphics;
 		g.beginBitmapFill(b);*/
 
-		this.stage.addChild(b);
+		this.stage.addChildAt(b , 0);
 	}
 
 	private initStage(canvas: HTMLCanvasElement, draftWidth: number) {
@@ -69,7 +78,7 @@ class Main {
 		this.stage.setBounds(0, 0, w * this.ratio, h * this.ratio);
 
 		createjs.Ticker.framerate = 30;
-		createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
+		createjs.Ticker.timingMode = createjs.Ticker.RAF;
 
 		createjs.Ticker.addEventListener('tick', (e: createjs.TickerEvent) => this.tick(e));
 

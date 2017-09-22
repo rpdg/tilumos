@@ -80,6 +80,7 @@ https://github.com/simeydotme/jQuery-canvas-sparkles  jquery加闪光
 http://css3transition.com/demo/Sparkle-Effect-Using-jQuery-And-Canvas/index.html
 http://www.relfind.com/game/magician.html h5游戏，有闪光图资源
 https://www.pond5.com/sound-effect/47602257/magic-wand-sparkle.html#2  音效
+https://www.pond5.com/sound-effect/36542029/magic-wand.html
 
 
 http://thinkpixellab.com/pxloader/    loading
@@ -126,6 +127,10 @@ https://stackoverflow.com/questions/18357149/safely-disposing-of-a-stage-element
 
 http://blog.csdn.net/lanix516/article/details/47326093
 
+https://ics.media/tutorial-createjs/index.html
+
+微信自动播音乐
+http://www.ajexoop.com/wordpress/2017/06/soundjs%e7%9a%84%e7%94%a8%e6%b3%95%e4%b8%8e%e6%80%8e%e4%b9%88%e5%9c%a8%e5%be%ae%e4%bf%a1%e5%bd%93%e4%b8%ad%e8%87%aa%e5%8a%a8%e6%92%ad%e6%94%be%e9%9f%b3%e4%b9%90.html
 
 =======================================
 as3  sparkle effect
@@ -159,3 +164,15 @@ https://stackoverflow.com/questions/17667487/water-ripple-effect-on-background-o
 
 
 http://blog.teamtreehouse.com/create-vector-masks-using-the-html5-canvas      vector mask
+
+
+
+进度条
+http://www.html5tricks.com/html5-canvas-loader.html
+js:
+https://jsfiddle.net/gsjn5h4t/
+
+
+
+音效
+http://ibaotu.com/yinxiao/?chan=bd&label=video&plan=D2-bd&kwd=7753

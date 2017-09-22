@@ -7,19 +7,24 @@ class Main {
     loadSound() {
         this.preLoader = new createjs.LoadQueue();
         this.preLoader.installPlugin(createjs.Sound);
-        createjs.Sound.alternateExtensions = ['mp3'];
-        this.preLoader.addEventListener('progress', function (e) {
-            console.log('loading:', e);
+        //createjs.Sound.alternateExtensions = ['mp3'];
+        ///
+        this.progressBar = new ProgressBar();
+        this.stage.addChild(this.progressBar);
+        this.preLoader.addEventListener('progress', (event) => {
+            this.progressBar.progress = event.progress;
         });
         this.preLoader.addEventListener('complete', (e) => this.playSound(e));
-        this.preLoader.loadFile({ id: 'mySound', src: 'assets/sound/magic-wand-sparkle.mp3' });
         // OR
         this.preLoader.loadManifest([
             { id: 'myImage1', src: 'assets/image/1.jpg' },
             { id: 'myImage2', src: 'assets/image/2.png' },
+            { id: 'mySound', src: 'assets/sound/魔法2.mp3' },
+            { id: 'mySound', src: 'assets/sound/魔法5.mp3' },
         ]);
     }
     playSound(event) {
+        this.progressBar.progress = 1;
         let btn = document.getElementById('btnPlay');
         console.log(btn);
         console.log('loaded:', event);
@@ -34,7 +39,7 @@ class Main {
         /*let s = new createjs.Shape();
         let g = s.graphics;
         g.beginBitmapFill(b);*/
-        this.stage.addChild(b);
+        this.stage.addChildAt(b, 0);
     }
     initStage(canvas, draftWidth) {
         let w = document.body.clientWidth;
@@ -50,7 +55,7 @@ class Main {
         this.stage.scaleY = stageScale;
         this.stage.setBounds(0, 0, w * this.ratio, h * this.ratio);
         createjs.Ticker.framerate = 30;
-        createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
+        createjs.Ticker.timingMode = createjs.Ticker.RAF;
         createjs.Ticker.addEventListener('tick', (e) => this.tick(e));
         if (createjs.Touch.isSupported()) {
             createjs.Touch.enable(this.stage);

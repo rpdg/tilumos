@@ -27,7 +27,7 @@ class Util {
     static breath(obj, offset = 5) {
         if (Util.breathObjs.length === 0) {
             Util.breathing = true;
-            createjs.Ticker.addEventListener('tick', (e) => Util.tickBreath(e));
+            createjs.Ticker.addEventListener('tick', Util.tickBreath);
         }
         //
         obj.breath = {
@@ -37,10 +37,10 @@ class Util {
             max: obj.y + offset,
             remove: -1,
         };
-        this.breathObjs.push(obj);
+        Util.breathObjs.push(obj);
     }
     static unBreath(obj) {
-        let index = this.breathObjs.indexOf(obj);
+        let index = Util.breathObjs.indexOf(obj);
         if (index > -1) {
             obj.breath.remove = index;
         }
@@ -50,11 +50,11 @@ class Util {
         if (Util.breathing) {
             if (Util.breathObjs.length === 0) {
                 Util.breathing = false;
-                createjs.Ticker.removeAllEventListeners('tick');
+                createjs.Ticker.removeEventListener('tick', Util.tickBreath);
             }
             let step = Math.random();
-            for (let i = 0, l = this.breathObjs.length; i < l; i++) {
-                let obj = this.breathObjs[i];
+            for (let i = 0, l = Util.breathObjs.length; i < l; i++) {
+                let obj = Util.breathObjs[i];
                 if (obj.breath.remove === -1) {
                     if (obj.breath.forward) {
                         obj.y += step;
@@ -67,13 +67,19 @@ class Util {
                     }
                 }
                 else {
-                    this.breathObjs.splice(obj.breath.remove, 1);
+                    Util.breathObjs.splice(obj.breath.remove, 1);
                     obj.y = obj.breath.y;
                 }
             }
         }
     }
+    static FPS() {
+        console.log(Util.fps);
+    }
 }
 Util.breathObjs = [];
 Util.breathing = false;
+/////
+Util.time = 0;
+Util.fps = 0;
 //# sourceMappingURL=/page/star/util/util.js.map

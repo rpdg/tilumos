@@ -56,7 +56,7 @@ class Util {
 	static breath(obj: IBreathable, offset: number = 5) {
 		if (Util.breathObjs.length === 0) {
 			Util.breathing = true;
-			createjs.Ticker.addEventListener('tick', (e: createjs.TickerEvent) => Util.tickBreath(e));
+			createjs.Ticker.addEventListener('tick',  Util.tickBreath);
 		}
 
 
@@ -69,11 +69,11 @@ class Util {
 			remove: -1,
 		};
 
-		this.breathObjs.push(obj);
+		Util.breathObjs.push(obj);
 	}
 
 	static unBreath(obj: IBreathable): number {
-		let index = this.breathObjs.indexOf(obj);
+		let index = Util.breathObjs.indexOf(obj);
 		if (index > -1) {
 			obj.breath.remove = index;
 		}
@@ -88,13 +88,13 @@ class Util {
 
 			if (Util.breathObjs.length === 0) {
 				Util.breathing = false;
-				createjs.Ticker.removeAllEventListeners('tick');
+				createjs.Ticker.removeEventListener('tick' ,  Util.tickBreath);
 			}
 
 			let step = Math.random();
 
-			for (let i = 0, l = this.breathObjs.length; i < l; i++) {
-				let obj = this.breathObjs[i];
+			for (let i = 0, l = Util.breathObjs.length; i < l; i++) {
+				let obj = Util.breathObjs[i];
 
 				if (obj.breath.remove === -1) {
 					if (obj.breath.forward) {
@@ -107,7 +107,7 @@ class Util {
 					}
 				}
 				else {
-					this.breathObjs.splice(obj.breath.remove, 1);
+					Util.breathObjs.splice(obj.breath.remove, 1);
 					obj.y = obj.breath.y;
 				}
 			}
@@ -115,5 +115,18 @@ class Util {
 		}
 
 	}
+
+
+
+
+	/////
+
+
+	private static time = 0;
+	private static fps = 0;
+	static FPS(){
+		console.log(Util.fps);
+	}
+
 }
 

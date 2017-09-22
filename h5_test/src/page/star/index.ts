@@ -142,6 +142,7 @@ class Main {
 
 		this.stage.setBounds(0, 0, w * this.ratio, h * this.ratio);
 		Util.drawGrid(this.stage, 100);
+		Util.FPS();
 
 		if (createjs.Touch.isSupported()) {
 			createjs.Touch.enable(this.stage);
