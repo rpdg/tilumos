@@ -122,9 +122,12 @@ https://stackoverflow.com/questions/2795269/does-html5-canvas-support-double-buf
 createjs 教程
 http://www.ajexoop.com/wordpress/2016/03/%E6%96%B0%E6%89%8B%E5%86%99createjs%E6%97%B6%E5%AE%B9%E6%98%93%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89.html
 
+http://prog3.com/sbdm/blog/bboyjoe/article/category/5612725
 https://blog.toggl.com/better-multitouch-support-for-canvas-with-hammerjs/
 https://blog.toggl.com/6-performance-tips-for-html-canvas-and-createjs/
 https://stackoverflow.com/questions/27661920/is-pinch-zoom-supported-in-createjs
+https://stackoverflow.com/questions/18759369/how-to-move-a-object-in-html5-createjs-in-wave-movement  波形移动
+https://jsfiddle.net/4k1fnkta/  matrix2D
 
 
 https://stackoverflow.com/questions/20340796/how-to-clear-createjs-code-and-canvas-completely    安全移除stage
@@ -133,6 +136,56 @@ https://stackoverflow.com/questions/18357149/safely-disposing-of-a-stage-element
 http://blog.csdn.net/lanix516/article/details/47326093
 
 https://ics.media/tutorial-createjs/index.html
+
+http://www.backwardcompatible.net/175-apply-grayscale-filter-easeljs-createjs    grayscale filter 
+https://www.bvbcode.com/code/a1knf4zc-2618631    Threshold Filter
+https://pastebin.com/D8wDrSK7   InverseAlpha Filter 
+http://blog.industrialassets.co.uk/easeljs-filters-transparency-map-filter/     TRANSPARENCY MAP FILTER
+http://www.yoheim.net/blog.php?q=20121106  filter 日本教程
+
+http://blog.nipx.jp/archives/49   as3 DisplacementMapFilter
+http://www.soundstep.com/blog/2012/04/25/javascript-displacement-mapping/   js displacement-mapping
+
+http://www.quasimondo.com/BoxBlurForCanvas/FastBlurDemo.html  super fast blur filter
+http://indiegamr.com/fading-line-effect-with-easeljs/   上面那个在createjs的使用
+
+
+http://jsdo.it/__ikke__/cHiG   画波浪动作
+
+https://github.com/benjamminf/warpjs
+https://github.com/soquel/warp.js 
+https://www.tinkeringwithstuff.com/posts/canvas-warping-with-javascript.html
+
+https://gist.github.com/mindware/e7e02d8f2d0ab863abd5  wave a flag
+
+https://sirxemic.github.io/jquery.ripples/    ripples 水波纹
+https://jsfiddle.net/esteewhy/5Ht3b/6/   水波纹 鼠标跟随
+https://jsfiddle.net/glafarge/6h84bpnk/  pixi.js  rippling ?
+
+http://tulrich.com/geekstuff/canvas/perspective.html  3d旋转
+http://chenxing.name/fun/imgwarp-js/ 
+
+https://ariya.io/2012/03/underwater-effect-with-html5-canvas  图像canvas扭曲原理
+https://github.com/benjamminf/warpjs  波浪扭曲 SVG的
+
+
+https://github.com/migurski/canvas-warp   多边形变形
+https://github.com/snorpey/distort-grid   多边形变形
+
+
+
+https://stackoverflow.com/questions/39150461/distorting-an-image-on-a-single-axis-with-javascript-and-canvas  扭曲图形，很接近！
+
+ZIM
+==========================
+http://zimjs.com/code/swipe.html 
+http://zimjs.com/code/paper/
+
+https://www.youtube.com/watch?v=WL1P7VOQFRY  zim 视频教程
+
+
+
+
 
 微信自动播音乐
 http://www.ajexoop.com/wordpress/2017/06/soundjs%e7%9a%84%e7%94%a8%e6%b3%95%e4%b8%8e%e6%80%8e%e4%b9%88%e5%9c%a8%e5%be%ae%e4%bf%a1%e5%bd%93%e4%b8%ad%e8%87%aa%e5%8a%a8%e6%92%ad%e6%94%be%e9%9f%b3%e4%b9%90.html
