@@ -11,4 +11,4 @@ class Scence {
         this.stage = main.stage;
     }
 }
-//# sourceMappingURL=/util/IDispose.js.map
+//# sourceMappingURL=/util/interfaces.js.map

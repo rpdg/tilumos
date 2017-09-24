@@ -1,9 +1,9 @@
 {
     "version": 3,
-    "file": "IDispose.js",
+    "file": "interfaces.js",
     "sourceRoot": "",
     "sources": [
-        "/util/IDispose.ts"
+        "/util/interfaces.ts"
     ],
     "names": [],
     "mappings": ";AAIA;;;;;GAKG;AAGH;IAIC,YAAY,IAAS;QACpB,IAAI,CAAC,GAAG,GAAG,IAAI,CAAC;QAChB,IAAI,CAAC,KAAK,GAAG,IAAI,CAAC,KAAK,CAAC;IACzB,CAAC;AACF,CAAC;AAAA",
