@@ -6,7 +6,8 @@ class Scene1{
 		let wand = Util.addImage(main.stage , <HTMLImageElement> main.preLoader.getResult('wand') , 1, 350, 80);
 		Util.breath(wand  , 10);
 
-		Util.addImage(main.stage , <HTMLImageElement> main.preLoader.getResult('box'), 1, 10, 550);
+		let box = Util.addImage(main.stage , <HTMLImageElement> main.preLoader.getResult('box'), 1, 10, 550);
+
 
 		//
 		let clickTip = new ClickTip();
@@ -18,7 +19,11 @@ class Scene1{
 		clickTip.addEventListener('click', ()=> {
 			Util.unBreath(wand);
 			this.clickBox();
-		})
+		});
+
+
+
+
 	}
 
 	clickBox(){

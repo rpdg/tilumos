@@ -4,7 +4,7 @@ class Scene1 {
         Util.addImage(main.stage, main.preLoader.getResult('bg-1'), 0, 0, -50);
         let wand = Util.addImage(main.stage, main.preLoader.getResult('wand'), 1, 350, 80);
         Util.breath(wand, 10);
-        Util.addImage(main.stage, main.preLoader.getResult('box'), 1, 10, 550);
+        let box = Util.addImage(main.stage, main.preLoader.getResult('box'), 1, 10, 550);
         //
         let clickTip = new ClickTip();
         clickTip.x = 460;
@@ -13,8 +13,13 @@ class Scene1 {
         clickTip.pulsate();
         clickTip.addEventListener('click', () => {
             Util.unBreath(wand);
-            //main.scene2();
+            this.clickBox();
         });
+    }
+    clickBox() {
+        this.openBox();
+    }
+    openBox() {
     }
 }
 //# sourceMappingURL=/scene1.js.map
