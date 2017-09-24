@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "file": "IDispose.js",
+    "sourceRoot": "",
+    "sources": [
+        "/util/IDispose.ts"
+    ],
+    "names": [],
+    "mappings": ";AAIA;;;;;GAKG",
+    "sourcesContent": [
+        "interface IDispose{\r\n\tdispose();\r\n}\r\n\r\n/*\r\nabstract class DisposibleObject extends DisplayObject implements IDispose{\r\n\tdispose(){\r\n\t\tthis.parent.removeChild(this);\r\n\t}\r\n}*/\r\n"
+    ]
+}

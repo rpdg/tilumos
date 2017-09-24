@@ -1,0 +1,17 @@
+$w: 100%;
+$h: 100%;
+$bg: #000;
+
+html,body ,#gameCanvas{
+	width: $w;
+	height: $h;
+	background-color: $bg;
+}
+
+html, body, div, span, canvas {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+

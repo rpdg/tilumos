@@ -233,6 +233,11 @@ http://blog.teamtreehouse.com/create-vector-masks-using-the-html5-canvas      ve
 
 
 
+http://djt.qq.com/article/view/1249    让界面动画更自然
+
+
+
+
 进度条
 http://www.html5tricks.com/html5-canvas-loader.html
 js:
