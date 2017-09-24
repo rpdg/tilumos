@@ -27,7 +27,7 @@ class Util {
         g.endStroke();
         stage.addChild(s);
     }
-    static breath(obj, offset = 10) {
+    static breath(obj, offset = 10, revertY = false) {
         if (Util.breathObjs.length === 0) {
             Util.breathing = true;
             createjs.Ticker.addEventListener('tick', Util.tickBreath);
@@ -39,13 +39,15 @@ class Util {
             min: obj.y - offset,
             max: obj.y + offset,
             remove: -1,
+            revertY: revertY
         };
         Util.breathObjs.push(obj);
     }
-    static unBreath(obj) {
+    static unBreath(obj, revertY = false) {
         let index = Util.breathObjs.indexOf(obj);
         if (index > -1) {
             obj.breath.remove = index;
+            obj.breath.revertY = revertY;
         }
         return index;
     }
@@ -74,7 +76,8 @@ class Util {
                 }
                 else {
                     Util.breathObjs.splice(obj.breath.remove, 1);
-                    obj.y = obj.breath.y;
+                    if (obj.breath.revertY)
+                        obj.y = obj.breath.y;
                 }
             }
         }

@@ -10,6 +10,7 @@ interface BreathCfg {
 	min: number;
 	max: number;
 	remove: number;
+	revertY: boolean;
 }
 
 interface IBreathable {
@@ -56,7 +57,7 @@ class Util {
 	private static breathing: boolean = false;
 	private static breathCount: number = 0;
 
-	static breath(obj: IBreathable, offset: number = 10) {
+	static breath(obj: IBreathable, offset: number = 10, revertY ?: boolean = false) {
 		if (Util.breathObjs.length === 0) {
 			Util.breathing = true;
 			createjs.Ticker.addEventListener('tick', Util.tickBreath);
@@ -70,15 +71,17 @@ class Util {
 			min: obj.y - offset,
 			max: obj.y + offset,
 			remove: -1,
+			revertY: revertY
 		};
 
 		Util.breathObjs.push(obj);
 	}
 
-	static unBreath(obj: IBreathable): number {
+	static unBreath(obj: IBreathable, revertY?: boolean = false): number {
 		let index = Util.breathObjs.indexOf(obj);
 		if (index > -1) {
 			obj.breath.remove = index;
+			obj.breath.revertY = revertY;
 		}
 
 		return index;
@@ -114,7 +117,8 @@ class Util {
 				}
 				else {
 					Util.breathObjs.splice(obj.breath.remove, 1);
-					obj.y = obj.breath.y;
+					if (obj.breath.revertY)
+						obj.y = obj.breath.y;
 				}
 
 				//console.log(obj.y, step);
@@ -136,9 +140,7 @@ class Util {
 	}
 
 
-
-
-	static addImage(conatainer : Container , imgElem: HTMLImageElement, index: number = 1, x?: number = 0, y?: number = 0): Bitmap {
+	static addImage(conatainer: Container, imgElem: HTMLImageElement, index: number = 1, x?: number = 0, y?: number = 0): Bitmap {
 		let bmp: createjs.Bitmap = new createjs.Bitmap(imgElem);
 		bmp.x = x;
 		bmp.y = y;

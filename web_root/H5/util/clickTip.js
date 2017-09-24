@@ -19,7 +19,6 @@ class ClickTip extends createjs.Container {
         //s.visible = false;
         this.addChild(s);
         this.addEventListener('click', () => {
-            createjs.Sound.play('sound_sparkle');
             this.dispose();
         });
     }

@@ -1,7 +1,7 @@
 "use strict";
 var Shape = createjs.Shape;
 var Bitmap = createjs.Bitmap;
-class Main {
+class App {
     constructor(canvas, draftWidth = 750) {
         this.initStage(canvas, draftWidth);
     }
@@ -37,6 +37,7 @@ class Main {
             { id: 'bg-1', src: 'img/scene1/bg-1.jpg' },
             { id: 'wand', src: 'img/scene1/wand.png' },
             { id: 'box', src: 'img/scene1/box.png' },
+            { id: 'light', src: 'img/scene1/light.png' },
             { id: 'sound_sparkle', src: 'sound/sparkle.mp3' },
             { id: 'sound_magic', src: 'sound/magic.mp3' },
         ], true, 'assets/');
@@ -69,7 +70,7 @@ class Main {
 //
 function run() {
     window.removeEventListener('load', run);
-    new Main(document.getElementById('gameCanvas'));
+    new App(document.getElementById('gameCanvas'));
 }
 window.addEventListener('load', run);
 //# sourceMappingURL=/index.js.map

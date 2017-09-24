@@ -32,7 +32,6 @@ class ClickTip extends createjs.Container implements IDispose {
 
 
 		this.addEventListener('click',  ()=> {
-			createjs.Sound.play('sound_sparkle');
 			this.dispose();
 		});
 	}
