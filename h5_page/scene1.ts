@@ -1,3 +1,9 @@
+function tickScene1Frame(e: createjs.TickerEvent){
+	scene.tick(e);
+}
+
+let scene :Scene1;
+
 class Scene1 extends Scene{
 
 
@@ -5,10 +11,12 @@ class Scene1 extends Scene{
 	private box: Bitmap;
 
 	private particleSystem : particlejs.ParticleSystem ;
+	private particleYOffset : number = 130;
 
 	constructor(app: App) {
 		super(app);
 
+		scene = this ;
 
 		Util.addImage(app.stage, <HTMLImageElement> app.preLoader.getResult('bg-1'), 0, 0, -50);
 
@@ -25,10 +33,12 @@ class Scene1 extends Scene{
 		app.stage.addChild(clickTip);
 		clickTip.pulsate();
 
-		clickTip.addEventListener('click', ()=> {
+		clickTip.on('click', ()=> {
 			Util.unBreath(this.wand);
 			this.clickBox();
-		});
+			this.particleSystem.emitFrequency = 200;
+			this.particleYOffset = -100;
+		} , this , true);
 
 
 		this.particleSystem = new particlejs.ParticleSystem();
@@ -38,13 +48,13 @@ class Scene1 extends Scene{
 				"bgColor": "#00000",
 				"width": 679,
 				"height": 343,
-				"emitFrequency": 80,
+				"emitFrequency": 50,
 				"startX": 340,
 				"startXVariance": 169,
 				"startY": 147,
 				"startYVariance": 179,
 				"initialDirection": 348,
-				"initialDirectionVariance": "0",
+				"initialDirectionVariance": 112,
 				"initialSpeed": 1.2,
 				"initialSpeedVariance": 2.2,
 				"friction": "0",
@@ -54,7 +64,7 @@ class Scene1 extends Scene{
 				"startScaleVariance": 0.33,
 				"finishScale": 0.04,
 				"finishScaleVariance": "0.23",
-				"lifeSpan": "27",
+				"lifeSpan":  50 ,
 				"lifeSpanVariance": "93",
 				"startAlpha": "1",
 				"startAlphaVariance": "0",
@@ -79,7 +89,7 @@ class Scene1 extends Scene{
 		);
 
 
-		createjs.Ticker.addEventListener('tick', (e: createjs.TickerEvent) => this.tick(e));
+		createjs.Ticker.on('tick', this.tick , this);
 	}
 
 	clickBox() {
@@ -90,32 +100,26 @@ class Scene1 extends Scene{
 
 			createjs.Sound.play('sound_sparkle');
 
+			this.dispose();
 			setTimeout(()=> {
-				this.openBox();
+				new Scene2(this.app);
 			}, 200);
 
 		});
 
 	}
 
-	openBox() {
-		let light = Util.addImage(this.stage, <HTMLImageElement> this.app.preLoader.getResult('light'), 2, 0, -50);
-		light.alpha = 0;
-		Tween.get(light).to({alpha: 1}, 3300, createjs.Ease.sineIn);
-
-		this.dispose();
-		new Scene2(this.app);
-	}
 
 
-
-	private tick(e: createjs.TickerEvent) {
-		this.particleSystem.startX = this.wand.x + 180 ;
-		this.particleSystem.startY = this.wand.y + 120 ;
+	tick(e: createjs.TickerEvent) {
+		console.log('emit');
+		this.particleSystem.startX = this.wand.x + 160 ;
+		this.particleSystem.startY = this.wand.y + this.particleYOffset ;
 		this.particleSystem.update();
 	}
 
-	private dispose(){
+	dispose(){
+		createjs.Ticker.removeEventListener('tick', tickScene1Frame);
 		this.particleSystem.dispose();
 	}
 }
