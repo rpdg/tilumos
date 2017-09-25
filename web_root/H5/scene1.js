@@ -1,12 +1,7 @@
-function tickScene1Frame(e) {
-    scene.tick(e);
-}
-let scene;
 class Scene1 extends Scene {
     constructor(app) {
         super(app);
         this.particleYOffset = 130;
-        scene = this;
         Util.addImage(app.stage, app.preLoader.getResult('bg-1'), 0, 0, -50);
         this.wand = Util.addImage(app.stage, app.preLoader.getResult('wand'), 1, 350, 80);
         Util.breath(this.wand, 10);
@@ -67,7 +62,7 @@ class Scene1 extends Scene {
             'alphaCurveType': '0',
             'VERSION': '0.1.3',
         });
-        createjs.Ticker.addEventListener('tick', tickScene1Frame);
+        this.tickHandler = createjs.Ticker.on('tick', this.tick, this);
     }
     clickBox() {
         Tween.get(this.wand).to({ rotation: -68, y: 800, x: 180 }, 1500, createjs.Ease.sineIn).wait(100).call(() => {
@@ -100,7 +95,7 @@ class Scene1 extends Scene {
         this.particleSystem.update();
     }
     dispose() {
-        createjs.Ticker.removeEventListener('tick', tickScene1Frame);
+        createjs.Ticker.off('tick', this.tickHandler);
         this.particleSystem.dispose();
     }
 }

@@ -60,7 +60,7 @@ class App {
         if (createjs.Touch.isSupported()) {
             createjs.Touch.enable(this.stage);
         }
-        createjs.Ticker.framerate = 30;
+        createjs.Ticker.framerate = 60;
         createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
         createjs.Ticker.addEventListener('tick', (e) => this.tick(e));
         this.loadAssets();

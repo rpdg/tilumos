@@ -1,8 +1,4 @@
-function tickScene1Frame(e: createjs.TickerEvent) {
-	scene.tick(e);
-}
 
-let scene: Scene1;
 
 class Scene1 extends Scene {
 
@@ -13,10 +9,10 @@ class Scene1 extends Scene {
 	private particleSystem: particlejs.ParticleSystem;
 	private particleYOffset: number = 130;
 
+	private tickHandler : Function;
+
 	constructor(app: App) {
 		super(app);
-
-		scene = this;
 
 		Util.addImage(app.stage, <HTMLImageElement> app.preLoader.getResult('bg-1'), 0, 0, -50);
 
@@ -89,7 +85,7 @@ class Scene1 extends Scene {
 		);
 
 
-		createjs.Ticker.addEventListener('tick', tickScene1Frame);
+		this.tickHandler = createjs.Ticker.on('tick', this.tick , this);
 	}
 
 	clickBox() {
@@ -137,7 +133,7 @@ class Scene1 extends Scene {
 	}
 
 	dispose() {
-		createjs.Ticker.removeEventListener('tick', tickScene1Frame);
+		createjs.Ticker.off('tick', this.tickHandler);
 		this.particleSystem.dispose();
 	}
 }
