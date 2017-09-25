@@ -1,4 +1,3 @@
-"use strict";
 var Shape = createjs.Shape;
 var Tween = createjs.Tween;
 var Timeline = createjs.Timeline;

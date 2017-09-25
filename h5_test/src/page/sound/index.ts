@@ -82,6 +82,7 @@ class Main {
 
 		createjs.Ticker.addEventListener('tick', (e: createjs.TickerEvent) => this.tick(e));
 
+		this.stage.mouseChildren = this.stage.mouseEnabled = false;
 
 		if (createjs.Touch.isSupported()) {
 			createjs.Touch.enable(this.stage);

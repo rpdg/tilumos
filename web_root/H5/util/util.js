@@ -1,4 +1,3 @@
-"use strict";
 var Stage = createjs.Stage;
 var Bitmap = createjs.Bitmap;
 var DisplayObject = createjs.DisplayObject;
@@ -79,6 +78,7 @@ class Util {
                     if (obj.breath.revertY)
                         obj.y = obj.breath.y;
                 }
+                //console.log(obj.y, step);
             }
         }
     }

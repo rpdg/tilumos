@@ -1,5 +1,6 @@
-class Scene2 extends Scence{
+class Scene2 extends Scene{
 	constructor(app :App){
 		super(app);
 	}
+
 }

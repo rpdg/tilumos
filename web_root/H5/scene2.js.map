@@ -6,8 +6,8 @@
         "/scene2.ts"
     ],
     "names": [],
-    "mappings": ";AAAA,qBAAqB,MAAM;IAC1B,YAAY,GAAQ;QACnB,MAAM,GAAG,CAAC,CAAC;IACZ,CAAC;AACF,CAAC;AAAA",
+    "mappings": "AAAA,YAAa,SAAQ,KAAK;IACzB,YAAY,GAAQ;QACnB,KAAK,CAAC,GAAG,CAAC,CAAC;IACZ,CAAC;CAED",
     "sourcesContent": [
-        "class Scene2 extends Scence{\r\n\tconstructor(app :App){\r\n\t\tsuper(app);\r\n\t}\r\n}"
+        "class Scene2 extends Scene{\r\n\tconstructor(app :App){\r\n\t\tsuper(app);\r\n\t}\r\n\r\n}"
     ]
 }

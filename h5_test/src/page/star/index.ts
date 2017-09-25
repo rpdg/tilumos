@@ -3,8 +3,10 @@ import Shape = createjs.Shape;
 
 class Main {
 	private stage: createjs.Stage;
+	private particleSystem : particlejs.ParticleSystem ;
 	private ratio: number;
 	private stars: Star[];
+	private wand :Wand ;
 
 	constructor(canvas: HTMLCanvasElement, draftWidth?: number = 750) {
 		this.initStage(canvas ,draftWidth);
@@ -25,14 +27,71 @@ class Main {
 		}
 
 
-		let wand = new Wand(200, 200);
-		wand.rotation = -35;
-		this.stage.addChild(wand);
+		this.wand = new Wand(200, 200);
+		this.wand.rotation = -35;
+		this.stage.addChild(this.wand);
 
 
-		createjs.Tween.get(wand).wait(1000).to({x: 500, y: 500}, 1000).call(function () {
-			Util.breath(wand  , 20);
+		createjs.Tween.get(this.wand).wait(1000).to({x: 500, y: 500}, 1000).call(function () {
+			Util.breath(this.wand  , 20);
 		});
+
+
+		this.particleSystem = new particlejs.ParticleSystem();
+		this.stage.addChild(this.particleSystem.container);
+		this.particleSystem.importFromJson(
+			{
+				"bgColor": "#00000",
+				"width": 679,
+				"height": 343,
+				"emitFrequency": 50,
+				"startX": 340,
+				"startXVariance": 169,
+				"startY": 147,
+				"startYVariance": 179,
+				"initialDirection": 348,
+				"initialDirectionVariance": "0",
+				"initialSpeed": 1.2,
+				"initialSpeedVariance": 2.2,
+				"friction": "0",
+				"accelerationSpeed": "0",
+				"accelerationDirection": "0",
+				"startScale": 0.06,
+				"startScaleVariance": 0.33,
+				"finishScale": 0.04,
+				"finishScaleVariance": "0.23",
+				"lifeSpan": "27",
+				"lifeSpanVariance": "93",
+				"startAlpha": "1",
+				"startAlphaVariance": "0",
+				"finishAlpha": 0,
+				"finishAlphaVariance": 0.26,
+				"shapeIdList": [
+					"kirakira",
+					"star"
+				],
+				"startColor": {
+					"hue": 198,
+					"hueVariance": 0,
+					"saturation": 100,
+					"saturationVariance": 89,
+					"luminance": 93,
+					"luminanceVariance": 68
+				},
+				"blendMode": false,
+				"alphaCurveType": "0",
+				"VERSION": "0.1.3"
+			}
+		);
+
+
+
+
+
+
+
+
+
 
 
 		createjs.Ticker.framerate = 30;
@@ -65,7 +124,7 @@ class Main {
 		});
 
 
-		wand.on('pressup', function (evt: createjs.MouseEvent) {
+		this.wand.on('pressup', function (evt: createjs.MouseEvent) {
 			if (clickTip) {
 				clickTip.dispose();
 				clickTip = null;
@@ -82,7 +141,7 @@ class Main {
 				that.stars = null;
 			}
 
-			Util.unBreath(wand);
+			Util.unBreath(this.wand);
 
 		});
 
@@ -122,6 +181,12 @@ class Main {
 	}*/
 
 	private tick(e: createjs.TickerEvent) {
+		this.particleSystem.startX = this.wand.x;
+		this.particleSystem.startY = this.wand.y;
+		this.particleSystem.update();
+
+
+		//
 		this.stage.update(e);
 	}
 

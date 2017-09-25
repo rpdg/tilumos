@@ -19,8 +19,8 @@ class Main {
         this.preLoader.loadManifest([
             { id: 'myImage1', src: 'assets/image/1.jpg' },
             { id: 'myImage2', src: 'assets/image/2.png' },
-            { id: 'mySound', src: 'assets/sound/魔法2.mp3' },
-            { id: 'mySound', src: 'assets/sound/魔法5.mp3' },
+            { id: 'mySound', src: 'assets/sound/sparkle.mp3' },
+            { id: 'mySound', src: 'assets/sound/magic.mp3' },
         ]);
     }
     playSound(event) {
@@ -57,6 +57,7 @@ class Main {
         createjs.Ticker.framerate = 30;
         createjs.Ticker.timingMode = createjs.Ticker.RAF;
         createjs.Ticker.addEventListener('tick', (e) => this.tick(e));
+        this.stage.mouseChildren = this.stage.mouseEnabled = false;
         if (createjs.Touch.isSupported()) {
             createjs.Touch.enable(this.stage);
         }

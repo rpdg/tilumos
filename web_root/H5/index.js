@@ -1,4 +1,3 @@
-"use strict";
 var Shape = createjs.Shape;
 var Bitmap = createjs.Bitmap;
 class App {

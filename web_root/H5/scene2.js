@@ -1,5 +1,4 @@
-"use strict";
-class Scene2 extends Scence {
+class Scene2 extends Scene {
     constructor(app) {
         super(app);
     }

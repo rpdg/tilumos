@@ -7,6 +7,6 @@
     "sourcesContent": [
         "$w: 100%;\r\n$h: 100%;\r\n$bg: #000;\r\n\r\nhtml,body ,#gameCanvas{\r\n\twidth: $w;\r\n\theight: $h;\r\n\tbackground-color: $bg;\r\n}\r\n\r\nhtml, body, div, span, canvas {\r\n\tmargin:0;\r\n\tpadding:0;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n\r\n"
     ],
-    "mappings": "AAIA,AAAA,IAAI,EAAC,AAAA,IAAI,EAAE,AAAA,WAAW,CAAA,EACrB,KAAK,EALF,IAAI,EAMP,MAAM,EALH,IAAI,EAMP,gBAAgB,EALZ,IAAI,GAMR;;AAED,AAAA,IAAI,EAAE,AAAA,IAAI,EAAE,AAAA,GAAG,EAAE,AAAA,IAAI,EAAE,AAAA,MAAM,CAAC,EAC7B,MAAM,EAAC,CAAE,EACT,OAAO,EAAC,CAAE,EACV,UAAU,EAAE,UAAW,GACvB",
-    "names": []
+    "names": [],
+    "mappings": "AAIA,AAAA,IAAI,EAAC,AAAA,IAAI,EAAE,AAAA,WAAW,CAAA,EACrB,KAAK,EALF,IAAI,EAMP,MAAM,EALH,IAAI,EAMP,gBAAgB,EALZ,IAAI,GAMR;;AAED,AAAA,IAAI,EAAE,AAAA,IAAI,EAAE,AAAA,GAAG,EAAE,AAAA,IAAI,EAAE,AAAA,MAAM,CAAC,EAC7B,MAAM,EAAC,CAAC,EACR,OAAO,EAAC,CAAC,EACT,UAAU,EAAE,UAAU,GACtB"
 }

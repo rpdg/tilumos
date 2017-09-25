@@ -1,4 +1,3 @@
-"use strict";
 var Shape = createjs.Shape;
 var Graphics = createjs.Graphics;
 let progressBarInstance;

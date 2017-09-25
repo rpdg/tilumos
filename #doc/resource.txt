@@ -7,13 +7,13 @@ http://www.jqueryscript.net/demo/jQuery-Plugin-For-Magic-Cursor-Animations-jStar
 https://jsfiddle.net/felixmc/f6LdQ/light/  easeljs particale demo
 http://www.snazzyspace.com/tumblr/mouse-sparkles.php/
 http://jsdo.it/clockmaker/createjs-particle-emitter     createjs particle
-http://www.qdfuns.com/notes/29385/62fd5cd751660c9203bc0386ff0ae87a.html     js+html5实现跟随鼠标移动而散开的粒子
+http://www.qdfuns.com/notes/29385/6f2fd5cd751660c9203bc0386ff0ae87a.html     js+html5实现跟随鼠标移动而散开的粒子
 http://www.sucaijiayuan.com/Js/html5-css3/968.html     js+html5实现跟随鼠标移动而散开的粒子
 https://www.sourcecodester.com/node/10067    Cursor Sparkle Effect using Javascript
 https://github.com/andyr0id/createjs_particles    particle
 http://ics-web.jp/projects/particle-develop/     particle
 
-
+https://ics-creative.github.io/ParticleJS/docs/examples/mouse-tracking.html  火焰跟随鼠标，ParticleJS 的应用
 
 
 圆点扩散 ripple pulse effect
