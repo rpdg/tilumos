@@ -5,9 +5,15 @@ abstract class DisposibleObject extends DisplayObject implements IDispose{
     }
 }*/
 class Scene {
-    constructor(main) {
-        this.app = main;
-        this.stage = main.stage;
+    constructor(appOrScene) {
+        if (appOrScene instanceof App)
+            this.app = appOrScene;
+        else {
+            let sc = appOrScene;
+            this.app = sc.app;
+            this.prevScene = sc;
+        }
+        this.stage = this.app.stage;
     }
     dispose() {
     }

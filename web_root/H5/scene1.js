@@ -26,46 +26,46 @@ class Scene1 extends Scene {
         this.particleSystem = new particlejs.ParticleSystem();
         this.stage.addChild(this.particleSystem.container);
         this.particleSystem.importFromJson({
-            "bgColor": "#00000",
-            "width": 679,
-            "height": 343,
-            "emitFrequency": 30,
-            "startX": 340,
-            "startXVariance": 169,
-            "startY": 147,
-            "startYVariance": 179,
-            "initialDirection": 348,
-            "initialDirectionVariance": 112,
-            "initialSpeed": 1.2,
-            "initialSpeedVariance": 2.2,
-            "friction": "0",
-            "accelerationSpeed": "0",
-            "accelerationDirection": "0",
-            "startScale": 0.06,
-            "startScaleVariance": 0.33,
-            "finishScale": 0.04,
-            "finishScaleVariance": "0.23",
-            "lifeSpan": 50,
-            "lifeSpanVariance": "93",
-            "startAlpha": "1",
-            "startAlphaVariance": "0",
-            "finishAlpha": 0,
-            "finishAlphaVariance": 0.26,
-            "shapeIdList": [
-                "kirakira",
-                "star"
+            'bgColor': '#00000',
+            'width': 679,
+            'height': 343,
+            'emitFrequency': 30,
+            'startX': 340,
+            'startXVariance': 169,
+            'startY': 147,
+            'startYVariance': 179,
+            'initialDirection': 348,
+            'initialDirectionVariance': 112,
+            'initialSpeed': 1.2,
+            'initialSpeedVariance': 2.2,
+            'friction': '0',
+            'accelerationSpeed': '0',
+            'accelerationDirection': '0',
+            'startScale': 0.06,
+            'startScaleVariance': 0.33,
+            'finishScale': 0.04,
+            'finishScaleVariance': '0.23',
+            'lifeSpan': 50,
+            'lifeSpanVariance': '93',
+            'startAlpha': '1',
+            'startAlphaVariance': '0',
+            'finishAlpha': 0,
+            'finishAlphaVariance': 0.26,
+            'shapeIdList': [
+                'kirakira',
+                'star',
             ],
-            "startColor": {
-                "hue": 198,
-                "hueVariance": 0,
-                "saturation": 100,
-                "saturationVariance": 89,
-                "luminance": 93,
-                "luminanceVariance": 68
+            'startColor': {
+                'hue': 198,
+                'hueVariance': 0,
+                'saturation': 100,
+                'saturationVariance': 89,
+                'luminance': 93,
+                'luminanceVariance': 68,
             },
-            "blendMode": false,
-            "alphaCurveType": "0",
-            "VERSION": "0.1.3"
+            'blendMode': false,
+            'alphaCurveType': '0',
+            'VERSION': '0.1.3',
         });
         createjs.Ticker.addEventListener('tick', tickScene1Frame);
     }
@@ -77,24 +77,21 @@ class Scene1 extends Scene {
             this.particleSystem.initialDirectionVariance = 360;
             this.particleSystem.initialSpeed = 20;
             this.particleSystem.initialSpeedVariance = 0;
-            this.particleSystem.lifeSpan = 80;
-            this.particleSystem.emitFrequency = 250;
+            this.particleSystem.lifeSpan = 30;
+            this.particleSystem.emitFrequency = 1500;
             //this.particleYOffset = -100;
             setTimeout(() => {
                 this.particleSystem.emitFrequency = 0;
                 setTimeout(() => {
                     this.stage.removeChild(this.wand);
                     this.openBox();
-                }, 1500);
-            }, 500);
+                }, 1800);
+            }, 200);
         });
     }
     openBox() {
-        let light = Util.addImage(this.stage, this.app.preLoader.getResult('light'), 2, 0, -50);
-        light.alpha = 0;
-        Tween.get(light).to({ alpha: 1 }, 3600, createjs.Ease.sineIn);
         this.dispose();
-        new Scene2(this.app);
+        new Scene2(this);
     }
     tick(e) {
         //console.log('emit');

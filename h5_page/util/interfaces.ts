@@ -1,4 +1,4 @@
-interface IDispose{
+interface IDispose {
 	dispose();
 }
 
@@ -10,16 +10,25 @@ abstract class DisposibleObject extends DisplayObject implements IDispose{
 }*/
 
 
-abstract class Scene implements IDispose{
-	 app : App;
-	 stage :Stage ;
+abstract class Scene implements IDispose {
+	app: App;
+	stage: Stage;
+	prevScene: Scene;
 
-	constructor(main :App){
-		this.app = main;
-		this.stage = main.stage;
+	constructor(appOrScene: App | Scene) {
+		if (appOrScene instanceof App)
+			this.app = appOrScene;
+		else{
+			let sc = <Scene> appOrScene;
+			this.app = sc.app;
+			this.prevScene = sc;
+		}
+
+		this.stage = this.app.stage;
+
 	}
 
-	dispose(){
+	dispose() {
 
 	}
 }

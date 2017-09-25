@@ -6,8 +6,8 @@
         "/util/interfaces.ts"
     ],
     "names": [],
-    "mappings": "AAIA;;;;;GAKG;AAGH;IAIC,YAAY,IAAS;QACpB,IAAI,CAAC,GAAG,GAAG,IAAI,CAAC;QAChB,IAAI,CAAC,KAAK,GAAG,IAAI,CAAC,KAAK,CAAC;IACzB,CAAC;IAED,OAAO;IAEP,CAAC;CACD",
+    "mappings": "AAIA;;;;;GAKG;AAGH;IAKC,YAAY,UAAuB;QAClC,EAAE,CAAC,CAAC,UAAU,YAAY,GAAG,CAAC;YAC7B,IAAI,CAAC,GAAG,GAAG,UAAU,CAAC;QACvB,IAAI,CAAA,CAAC;YACJ,IAAI,EAAE,GAAW,UAAU,CAAC;YAC5B,IAAI,CAAC,GAAG,GAAG,EAAE,CAAC,GAAG,CAAC;YAClB,IAAI,CAAC,SAAS,GAAG,EAAE,CAAC;QACrB,CAAC;QAED,IAAI,CAAC,KAAK,GAAG,IAAI,CAAC,GAAG,CAAC,KAAK,CAAC;IAE7B,CAAC;IAED,OAAO;IAEP,CAAC;CACD",
     "sourcesContent": [
-        "interface IDispose{\r\n\tdispose();\r\n}\r\n\r\n/*\r\nabstract class DisposibleObject extends DisplayObject implements IDispose{\r\n\tdispose(){\r\n\t\tthis.parent.removeChild(this);\r\n\t}\r\n}*/\r\n\r\n\r\nabstract class Scene implements IDispose{\r\n\t app : App;\r\n\t stage :Stage ;\r\n\r\n\tconstructor(main :App){\r\n\t\tthis.app = main;\r\n\t\tthis.stage = main.stage;\r\n\t}\r\n\r\n\tdispose(){\r\n\r\n\t}\r\n}"
+        "interface IDispose {\r\n\tdispose();\r\n}\r\n\r\n/*\r\nabstract class DisposibleObject extends DisplayObject implements IDispose{\r\n\tdispose(){\r\n\t\tthis.parent.removeChild(this);\r\n\t}\r\n}*/\r\n\r\n\r\nabstract class Scene implements IDispose {\r\n\tapp: App;\r\n\tstage: Stage;\r\n\tprevScene: Scene;\r\n\r\n\tconstructor(appOrScene: App | Scene) {\r\n\t\tif (appOrScene instanceof App)\r\n\t\t\tthis.app = appOrScene;\r\n\t\telse{\r\n\t\t\tlet sc = <Scene> appOrScene;\r\n\t\t\tthis.app = sc.app;\r\n\t\t\tthis.prevScene = sc;\r\n\t\t}\r\n\r\n\t\tthis.stage = this.app.stage;\r\n\r\n\t}\r\n\r\n\tdispose() {\r\n\r\n\t}\r\n}"
     ]
 }
