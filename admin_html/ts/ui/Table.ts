@@ -310,7 +310,7 @@ class Table extends AjaxDisplayObject {
 				this.pageCounter.html(format.json(this.pageTemplate, {rowCount, pageIndex, pageCount}));
 
 				let bf = this.pageCounter.find('.bf');
-				this.iptPageGo.val(pageIndex);//.data('total' , pageCount);
+				this.iptPageGo.val(pageIndex+1);//.data('total' , pageCount);
 				bf.replaceWith(this.iptPageGo);
 			}
 

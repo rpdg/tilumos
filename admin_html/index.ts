@@ -25,8 +25,8 @@ let btnLogin = $('#btnLogin').click(function () {
 	});
 
 	if (param) {
-		opg.api.login(param, function (data) {
-			if (data === 1) {
+		opg.api.login(param, function (json) {
+			if (json.data === 1) {
 
 				let url = __uri('./page/main.aspx');
 

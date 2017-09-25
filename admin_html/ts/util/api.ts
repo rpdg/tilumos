@@ -164,13 +164,12 @@ class ServerFn {
 				},
 				success: function (json: AjaxMessage, textStatus: string, jqXHR: JQueryXHR) {
 
-
 					if (json.error) {
 						that.handleError.call(that, json.error , callback);
 					}
 					else {
 						if (callback && typeof callback === 'function')
-							callback(json, textStatus, jqXHR);
+							callback(json , textStatus, jqXHR);
 					}
 				}
 			});
