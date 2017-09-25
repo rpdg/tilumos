@@ -65,22 +65,22 @@ class Scene1 extends Scene {
         this.tickHandler = createjs.Ticker.on('tick', this.tick, this);
     }
     clickBox() {
-        Tween.get(this.wand).to({ rotation: -68, y: 800, x: 180 }, 1500, createjs.Ease.sineIn).wait(100).call(() => {
+        Tween.get(this.wand).to({ rotation: -78, y: 900, x: 260 }, 1500, createjs.Ease.sineIn).wait(100).call(() => {
             Tween.removeTweens(this.wand);
             createjs.Sound.play('sound_sparkle');
             this.particleSystem.initialDirection = 0;
             this.particleSystem.initialDirectionVariance = 360;
-            this.particleSystem.initialSpeed = 20;
+            this.particleSystem.initialSpeed = 10;
             this.particleSystem.initialSpeedVariance = 0;
             this.particleSystem.lifeSpan = 30;
             this.particleSystem.emitFrequency = 1500;
-            //this.particleYOffset = -100;
+            this.particleYOffset = -150;
             setTimeout(() => {
                 this.particleSystem.emitFrequency = 0;
                 setTimeout(() => {
                     this.stage.removeChild(this.wand);
                     this.openBox();
-                }, 1800);
+                }, 1000);
             }, 200);
         });
     }
