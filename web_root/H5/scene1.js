@@ -1,6 +1,12 @@
+function tickScene1Frame(e) {
+    scene.tick(e);
+}
+let scene;
 class Scene1 extends Scene {
     constructor(app) {
         super(app);
+        this.particleYOffset = 130;
+        scene = this;
         Util.addImage(app.stage, app.preLoader.getResult('bg-1'), 0, 0, -50);
         this.wand = Util.addImage(app.stage, app.preLoader.getResult('wand'), 1, 350, 80);
         Util.breath(this.wand, 10);
@@ -11,23 +17,25 @@ class Scene1 extends Scene {
         clickTip.y = 810;
         app.stage.addChild(clickTip);
         clickTip.pulsate();
-        clickTip.addEventListener('click', () => {
+        clickTip.on('click', () => {
             Util.unBreath(this.wand);
             this.clickBox();
-        });
+            this.particleSystem.emitFrequency = 100;
+            this.particleYOffset = -100;
+        }, this, true);
         this.particleSystem = new particlejs.ParticleSystem();
         this.stage.addChild(this.particleSystem.container);
         this.particleSystem.importFromJson({
             "bgColor": "#00000",
             "width": 679,
             "height": 343,
-            "emitFrequency": 80,
+            "emitFrequency": 30,
             "startX": 340,
             "startXVariance": 169,
             "startY": 147,
             "startYVariance": 179,
             "initialDirection": 348,
-            "initialDirectionVariance": "0",
+            "initialDirectionVariance": 112,
             "initialSpeed": 1.2,
             "initialSpeedVariance": 2.2,
             "friction": "0",
@@ -37,7 +45,7 @@ class Scene1 extends Scene {
             "startScaleVariance": 0.33,
             "finishScale": 0.04,
             "finishScaleVariance": "0.23",
-            "lifeSpan": "27",
+            "lifeSpan": 50,
             "lifeSpanVariance": "93",
             "startAlpha": "1",
             "startAlphaVariance": "0",
@@ -59,31 +67,43 @@ class Scene1 extends Scene {
             "alphaCurveType": "0",
             "VERSION": "0.1.3"
         });
-        createjs.Ticker.addEventListener('tick', (e) => this.tick(e));
+        createjs.Ticker.addEventListener('tick', tickScene1Frame);
     }
     clickBox() {
-        Tween.get(this.wand).to({ rotation: -68, y: 800, x: 180 }, 1500, createjs.Ease.sineIn).wait(300).call(() => {
+        Tween.get(this.wand).to({ rotation: -68, y: 800, x: 180 }, 1500, createjs.Ease.sineIn).wait(100).call(() => {
             Tween.removeTweens(this.wand);
-            this.stage.removeChild(this.wand);
             createjs.Sound.play('sound_sparkle');
+            this.particleSystem.initialDirection = 0;
+            this.particleSystem.initialDirectionVariance = 360;
+            this.particleSystem.initialSpeed = 20;
+            this.particleSystem.initialSpeedVariance = 0;
+            this.particleSystem.lifeSpan = 80;
+            this.particleSystem.emitFrequency = 250;
+            //this.particleYOffset = -100;
             setTimeout(() => {
-                this.openBox();
-            }, 200);
+                this.particleSystem.emitFrequency = 0;
+                setTimeout(() => {
+                    this.stage.removeChild(this.wand);
+                    this.openBox();
+                }, 1500);
+            }, 500);
         });
     }
     openBox() {
         let light = Util.addImage(this.stage, this.app.preLoader.getResult('light'), 2, 0, -50);
         light.alpha = 0;
-        Tween.get(light).to({ alpha: 1 }, 3300, createjs.Ease.sineIn);
+        Tween.get(light).to({ alpha: 1 }, 3600, createjs.Ease.sineIn);
         this.dispose();
         new Scene2(this.app);
     }
     tick(e) {
-        this.particleSystem.startX = this.wand.x + 180;
-        this.particleSystem.startY = this.wand.y + 120;
+        //console.log('emit');
+        this.particleSystem.startX = this.wand.x + 160;
+        this.particleSystem.startY = this.wand.y + this.particleYOffset;
         this.particleSystem.update();
     }
     dispose() {
+        createjs.Ticker.removeEventListener('tick', tickScene1Frame);
         this.particleSystem.dispose();
     }
 }

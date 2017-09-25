@@ -6,8 +6,8 @@
         "/scene2.ts"
     ],
     "names": [],
-    "mappings": "AAAA,YAAa,SAAQ,KAAK;IACzB,YAAY,GAAQ;QACnB,KAAK,CAAC,GAAG,CAAC,CAAC;IACZ,CAAC;CAED",
+    "mappings": "AAAA,YAAa,SAAQ,KAAK;IACzB,YAAY,GAAQ;QACnB,KAAK,CAAC,GAAG,CAAC,CAAC;QAEX,iBAAiB;IAClB,CAAC;CAGD",
     "sourcesContent": [
-        "class Scene2 extends Scene{\r\n\tconstructor(app :App){\r\n\t\tsuper(app);\r\n\t}\r\n\r\n}"
+        "class Scene2 extends Scene{\r\n\tconstructor(app :App){\r\n\t\tsuper(app);\r\n\r\n\t\t//this.openBox();\r\n\t}\r\n\r\n\r\n}"
     ]
 }
