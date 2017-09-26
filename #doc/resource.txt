@@ -127,6 +127,11 @@ http://www.ajexoop.com/wordpress/2016/03/%E6%96%B0%E6%89%8B%E5%86%99createjs%E6%
 https://www.safaribooksonline.com/blog/2012/06/19/creating-a-particle-system-with-easeljs/  建立粒子系统
 http://sandbox.createjs.com/FastContainer/  使用fast container
 
+https://code.tutsplus.com/tutorials/using-createjs-easeljs--net-34840
+
+http://pops-web.com/main/pops/archives/212  bitmap 教程
+http://pops-web.com/main/pops/archives/255
+
 http://prog3.com/sbdm/blog/bboyjoe/article/category/5612725
 https://blog.toggl.com/better-multitouch-support-for-canvas-with-hammerjs/
 https://blog.toggl.com/6-performance-tips-for-html-canvas-and-createjs/
@@ -235,6 +240,15 @@ http://blog.teamtreehouse.com/create-vector-masks-using-the-html5-canvas      ve
 
 
 http://djt.qq.com/article/view/1249    让界面动画更自然
+
+
+
+
+bitmapData
+https://github.com/u-kudox/BitmapData_for_EaselJS
+http://kudox.jp/java-script/createjs-easeljs-bitmapdata   教程
+
+https://stackoverflow.com/questions/35977804/resizing-images-using-createjs-easeljs  bitmap 缩放图像
 
 
 

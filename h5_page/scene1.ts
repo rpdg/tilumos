@@ -4,6 +4,7 @@ class Scene1 extends Scene {
 
 	wand: Bitmap;
 	box: Bitmap;
+	bg: Bitmap;
 
 
 	private particleSystem: particlejs.ParticleSystem;
@@ -14,7 +15,7 @@ class Scene1 extends Scene {
 	constructor(app: App) {
 		super(app);
 
-		Util.addImage(app.stage, <HTMLImageElement> app.preLoader.getResult('bg-1'), 0, 0, -50);
+		this.bg = Util.addImage(app.stage, <HTMLImageElement> app.preLoader.getResult('bg-1'), 0, 0, -50);
 
 		this.wand = Util.addImage(app.stage, <HTMLImageElement> app.preLoader.getResult('wand'), 1, 350, 80);
 		Util.breath(this.wand, 10);
@@ -100,7 +101,7 @@ class Scene1 extends Scene {
 			this.particleSystem.initialSpeed = 10;
 			this.particleSystem.initialSpeedVariance = 0;
 			this.particleSystem.lifeSpan = 30;
-			this.particleSystem.emitFrequency = 1500;
+			this.particleSystem.emitFrequency = 2000;
 			this.particleYOffset = -150;
 
 			setTimeout(() => {
@@ -135,5 +136,6 @@ class Scene1 extends Scene {
 	dispose() {
 		createjs.Ticker.off('tick', this.tickHandler);
 		this.particleSystem.dispose();
+
 	}
 }

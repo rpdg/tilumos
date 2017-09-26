@@ -21,8 +21,8 @@ class App {
 		new Scene1(this);
 	}
 
-	private scene2(){
-		console.log('222')
+	private scene2() {
+		console.log('222');
 	}
 
 	private tick(e: createjs.TickerEvent) {
@@ -60,6 +60,9 @@ class App {
 			{id: 'wand', src: 'img/scene1/wand.png'},
 			{id: 'box', src: 'img/scene1/box.png'},
 			{id: 'light', src: 'img/scene1/light.png'},
+			{id: 'castle-white', src: 'img/scene3/castle-white.png'},
+			{id: 'castle-white-hole', src: 'img/scene3/castle-white-hole.png'},
+			{id: 'castle-white-bg', src: 'img/scene3/castle-white-bg.jpg'},
 			{id: 'sound_sparkle', src: 'sound/sparkle.mp3'},
 			{id: 'sound_magic', src: 'sound/magic.mp3'},
 		], true, 'assets/');

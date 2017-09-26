@@ -2,7 +2,7 @@ class Scene1 extends Scene {
     constructor(app) {
         super(app);
         this.particleYOffset = 130;
-        Util.addImage(app.stage, app.preLoader.getResult('bg-1'), 0, 0, -50);
+        this.bg = Util.addImage(app.stage, app.preLoader.getResult('bg-1'), 0, 0, -50);
         this.wand = Util.addImage(app.stage, app.preLoader.getResult('wand'), 1, 350, 80);
         Util.breath(this.wand, 10);
         this.box = Util.addImage(app.stage, app.preLoader.getResult('box'), 1, 10, 550);
@@ -73,7 +73,7 @@ class Scene1 extends Scene {
             this.particleSystem.initialSpeed = 10;
             this.particleSystem.initialSpeedVariance = 0;
             this.particleSystem.lifeSpan = 30;
-            this.particleSystem.emitFrequency = 1500;
+            this.particleSystem.emitFrequency = 2000;
             this.particleYOffset = -150;
             setTimeout(() => {
                 this.particleSystem.emitFrequency = 0;
