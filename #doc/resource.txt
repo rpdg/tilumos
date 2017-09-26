@@ -178,7 +178,8 @@ https://github.com/migurski/canvas-warp   多边形变形
 https://github.com/snorpey/distort-grid   多边形变形
 
 
-
+http://jsfiddle.net/m1erickson/bcjmxr80/  就是这个
+https://stackoverflow.com/questions/25668914/add-flaglike-waving-to-2d-context?noredirect=1&lq=1
 https://stackoverflow.com/questions/39150461/distorting-an-image-on-a-single-axis-with-javascript-and-canvas  扭曲图形，很接近！
 
 ZIM
