@@ -18,10 +18,10 @@ class Scene1 extends Scene {
 
 		this.bg = Util.addImage(this.stage, <HTMLImageElement> app.preLoader.getResult('bg-1'), 0, 0, -50);
 
-		this.wand = Util.addImage(this.stage, <HTMLImageElement> app.preLoader.getResult('wand'), 1, 350, 80);
-		Util.breath(this.wand, 10);
-
 		this.box = Util.addImage(this.stage, <HTMLImageElement> app.preLoader.getResult('box'), 1, 10, 550);
+
+		this.wand = Util.addImage(this.stage, <HTMLImageElement> app.preLoader.getResult('wand'), 2, 350, 80);
+		Util.breath(this.wand, 10);
 
 
 		//
@@ -31,7 +31,7 @@ class Scene1 extends Scene {
 		this.stage.addChild(clickTip);
 		clickTip.pulsate();
 
-		clickTip.on('click', () => {
+		clickTip.on('click', function () {
 			Util.unBreath(this.wand);
 			this.clickBox();
 			this.particleSystem.emitFrequency = 100;

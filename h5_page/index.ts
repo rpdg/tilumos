@@ -3,6 +3,8 @@ import Bitmap = createjs.Bitmap;
 
 
 class App {
+	_stats;
+
 	draftWidth: number;
 	draftHeight: number;
 
@@ -10,7 +12,17 @@ class App {
 	private ratio: number;
 	preLoader: createjs.LoadQueue;
 
+
+	tickHandler : Function;
+
 	constructor(canvas: HTMLCanvasElement, draftWidth?: number = 750) {
+		this._stats = new Stats();
+		this._stats.setMode(0);
+		this._stats.domElement.style.position = "absolute";
+		this._stats.domElement.style.left = "0px";
+		this._stats.domElement.style.top = "0px";
+		document.body.appendChild(this._stats.domElement);
+
 
 
 		this.initStage(canvas, draftWidth);
@@ -19,14 +31,16 @@ class App {
 	}
 
 
-	private show() {
-		//new Scene1(this);
-		new Scene2(this);
+	private showScene() {
+
+		new Scene1(this);
+		//new Scene2(this);
 	}
 
 
 	private tick(e: createjs.TickerEvent) {
 		this.stage.update(e);
+		this._stats.update();
 	}
 
 
@@ -53,7 +67,7 @@ class App {
 			console.log(this.preLoader);
 			progressBar.progress = 1;
 
-			this.show();
+			this.showScene();
 		});
 
 
@@ -103,7 +117,7 @@ class App {
 		createjs.Ticker.framerate = 60;
 		createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
 
-		createjs.Ticker.addEventListener('tick', (e: createjs.TickerEvent) => this.tick(e));
+		this.tickHandler = createjs.Ticker.on('tick', this.tick , this);
 
 		this.loadAssets();
 	}

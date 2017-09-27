@@ -15,7 +15,7 @@ abstract class Scene implements IDispose {
 	stage: Stage;
 	prevScene: Scene;
 
-	tickHandler : Function;
+	protected tickHandler : Function;
 
 	constructor(appOrScene: App | Scene) {
 		if (appOrScene instanceof App)

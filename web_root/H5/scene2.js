@@ -1,19 +1,46 @@
+var BitmapData = createjs.BitmapData;
 class Scene2 extends Scene {
     constructor(prevScene) {
         super(prevScene);
+        this.distort = 0;
         //let ctx = (<HTMLCanvasElement> this.stage.canvas).getContext('2d');
-        this.draw();
+        this.castleContainer = new Container();
+        this.showCastleWhite();
+    }
+    showCastleWhite() {
+        Util.addImage(this.castleContainer, this.app.preLoader.getResult('castle-white-bg'), 0, 0, 0);
+        let hole = Util.addImage(this.castleContainer, this.app.preLoader.getResult('castle-white-hole'), 1, 0, 0);
+        console.log(hole.getBounds());
+        //hole.regX = 100;
+        //hole.regY = 100;
+        //hole.rotation = 50;
+        Util.addImage(this.castleContainer, this.app.preLoader.getResult('castle-white'), 2, 100, 200);
+        this.stage.addChild(this.castleContainer);
+        this.castleContainer.on('click', function () {
+            this.draw();
+        }, this, true);
     }
     draw() {
-        let container = new Container();
-        let bmp0 = Util.addImage(container, this.app.preLoader.getResult('castle-white-bg'), 0, 0, -50);
-        let bmp5 = Util.addImage(container, this.app.preLoader.getResult('castle-white'), 1, 0, 0);
-        container.cache(0, 0, this.app.draftWidth, this.app.draftHeight);
-        this.stage.addChild(container);
-        let _bmd01 = createjs.BitmapData.getBitmapData(container);
-        let colorTransform = new createjs.ColorTransform(1, 1, 0, 1, 255);
-        let rect = new createjs.Rectangle(0, 0, _bmd01.width >> 1, _bmd01.height);
-        _bmd01.colorTransform(rect, colorTransform);
+        this.stage.removeChild(this.castleContainer);
+        this.castleContainer.cache(0, 0, this.app.draftWidth, this.app.draftHeight);
+        this.sourceBmd = createjs.BitmapData.getBitmapData(this.castleContainer);
+        this.targetBmd = new createjs.BitmapData(null, this.app.draftWidth, this.app.draftHeight);
+        let _bitmap02 = new createjs.Bitmap(this.targetBmd.canvas);
+        this.stage.addChild(_bitmap02);
+        this.distort = 1;
+    }
+    tick() {
+        if (this.distort > 0) {
+            if (this.distort < 300) {
+                for (let x = 0; x < this.app.draftWidth; x++) {
+                    let y = this.distort * Math.sin(x / 18) + 200 - 162;
+                    this.targetBmd.drawImage(this.sourceBmd, x, 0, 1, this.app.draftHeight, x, y, 1, this.app.draftHeight);
+                }
+                this.distort += 5;
+            }
+        }
+        /**/
+        this.stage.update();
     }
 }
 //# sourceMappingURL=/scene2.js.map

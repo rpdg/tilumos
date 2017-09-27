@@ -160,6 +160,12 @@ http://www.quasimondo.com/BoxBlurForCanvas/FastBlurDemo.html  super fast blur fi
 http://indiegamr.com/fading-line-effect-with-easeljs/   上面那个在createjs的使用
 
 
+http://blog.163.com/mdzhg@126/blog/static/163321568201041823325775/  BitmapData的讲解
+
+
+
+
+
 http://jsdo.it/__ikke__/cHiG   画波浪动作
 
 https://github.com/benjamminf/warpjs

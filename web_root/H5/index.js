@@ -2,14 +2,21 @@ var Shape = createjs.Shape;
 var Bitmap = createjs.Bitmap;
 class App {
     constructor(canvas, draftWidth = 750) {
+        this._stats = new Stats();
+        this._stats.setMode(0);
+        this._stats.domElement.style.position = "absolute";
+        this._stats.domElement.style.left = "0px";
+        this._stats.domElement.style.top = "0px";
+        document.body.appendChild(this._stats.domElement);
         this.initStage(canvas, draftWidth);
     }
-    show() {
-        //new Scene1(this);
-        new Scene2(this);
+    showScene() {
+        new Scene1(this);
+        //new Scene2(this);
     }
     tick(e) {
         this.stage.update(e);
+        this._stats.update();
     }
     loadAssets() {
         ///
@@ -29,7 +36,7 @@ class App {
             //this.preLoader.removeAll();
             console.log(this.preLoader);
             progressBar.progress = 1;
-            this.show();
+            this.showScene();
         });
         //
         this.preLoader.loadManifest([
@@ -66,7 +73,7 @@ class App {
         }
         createjs.Ticker.framerate = 60;
         createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
-        createjs.Ticker.addEventListener('tick', (e) => this.tick(e));
+        this.tickHandler = createjs.Ticker.on('tick', this.tick, this);
         this.loadAssets();
     }
 }
