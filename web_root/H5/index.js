@@ -53,6 +53,7 @@ class App {
         this.draftWidth = draftWidth;
         let stageScale = w / draftWidth; //宽度自适应；
         this.ratio = draftWidth / w;
+        this.draftHeight = this.ratio * h;
         //let stageScale = h/1206; //高度自适应两者选一
         this.stage = new createjs.Stage(canvas);
         this.stage.scaleX = stageScale;

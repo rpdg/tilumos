@@ -3,7 +3,9 @@ import Bitmap = createjs.Bitmap;
 
 
 class App {
-	private draftWidth: number;
+	draftWidth: number;
+	draftHeight: number;
+
 	stage: createjs.Stage;
 	private ratio: number;
 	preLoader: createjs.LoadQueue;
@@ -84,6 +86,7 @@ class App {
 		this.draftWidth = draftWidth;
 		let stageScale = w / draftWidth; //宽度自适应；
 		this.ratio = draftWidth / w;
+		this.draftHeight = this.ratio * h ;
 		//let stageScale = h/1206; //高度自适应两者选一
 		this.stage = new createjs.Stage(canvas);
 		this.stage.scaleX = stageScale;
