@@ -1,22 +1,21 @@
 class Scene2 extends Scene {
     constructor(prevScene) {
         super(prevScene);
-        this.box = this.prevScene.box;
-        this.openBox();
+        let ctx = this.stage.canvas.getContext('2d');
+        this.draw();
+        this.tickHandler = createjs.Ticker.on('tick', this.tick, this);
     }
-    openBox() {
-        console.log(this.box);
-        this.light = Util.addImage(this.stage, this.app.preLoader.getResult('light'), 2, 0, -50);
-        this.light.alpha = 0;
-        Tween.get(this.light).to({ alpha: 1 }, 3600, createjs.Ease.sineIn).call(() => {
-            this.dispose();
-            new Scene3(this);
-        });
+    draw() {
+        let container = new Container();
+        //let bmp0 = Util.addImage(container, <HTMLImageElement> this.app.preLoader.getResult('castle-white-bg'), 0, 0, -50);
+        let bmp5 = Util.addImage(container, this.app.preLoader.getResult('castle-white'), 5, 0, 0);
+        this.stage.addChild(container);
+    }
+    tick(e) {
+        //this.stage.update();
     }
     dispose() {
-        this.stage.removeChild(this.box);
-        this.stage.removeChild(this.light);
-        this.stage.removeChild(this.prevScene.bg);
+        createjs.Ticker.off('tick', this.tickHandler);
     }
 }
 //# sourceMappingURL=/scene2.js.map

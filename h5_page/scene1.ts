@@ -4,6 +4,7 @@ class Scene1 extends Scene {
 
 	wand: Bitmap;
 	box: Bitmap;
+	light: Bitmap;
 	bg: Bitmap;
 
 
@@ -15,19 +16,19 @@ class Scene1 extends Scene {
 	constructor(app: App) {
 		super(app);
 
-		this.bg = Util.addImage(app.stage, <HTMLImageElement> app.preLoader.getResult('bg-1'), 0, 0, -50);
+		this.bg = Util.addImage(this.stage, <HTMLImageElement> app.preLoader.getResult('bg-1'), 0, 0, -50);
 
-		this.wand = Util.addImage(app.stage, <HTMLImageElement> app.preLoader.getResult('wand'), 1, 350, 80);
+		this.wand = Util.addImage(this.stage, <HTMLImageElement> app.preLoader.getResult('wand'), 1, 350, 80);
 		Util.breath(this.wand, 10);
 
-		this.box = Util.addImage(app.stage, <HTMLImageElement> app.preLoader.getResult('box'), 1, 10, 550);
+		this.box = Util.addImage(this.stage, <HTMLImageElement> app.preLoader.getResult('box'), 1, 10, 550);
 
 
 		//
 		let clickTip = new ClickTip();
 		clickTip.x = 460;
 		clickTip.y = 810;
-		app.stage.addChild(clickTip);
+		this.stage.addChild(clickTip);
 		clickTip.pulsate();
 
 		clickTip.on('click', () => {
@@ -90,7 +91,7 @@ class Scene1 extends Scene {
 	}
 
 	clickBox() {
-		Tween.get(this.wand).to({rotation: -78, y: 900, x: 260}, 1500, createjs.Ease.sineIn).wait(100).call(() => {
+		Tween.get(this.wand).to({rotation: -78, y: 900, x: 260}, 1500, createjs.Ease.sineIn).to({rotation: -75, y: 880, x: 250} , 300).wait(100).call(() => {
 
 			Tween.removeTweens(this.wand);
 
@@ -100,19 +101,22 @@ class Scene1 extends Scene {
 			this.particleSystem.initialDirectionVariance = 360;
 			this.particleSystem.initialSpeed = 10;
 			this.particleSystem.initialSpeedVariance = 0;
-			this.particleSystem.lifeSpan = 30;
-			this.particleSystem.emitFrequency = 2000;
+			this.particleSystem.lifeSpan = 40;
+			this.particleSystem.emitFrequency = 5000;
 			this.particleYOffset = -150;
 
 			setTimeout(() => {
 				this.particleSystem.emitFrequency = 0;
 
 				setTimeout(() => {
+					this.particleSystem.dispose();
 					this.stage.removeChild(this.wand);
-					this.openBox();
-				}, 1000);
+					createjs.Ticker.off('tick', this.tickHandler);
 
-			}, 200);
+					this.openBox();
+				}, 1200);
+
+			}, 100);
 
 		});
 
@@ -121,21 +125,27 @@ class Scene1 extends Scene {
 
 	openBox() {
 
-		this.dispose();
+		this.light = Util.addImage(this.stage, <HTMLImageElement> this.app.preLoader.getResult('light'), 2, 0, -50);
+		this.light.alpha = 0;
 
-		new Scene2(this);
+		Tween.get(this.light).to({alpha: 1}, 3600, createjs.Ease.sineIn).call(() => {
+			this.dispose();
+			new Scene2(this);
+		});
+
 	}
 
 	tick(e: createjs.TickerEvent) {
-		//console.log('emit');
+		console.log('emit');
 		this.particleSystem.startX = this.wand.x + 160;
 		this.particleSystem.startY = this.wand.y + this.particleYOffset;
 		this.particleSystem.update();
 	}
 
 	dispose() {
-		createjs.Ticker.off('tick', this.tickHandler);
-		this.particleSystem.dispose();
 
+		this.stage.removeChild(this.box);
+		this.stage.removeChild(this.light);
+		this.stage.removeChild(this.bg);
 	}
 }

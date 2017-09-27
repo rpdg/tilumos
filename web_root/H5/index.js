@@ -28,6 +28,8 @@ class App {
         });
         this.preLoader.addEventListener('complete', (e) => {
             this.preLoader.removeAllEventListeners();
+            //this.preLoader.removeAll();
+            console.log(this.preLoader);
             progressBar.progress = 1;
             this.scene1();
         });
@@ -37,9 +39,9 @@ class App {
             { id: 'wand', src: 'img/scene1/wand.png' },
             { id: 'box', src: 'img/scene1/box.png' },
             { id: 'light', src: 'img/scene1/light.png' },
-            { id: 'castle-white', src: 'img/scene3/castle-white.png' },
-            { id: 'castle-white-hole', src: 'img/scene3/castle-white-hole.png' },
-            { id: 'castle-white-bg', src: 'img/scene3/castle-white-bg.jpg' },
+            { id: 'castle-white', src: 'img/scene2/castle-white.png' },
+            { id: 'castle-white-hole', src: 'img/scene2/castle-white-hole.png' },
+            { id: 'castle-white-bg', src: 'img/scene2/castle-white-bg.jpg' },
             { id: 'sound_sparkle', src: 'sound/sparkle.mp3' },
             { id: 'sound_magic', src: 'sound/magic.mp3' },
         ], true, 'assets/');
@@ -70,9 +72,8 @@ class App {
     }
 }
 //
-function run() {
-    window.removeEventListener('load', run);
+window.addEventListener('load', function loadHandler() {
+    window.removeEventListener('load', loadHandler);
     new App(document.getElementById('gameCanvas'));
-}
-window.addEventListener('load', run);
+});
 //# sourceMappingURL=/index.js.map

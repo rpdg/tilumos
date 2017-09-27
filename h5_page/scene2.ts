@@ -1,30 +1,30 @@
 class Scene2 extends Scene {
 	box: Bitmap;
-	light: Bitmap;
+
+	private tickHandler : Function;
 
 	constructor(prevScene: Scene) {
 		super(prevScene);
+		let ctx = (<HTMLCanvasElement> this.stage.canvas).getContext('2d');
 
-		this.box = (<Scene1> this.prevScene).box;
+		this.draw();
 
-		this.openBox();
+		this.tickHandler = createjs.Ticker.on('tick', this.tick , this);
 	}
 
-	openBox() {
-		console.log(this.box);
+	draw() {
+		let container = new Container();
+		//let bmp0 = Util.addImage(container, <HTMLImageElement> this.app.preLoader.getResult('castle-white-bg'), 0, 0, -50);
+		let bmp5 = Util.addImage(container, <HTMLImageElement> this.app.preLoader.getResult('castle-white'), 5, 0, 0);
 
-		this.light = Util.addImage(this.stage, <HTMLImageElement> this.app.preLoader.getResult('light'), 2, 0, -50);
-		this.light.alpha = 0;
+		this.stage.addChild(container);
+	}
 
-		Tween.get(this.light).to({alpha: 1}, 3600, createjs.Ease.sineIn).call(() => {
-			this.dispose();
-			new Scene3(this);
-		});
+	tick(e: createjs.TickerEvent) {
+		//this.stage.update();
 	}
 
 	dispose() {
-		this.stage.removeChild(this.box);
-		this.stage.removeChild(this.light);
-		this.stage.removeChild((<Scene1> this.prevScene).bg);
+		createjs.Ticker.off('tick', this.tickHandler);
 	}
 }

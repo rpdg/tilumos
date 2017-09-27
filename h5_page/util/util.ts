@@ -144,6 +144,7 @@ class Util {
 		let bmp: createjs.Bitmap = new createjs.Bitmap(imgElem);
 		bmp.x = x;
 		bmp.y = y;
+
 		conatainer.addChildAt(bmp, index);
 
 		return bmp;

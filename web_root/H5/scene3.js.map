@@ -6,8 +6,8 @@
         "/scene3.ts"
     ],
     "names": [],
-    "mappings": "AAAA,YAAa,SAAQ,KAAK;IAKzB,YAAY,SAAgB;QAC3B,KAAK,CAAC,SAAS,CAAC,CAAC;QACjB,IAAI,GAAG,GAAwB,IAAI,CAAC,KAAK,CAAC,MAAO,CAAC,UAAU,CAAC,IAAI,CAAC,CAAC;QAEnE,IAAI,CAAC,IAAI,EAAE,CAAC;QAEZ,IAAI,CAAC,WAAW,GAAG,QAAQ,CAAC,MAAM,CAAC,EAAE,CAAC,MAAM,EAAE,IAAI,CAAC,IAAI,EAAG,IAAI,CAAC,CAAC;IACjE,CAAC;IAED,IAAI;QACH,IAAI,SAAS,GAAG,IAAI,SAAS,EAAE,CAAC;QAChC,qHAAqH;QACrH,IAAI,IAAI,GAAG,IAAI,CAAC,QAAQ,CAAC,SAAS,EAAqB,IAAI,CAAC,GAAG,CAAC,SAAS,CAAC,SAAS,CAAC,cAAc,CAAC,EAAE,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC;QAE9G,IAAI,CAAC,KAAK,CAAC,QAAQ,CAAC,SAAS,CAAC,CAAC;IAChC,CAAC;IAED,IAAI,CAAC,CAAuB;QAC3B,sBAAsB;IACvB,CAAC;IAED,OAAO;QACN,QAAQ,CAAC,MAAM,CAAC,GAAG,CAAC,MAAM,EAAE,IAAI,CAAC,WAAW,CAAC,CAAC;IAC/C,CAAC;CACD",
+    "mappings": "",
     "sourcesContent": [
-        "class Scene3 extends Scene {\r\n\tbox: Bitmap;\r\n\r\n\tprivate tickHandler : Function;\r\n\r\n\tconstructor(prevScene: Scene) {\r\n\t\tsuper(prevScene);\r\n\t\tlet ctx = (<HTMLCanvasElement> this.stage.canvas).getContext('2d');\r\n\r\n\t\tthis.draw();\r\n\r\n\t\tthis.tickHandler = createjs.Ticker.on('tick', this.tick , this);\r\n\t}\r\n\r\n\tdraw() {\r\n\t\tlet container = new Container();\r\n\t\t//let bmp0 = Util.addImage(container, <HTMLImageElement> this.app.preLoader.getResult('castle-white-bg'), 0, 0, -50);\r\n\t\tlet bmp5 = Util.addImage(container, <HTMLImageElement> this.app.preLoader.getResult('castle-white'), 5, 0, 0);\r\n\r\n\t\tthis.stage.addChild(container);\r\n\t}\r\n\r\n\ttick(e: createjs.TickerEvent) {\r\n\t\t//this.stage.update();\r\n\t}\r\n\r\n\tdispose() {\r\n\t\tcreatejs.Ticker.off('tick', this.tickHandler);\r\n\t}\r\n}"
+        ""
     ]
 }
