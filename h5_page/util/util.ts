@@ -140,10 +140,15 @@ class Util {
 	}
 
 
-	static addImage(conatainer: Container, imgElem: HTMLImageElement, index: number = 1, x?: number = 0, y?: number = 0): Bitmap {
+	static addImage(conatainer: Container, imgElem: HTMLImageElement, index: number = 0, props?:Object): Bitmap {
 		let bmp: createjs.Bitmap = new createjs.Bitmap(imgElem);
-		bmp.x = x;
-		bmp.y = y;
+
+		if(props){
+			for(let prop in props){
+				bmp[prop] = props[prop] ;
+			}
+		}
+
 
 		conatainer.addChildAt(bmp, index);
 

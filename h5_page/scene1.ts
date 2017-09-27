@@ -1,5 +1,3 @@
-
-
 class Scene1 extends Scene {
 
 	wand: Bitmap;
@@ -11,16 +9,16 @@ class Scene1 extends Scene {
 	private particleSystem: particlejs.ParticleSystem;
 	private particleYOffset: number = 150;
 
-	private tickHandler : Function;
+	private tickHandler: Function;
 
 	constructor(app: App) {
 		super(app);
 
-		this.bg = Util.addImage(this.stage, <HTMLImageElement> app.preLoader.getResult('bg-1'), 0, 0, -50);
+		this.bg = Util.addImage(this.stage, <HTMLImageElement> app.preLoader.getResult('bg-1'), 0, {y: -50});
 
-		this.box = Util.addImage(this.stage, <HTMLImageElement> app.preLoader.getResult('box'), 1, 10, 550);
+		this.box = Util.addImage(this.stage, <HTMLImageElement> app.preLoader.getResult('box'), 1, {x: 10, y: 550});
 
-		this.wand = Util.addImage(this.stage, <HTMLImageElement> app.preLoader.getResult('wand'), 2, 350, 80);
+		this.wand = Util.addImage(this.stage, <HTMLImageElement> app.preLoader.getResult('wand'), 2, {x: 350, y: 80});
 		Util.breath(this.wand, 10);
 
 
@@ -63,7 +61,7 @@ class Scene1 extends Scene {
 				'finishScale': 0.04,
 				'finishScaleVariance': '0.23',
 				'lifeSpan': 80,
-				'lifeSpanVariance': 100 ,
+				'lifeSpanVariance': 100,
 				'startAlpha': 1,
 				'startAlphaVariance': '0',
 				'finishAlpha': 0,
@@ -90,7 +88,14 @@ class Scene1 extends Scene {
 	}
 
 	clickBox() {
-		Tween.get(this.wand).to({rotation: -78, y: 900, x: 260}, 1500, createjs.Ease.sineIn).to({rotation: -75, y: 880, x: 250} , 300).wait(100).call(() => {
+		this.particleSystem.startYVariance = 0;
+		this.particleYOffset = -50;
+
+		Tween.get(this.wand).to({rotation: -78, y: 900, x: 260}, 1000, createjs.Ease.sineIn).to({
+			rotation: -75,
+			y: 880,
+			x: 250,
+		}, 300).call(() => {
 
 			Tween.removeTweens(this.wand);
 
@@ -124,7 +129,7 @@ class Scene1 extends Scene {
 
 	openBox() {
 
-		this.light = Util.addImage(this.stage, <HTMLImageElement> this.app.preLoader.getResult('light'), 2, 0, -50);
+		this.light = Util.addImage(this.stage, <HTMLImageElement> this.app.preLoader.getResult('light'), 2, {y: -50});
 		this.light.alpha = 0;
 
 		Tween.get(this.light).to({alpha: 1}, 3600, createjs.Ease.sineIn).call(() => {

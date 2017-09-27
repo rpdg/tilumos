@@ -85,10 +85,13 @@ class Util {
     static FPS() {
         console.log(Util.fps);
     }
-    static addImage(conatainer, imgElem, index = 1, x = 0, y = 0) {
+    static addImage(conatainer, imgElem, index = 0, props) {
         let bmp = new createjs.Bitmap(imgElem);
-        bmp.x = x;
-        bmp.y = y;
+        if (props) {
+            for (let prop in props) {
+                bmp[prop] = props[prop];
+            }
+        }
         conatainer.addChildAt(bmp, index);
         return bmp;
     }
