@@ -14,8 +14,13 @@ class Scene {
             this.prevScene = sc;
         }
         this.stage = this.app.stage;
+        this.tickHandler = createjs.Ticker.on('tick', this.tick, this);
+    }
+    tick(e) {
+        this.stage.update();
     }
     dispose() {
+        createjs.Ticker.off('tick', this.tickHandler);
     }
 }
 //# sourceMappingURL=/util/interfaces.js.map

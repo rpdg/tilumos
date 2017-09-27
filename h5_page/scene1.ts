@@ -9,7 +9,7 @@ class Scene1 extends Scene {
 
 
 	private particleSystem: particlejs.ParticleSystem;
-	private particleYOffset: number = 130;
+	private particleYOffset: number = 150;
 
 	private tickHandler : Function;
 
@@ -52,7 +52,7 @@ class Scene1 extends Scene {
 				'startY': 147,
 				'startYVariance': 179,
 				'initialDirection': 348,
-				'initialDirectionVariance': 112,
+				'initialDirectionVariance': 180,
 				'initialSpeed': 1.2,
 				'initialSpeedVariance': 2.2,
 				'friction': '0',
@@ -62,9 +62,9 @@ class Scene1 extends Scene {
 				'startScaleVariance': 0.33,
 				'finishScale': 0.04,
 				'finishScaleVariance': '0.23',
-				'lifeSpan': 50,
-				'lifeSpanVariance': '93',
-				'startAlpha': '1',
+				'lifeSpan': 80,
+				'lifeSpanVariance': 100 ,
+				'startAlpha': 1,
 				'startAlphaVariance': '0',
 				'finishAlpha': 0,
 				'finishAlphaVariance': 0.26,
@@ -87,7 +87,6 @@ class Scene1 extends Scene {
 		);
 
 
-		this.tickHandler = createjs.Ticker.on('tick', this.tick , this);
 	}
 
 	clickBox() {
@@ -136,7 +135,7 @@ class Scene1 extends Scene {
 	}
 
 	tick(e: createjs.TickerEvent) {
-		console.log('emit');
+		//console.log('emit');
 		this.particleSystem.startX = this.wand.x + 160;
 		this.particleSystem.startY = this.wand.y + this.particleYOffset;
 		this.particleSystem.update();

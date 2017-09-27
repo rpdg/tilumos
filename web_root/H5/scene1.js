@@ -1,7 +1,7 @@
 class Scene1 extends Scene {
     constructor(app) {
         super(app);
-        this.particleYOffset = 130;
+        this.particleYOffset = 150;
         this.bg = Util.addImage(this.stage, app.preLoader.getResult('bg-1'), 0, 0, -50);
         this.wand = Util.addImage(this.stage, app.preLoader.getResult('wand'), 1, 350, 80);
         Util.breath(this.wand, 10);
@@ -30,7 +30,7 @@ class Scene1 extends Scene {
             'startY': 147,
             'startYVariance': 179,
             'initialDirection': 348,
-            'initialDirectionVariance': 112,
+            'initialDirectionVariance': 180,
             'initialSpeed': 1.2,
             'initialSpeedVariance': 2.2,
             'friction': '0',
@@ -40,9 +40,9 @@ class Scene1 extends Scene {
             'startScaleVariance': 0.33,
             'finishScale': 0.04,
             'finishScaleVariance': '0.23',
-            'lifeSpan': 50,
-            'lifeSpanVariance': '93',
-            'startAlpha': '1',
+            'lifeSpan': 80,
+            'lifeSpanVariance': 100,
+            'startAlpha': 1,
             'startAlphaVariance': '0',
             'finishAlpha': 0,
             'finishAlphaVariance': 0.26,
@@ -62,7 +62,6 @@ class Scene1 extends Scene {
             'alphaCurveType': '0',
             'VERSION': '0.1.3',
         });
-        this.tickHandler = createjs.Ticker.on('tick', this.tick, this);
     }
     clickBox() {
         Tween.get(this.wand).to({ rotation: -78, y: 900, x: 260 }, 1500, createjs.Ease.sineIn).to({ rotation: -75, y: 880, x: 250 }, 300).wait(100).call(() => {
@@ -95,7 +94,7 @@ class Scene1 extends Scene {
         });
     }
     tick(e) {
-        console.log('emit');
+        //console.log('emit');
         this.particleSystem.startX = this.wand.x + 160;
         this.particleSystem.startY = this.wand.y + this.particleYOffset;
         this.particleSystem.update();

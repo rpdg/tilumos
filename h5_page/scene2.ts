@@ -1,30 +1,26 @@
 class Scene2 extends Scene {
-	box: Bitmap;
 
-	private tickHandler : Function;
+	private tickHandler: Function;
 
-	constructor(prevScene: Scene) {
+	constructor(prevScene: Scene | App) {
 		super(prevScene);
-		let ctx = (<HTMLCanvasElement> this.stage.canvas).getContext('2d');
+
+		//let ctx = (<HTMLCanvasElement> this.stage.canvas).getContext('2d');
 
 		this.draw();
 
-		this.tickHandler = createjs.Ticker.on('tick', this.tick , this);
+
 	}
 
 	draw() {
 		let container = new Container();
-		//let bmp0 = Util.addImage(container, <HTMLImageElement> this.app.preLoader.getResult('castle-white-bg'), 0, 0, -50);
-		let bmp5 = Util.addImage(container, <HTMLImageElement> this.app.preLoader.getResult('castle-white'), 5, 0, 0);
+		let bmp0 = Util.addImage(container, <HTMLImageElement> this.app.preLoader.getResult('castle-white-bg'), 0, 0, -50);
+		let bmp5 = Util.addImage(container, <HTMLImageElement> this.app.preLoader.getResult('castle-white'), 1, 0, 0);
 
 		this.stage.addChild(container);
+
+		let _bmd01 = createjs.BitmapData.getBitmapData(container);
 	}
 
-	tick(e: createjs.TickerEvent) {
-		//this.stage.update();
-	}
 
-	dispose() {
-		createjs.Ticker.off('tick', this.tickHandler);
-	}
 }

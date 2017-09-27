@@ -17,13 +17,11 @@ class App {
 	}
 
 
-	private scene1() {
-		new Scene1(this);
+	private show() {
+		//new Scene1(this);
+		new Scene2(this);
 	}
 
-	private scene2() {
-		console.log('222');
-	}
 
 	private tick(e: createjs.TickerEvent) {
 		this.stage.update(e);
@@ -52,7 +50,8 @@ class App {
 			//this.preLoader.removeAll();
 			console.log(this.preLoader);
 			progressBar.progress = 1;
-			this.scene1();
+
+			this.show();
 		});
 
 

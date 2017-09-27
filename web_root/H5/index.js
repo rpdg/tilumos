@@ -4,11 +4,9 @@ class App {
     constructor(canvas, draftWidth = 750) {
         this.initStage(canvas, draftWidth);
     }
-    scene1() {
-        new Scene1(this);
-    }
-    scene2() {
-        console.log('222');
+    show() {
+        //new Scene1(this);
+        new Scene2(this);
     }
     tick(e) {
         this.stage.update(e);
@@ -31,7 +29,7 @@ class App {
             //this.preLoader.removeAll();
             console.log(this.preLoader);
             progressBar.progress = 1;
-            this.scene1();
+            this.show();
         });
         //
         this.preLoader.loadManifest([
