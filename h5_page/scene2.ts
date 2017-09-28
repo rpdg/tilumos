@@ -27,7 +27,9 @@ class Scene2 extends Scene {
 		Util.addImage(this.castleContainer, <HTMLImageElement> this.app.preLoader.getResult('castle-white-bg'), 0);
 
 		let x = this.app.draftWidth /2 , y = this.app.draftHeight /2 -50 ;
-		let hole = Util.addImage(this.castleContainer, <HTMLImageElement> this.app.preLoader.getResult('castle-white-hole'), 1, {x, y , regX :x , regY :y});
+		let hole = Util.addImage(this.castleContainer,
+			<HTMLImageElement> this.app.preLoader.getResult('castle-white-hole'), 1,
+			{x, y , regX :x/2 , regY :y/2 , scaleX : 2 , scaleY : 2});
 
 
 		let castle = Util.addImage(this.castleContainer, <HTMLImageElement> this.app.preLoader.getResult('castle-white'), 2, {x:100, y:200});
