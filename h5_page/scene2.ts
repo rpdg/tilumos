@@ -47,6 +47,9 @@ class Scene2 extends Scene {
 		} , this );
 		this.castleContainer.on('pressup' , function (e:createjs.MouseEvent) {
 			console.log('pressup' , e.isTouch , e.localX , e.localY);
+			if(Math.abs(e.localX - pressFromX) < 200){
+				Tween.get(castle).to({x : castleFromX} , 200);
+			}
 		} , this );
 
 		this.castleContainer.on('pressmove' , function (e:createjs.MouseEvent) {
