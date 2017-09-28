@@ -33,8 +33,8 @@ class App {
 
 	private showScene() {
 
-		new Scene1(this);
-		//new Scene2(this);
+		//new Scene1(this);
+		new Scene2(this);
 	}
 
 

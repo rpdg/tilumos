@@ -30,7 +30,7 @@ class Scene2 extends Scene {
 		let hole = Util.addImage(this.castleContainer, <HTMLImageElement> this.app.preLoader.getResult('castle-white-hole'), 1, {x, y , regX :x , regY :y});
 
 
-		Util.addImage(this.castleContainer, <HTMLImageElement> this.app.preLoader.getResult('castle-white'), 2, {x:100, y:200});
+		let castle = Util.addImage(this.castleContainer, <HTMLImageElement> this.app.preLoader.getResult('castle-white'), 2, {x:100, y:200});
 
 
 		this.stage.addChild(this.castleContainer);
@@ -39,7 +39,22 @@ class Scene2 extends Scene {
 		Tween.get(hole , {loop : true}).to({rotation: 360} , 3000);
 
 
-		this.castleContainer.on('click' , function () {
+		let fromX = 0 , castleFromX = 0;
+		this.castleContainer.on('mousedown' , function (e:createjs.MouseEvent) {
+			console.log('mousedown' , e.isTouch , e.localX , e.localY);
+			fromX = e.localX;
+			castleFromX = castle.x ;
+		} , this );
+		this.castleContainer.on('pressup' , function (e:createjs.MouseEvent) {
+			console.log('pressup' , e.isTouch , e.localX , e.localY);
+		} , this );
+
+		this.castleContainer.on('pressmove' , function (e:createjs.MouseEvent) {
+			console.log(e.isTouch , e.localX , fromX );
+			castle.x =  castleFromX + e.localX - fromX;
+		} , this );
+
+		this.castleContainer.on('dblclick' , function () {
 			Tween.removeTweens(hole);
 
 			this.distort();

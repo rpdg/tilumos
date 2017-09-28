@@ -1,1 +1,25 @@
-var __extends=this&&this.__extends||function(){var t=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(t,n){t.__proto__=n}||function(t,n){for(var o in n)n.hasOwnProperty(o)&&(t[o]=n[o])};return function(n,o){function e(){this.constructor=n}t(n,o),n.prototype=null===o?Object.create(o):(e.prototype=o.prototype,new e)}}(),Bitmap=createjs.Bitmap,wand=function(t){function n(n){return t.call(this,n)||this}return __extends(n,t),n.prototype.breath=function(){},n.prototype.unBreath=function(){},n.prototype.dispose=function(){},n}(Bitmap);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var Bitmap = createjs.Bitmap;
+var wand = (function (_super) {
+    __extends(wand, _super);
+    function wand(imageOrUrl) {
+        return _super.call(this, imageOrUrl) || this;
+    }
+    wand.prototype.breath = function () {
+    };
+    wand.prototype.unBreath = function () {
+    };
+    wand.prototype.dispose = function () {
+    };
+    return wand;
+}(Bitmap));
+//# sourceMappingURL=/components/wand.js.map
