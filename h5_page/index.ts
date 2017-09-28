@@ -3,7 +3,7 @@ import Bitmap = createjs.Bitmap;
 
 
 class App {
-	_stats;
+	_stats: Stats;
 
 	draftWidth: number;
 	draftHeight: number;
@@ -13,16 +13,16 @@ class App {
 	preLoader: createjs.LoadQueue;
 
 
-	tickHandler : Function;
+	tickHandler: Function;
 
 	constructor(canvas: HTMLCanvasElement, draftWidth?: number = 750) {
+
 		this._stats = new Stats();
 		this._stats.setMode(0);
-		this._stats.domElement.style.position = "absolute";
-		this._stats.domElement.style.left = "0px";
-		this._stats.domElement.style.top = "0px";
+		this._stats.domElement.style.position = 'absolute';
+		this._stats.domElement.style.left = '0px';
+		this._stats.domElement.style.top = '0px';
 		document.body.appendChild(this._stats.domElement);
-
 
 
 		this.initStage(canvas, draftWidth);
@@ -100,7 +100,7 @@ class App {
 		this.draftWidth = draftWidth;
 		let stageScale = w / draftWidth; //宽度自适应；
 		this.ratio = draftWidth / w;
-		this.draftHeight = this.ratio * h ;
+		this.draftHeight = this.ratio * h;
 		//let stageScale = h/1206; //高度自适应两者选一
 		this.stage = new createjs.Stage(canvas);
 		this.stage.scaleX = stageScale;
@@ -117,7 +117,7 @@ class App {
 		createjs.Ticker.framerate = 60;
 		createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
 
-		this.tickHandler = createjs.Ticker.on('tick', this.tick , this);
+		this.tickHandler = createjs.Ticker.on('tick', this.tick, this);
 
 		this.loadAssets();
 	}
@@ -129,3 +129,4 @@ window.addEventListener('load', function loadHandler() {
 	window.removeEventListener('load', loadHandler);
 	new App(<HTMLCanvasElement> document.getElementById('gameCanvas'));
 });
+

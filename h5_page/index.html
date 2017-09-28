@@ -12,19 +12,12 @@
 <body>
 <canvas id="gameCanvas"></canvas>
 
+{{if scripts}}
+{{each scripts}}
+<script src="{{$value}}"></script>
+{{/each}}
+{{/if}}
 
-<script src="lib/stats.min.js"></script>
-<script src="lib/createjs.min.js"></script>
-<script src="lib/particlejs.min.js"></script>
-<script src="lib/BitmapData.js"></script>
 
-<script src="util/interfaces.ts"></script>
-<script src="util/util.ts"></script>
-<script src="util/progressBar.ts"></script>
-<script src="util/clickTip.ts"></script>
-<script src="index.ts"></script>
-<script src="scene1.ts"></script>
-<script src="scene2.ts"></script>
-<script src="scene3.ts"></script>
 </body>
 </html>

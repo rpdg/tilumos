@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "file": "wand.js",
+    "sourceRoot": "",
+    "sources": [
+        "/components/wand.ts"
+    ],
+    "names": [],
+    "mappings": ";;;;;;;;;;AAAA,IAAO,MAAM,GAAG,QAAQ,CAAC,MAAM,CAAC;AAEhC;IAAmB,wBAAM;IACxB,cAAY,UAAqF;eAChG,kBAAM,UAAU,CAAC;IAClB,CAAC;IAED,qBAAM,GAAN;IAEA,CAAC;IACD,uBAAQ,GAAR;IAEA,CAAC;IAED,sBAAO,GAAP;IAEA,CAAC;IACF,WAAC;AAAD,CAAC,AAfD,CAAmB,MAAM,GAexB",
+    "sourcesContent": [
+        "import Bitmap = createjs.Bitmap;\r\n\r\nclass wand extends Bitmap implements IDispose{\r\n\tconstructor(imageOrUrl: HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | Object | string){\r\n\t\tsuper(imageOrUrl);\r\n\t}\r\n\r\n\tbreath(){\r\n\r\n\t}\r\n\tunBreath(){\r\n\r\n\t}\r\n\r\n\tdispose(){\r\n\r\n\t}\r\n}"
+    ]
+}

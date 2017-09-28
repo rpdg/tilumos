@@ -1,0 +1,1 @@
+var Scene=function(){function t(t){if(t instanceof App)this.app=t;else{var i=t;this.app=i.app,this.prevScene=i}this.stage=this.app.stage,this.tickHandler=createjs.Ticker.on("tick",this.tick,this)}return t.prototype.tick=function(){this.stage.update()},t.prototype.dispose=function(){createjs.Ticker.off("tick",this.tickHandler)},t}();

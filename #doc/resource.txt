@@ -30,6 +30,7 @@ http://www.bkjia.com/webzh/756470.html
 http://down.admin5.com/texiao/127478.html
 
 http://www.html5tricks.com/demo/css3-sword/index.html  双图层缓冲
+http://www.mikechambers.com/blog/2011/01/25/layering-multiple-canvas-elements-using-javascript-and-easeljs/   双图层
 
 
 
@@ -44,6 +45,12 @@ http://www.cnblogs.com/kenkofox/p/4153853.html
 http://createjs.cc/
 http://www.ajexoop.com/wordpress/2016/03/%e6%96%b0%e6%89%8b%e5%86%99createjs%e6%97%b6%e5%ae%b9%e6%98%93%e9%81%87%e5%88%b0%e7%9a%84%e5%9d%91%ef%bc%88%e6%8c%81%e7%bb%ad%e6%9b%b4%e6%96%b0%ef%bc%89.html
 http://www.ajexoop.com/wordpress/2017/04/%e7%ae%97%e6%b3%95%e7%9a%84%e8%89%ba%e6%9c%af%ef%bc%88%e9%99%84%e7%ae%97%e6%b3%95%e7%89%b9%e6%95%88demo%ef%bc%89.html
+
+
+http://www.backwardcompatible.net/175-apply-grayscale-filter-easeljs-createjs   图像灰度滤镜 filter
+
+
+
 
 createjs-typescript-template
 https://github.com/gyohk/createjs-typescript-template/blob/master/src/Main.ts
@@ -268,3 +275,12 @@ https://jsfiddle.net/gsjn5h4t/
 
 音效
 http://ibaotu.com/yinxiao/?chan=bd&label=video&plan=D2-bd&kwd=7753
+
+
+
+其他特效
+https://www.viget.com/articles/instagram-style-filters-in-html5-canvas    图层混合
+https://www.html5rocks.com/en/tutorials/canvas/imagefilters/   各种滤镜原理
+https://codepen.io/ara_node/pen/nuJCG   文字特效
+https://www.html5rocks.com/en/tutorials/canvas/texteffects/    文字效果
+https://code.tutsplus.com/articles/21-ridiculously-impressive-html5-canvas-experiments--net-14210   集合
