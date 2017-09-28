@@ -1,9 +1,9 @@
 {
     "version": 3,
-    "file": "Scene3.js",
+    "file": "scene3.js",
     "sourceRoot": "",
     "sources": [
-        "/Scene3.ts"
+        "/scene3.ts"
     ],
     "names": [],
     "mappings": "",
