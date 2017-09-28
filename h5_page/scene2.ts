@@ -39,10 +39,10 @@ class Scene2 extends Scene {
 		Tween.get(hole , {loop : true}).to({rotation: 360} , 3000);
 
 
-		let fromX = 0 , castleFromX = 0;
+		let pressFromX = 0 , castleFromX = 0;
 		this.castleContainer.on('mousedown' , function (e:createjs.MouseEvent) {
 			console.log('mousedown' , e.isTouch , e.localX , e.localY);
-			fromX = e.localX;
+			pressFromX = e.localX;
 			castleFromX = castle.x ;
 		} , this );
 		this.castleContainer.on('pressup' , function (e:createjs.MouseEvent) {
@@ -50,8 +50,9 @@ class Scene2 extends Scene {
 		} , this );
 
 		this.castleContainer.on('pressmove' , function (e:createjs.MouseEvent) {
-			console.log(e.isTouch , e.localX , fromX );
-			castle.x =  castleFromX + e.localX - fromX;
+			console.log(e.isTouch , e.localX , pressFromX );
+			castle.x =  castleFromX + e.localX - pressFromX;
+			//castle.x =  e.stageX;
 		} , this );
 
 		this.castleContainer.on('dblclick' , function () {

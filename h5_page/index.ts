@@ -111,7 +111,7 @@ class App {
 		//Util.FPS();
 
 		if (createjs.Touch.isSupported()) {
-			createjs.Touch.enable(this.stage);
+			createjs.Touch.enable(this.stage , true , false);
 		}
 
 		createjs.Ticker.framerate = 60;

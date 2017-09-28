@@ -74,6 +74,25 @@ http://zimjs.com/code/bits/view/swipe.html createjs + zim
 https://forums.adobe.com/thread/2181822 createjs+hammer
 
 
+在createjs里使用手势
+https://fabianirsara.com/2014/09/30/multitouch-gesture-transformations-with-easeljs/
+https://blog.toggl.com/better-multitouch-support-for-canvas-with-hammerjs/
+
+【easeljs】事件汇总
+https://segmentfault.com/a/1190000004374399
+
+createJs支持的事件有：
+on, added, click, dbclick, drawend, drawstart, 
+mousedown, mouseenter, mouseleave, mouseout, mouseover, 
+pressmove, pressup, 
+removed, rollout, rollover, 
+stagemousemove, stagemousedown, stagemouseup, 
+tick, tickstart, tickend. 
+
+
+
+
+
 key words：html5 cool canvas magic sparkle
 ==========================================================================
 
