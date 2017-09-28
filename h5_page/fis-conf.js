@@ -8,7 +8,7 @@ fis.match('**', {
 });
 
 //Typescript  Compile
-fis.match('{**.ts,**.html:ts}', {
+fis.match('**.{ts,html:ts}', {
 	parser: fis.plugin('typescript', {
 		sourceMap: true,
 		strictNullChecks: true,
@@ -19,7 +19,7 @@ fis.match('{**.ts,**.html:ts}', {
 	}),
 	//packTo: '/js/ts.js',
 	rExt: '.js',
-	isMod : false
+	isMod: false
 });
 
 
@@ -36,39 +36,34 @@ fis.match('{**/*.scss,**.html:scss}', {
 fis.match('**.html', {
 	parser: fis.plugin('art-template', {
 		native: true, //默认为false，即简单语法模式
-		define: {
-		}
+		define: {}
 	})
 });
 
 
-
 // default media is `dev`
-fis.media('dev').match('*.{html:js,js}', {
+fis.media('dev').match('**.{html:js,js}', {
 	optimizer: false
 }).match('*.{html:css,css}', {
 	useSprite: true,
 	optimizer: false
-}) ;
-
+});
 
 
 // 产品发布
-fis.media('prd').match('*.{html:js,js}', {
+fis.media('prd').match('**.{html:js,js,ts}', {
 	optimizer: fis.plugin('uglify-js', {
 		compress: {
 			drop_console: true,
 			drop_debugger: true
 		}
 	})
-}).match('*.{html:css,css}', {
+}).match('**.{html:css,css}', {
 	useSprite: true,
 	optimizer: fis.plugin('clean-css', {
 		keepBreaks: true
 	})
-}) ;
-
-
+});
 
 
 //fis3.cmd release dev -d ../web_root/H5/
