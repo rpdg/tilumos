@@ -128,5 +128,6 @@ class App {
 window.addEventListener('load', function loadHandler() {
 	window.removeEventListener('load', loadHandler);
 	new App(<HTMLCanvasElement> document.getElementById('gameCanvas'));
+	alert(navigator.language);
 });
 
