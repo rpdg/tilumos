@@ -33,8 +33,8 @@ class App {
 
 	private showScene() {
 
-		//new Scene1(this);
-		new Scene2(this);
+		new Scene1(this);
+		//new Scene2(this);
 	}
 
 
@@ -128,6 +128,5 @@ class App {
 window.addEventListener('load', function loadHandler() {
 	window.removeEventListener('load', loadHandler);
 	new App(<HTMLCanvasElement> document.getElementById('gameCanvas'));
-	alert(navigator.language);
 });
 
